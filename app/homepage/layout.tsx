@@ -3,6 +3,7 @@
 interface HomepageLayoutProps {
   children: React.ReactNode;
   hero: React.ReactNode;
+  popular?: React.ReactNode;
   menu: React.ReactNode;
   social: React.ReactNode;
   reservations: React.ReactNode;
@@ -13,6 +14,7 @@ export default function HomepageLayout({
   children,
   menu,
   hero,
+  popular,
   social,
   reservations,
   story,
@@ -20,7 +22,8 @@ export default function HomepageLayout({
   return (
     <div className="flex flex-col">
       {hero}
-      {menu}
+      {/* {menu} */}
+      {popular}
       {story}
       {social}
       {reservations}

@@ -1,71 +1,72 @@
 "use client";
-import { Circle } from 'lucide-react';
-
-import LogoSVG from '@/components/ui/LogoSVG';
-import { Container } from '@mantine/core';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div
-      className="relative min-h-screen bg-cover bg-center flex items-center"
-      style={{
-        backgroundImage: "url(./souvlucky2.png)",
-      }}
-    >
-      <Container
-        size="lg"
-        className="relative z-10 text-center flex flex-col items-center gap-16"
-      >
-        {/* Logo */}
-        <div className="transform scale-125 hover:scale-[1.3] transition-transform duration-300">
-          <LogoSVG />
+    <div className="@container relative min-h-[900px] bg-gradient-to-r from-white via-[#DFF4FF] to-blue-500 flex items-center">
+      <div className="container mx-auto px-6 relative ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="space-y-8 z-20">
+            <div className="space-y-6">
+              <h1 className="text-5xl lg:text-6xl font-bold mt-50 text-gray-800 leading-tight">
+                Taste of Greece
+              </h1>
+
+              <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+                Greek cuisine has a variety of flavours, tastes and colours.
+                Delicious plates, best ingredients that remind us the energy and
+                the passion of Athens or the summer breeze of the Greek islands.
+              </p>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/order"
+                className="bg-[#0D71C9] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#0A4E8C] transition-colors duration-200"
+              >
+                Order Now
+              </Link>
+
+              <Link
+                href="/menu"
+                className="border-2 bg-white border-[#0D71C9] text-[#0D71C9] px-8 py-3 rounded-full text-lg font-medium hover:bg-[#0D71C9] hover:text-white transition-all duration-200"
+              >
+                Menu
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Visual Content */}
+          <div className="relative h-96 lg:h-[500px]">
+            {/* Large background image - positioned to the right */}
+            <div className="absolute -top-20 -right-0 ">
+              <Image
+                src="/Hero visual 1.png"
+                alt="Greek Food Visual 1"
+                width={1000}
+                height={1000}
+                className="w-full h-full object-contain"
+                priority
+              />
+            </div>
+
+            {/* Smaller overlapping image - positioned to overlap from the left */}
+            <div className="absolute top-30 -left-0  z-10">
+              <Image
+                src="/Hero visual 2.png"
+                alt="Greek Food Visual 2"
+                width={1111}
+                height={400}
+                className="w-sm h-sm object-contain"
+                priority
+              />
+            </div>
+          </div>
         </div>
-
-        <div className="flex items-center justify-center gap-6 text-3xl font-light tracking-widest uppercase">
-          <span
-            className="text-[#0D71C9] hover:opacity-80 transition-colors cursor-default"
-            style={{
-              textShadow: `
-                -1px -1px 0 #FFF,  
-                1px -1px 0 #FFF,
-                -1px 1px 0 #FFF,
-                1px 1px 0 #FFF`,
-            }}
-          >
-            Authentic
-          </span>
-
-          <Circle size={12} className="text-[#0D71C9] fill-[#0D71C9]" />
-
-          <span
-            className="text-white hover:opacity-80 transition-colors cursor-default"
-            style={{
-              textShadow: `
-                -1px -1px 0 #0D71C9,  
-                1px -1px 0 #0D71C9,
-                -1px 1px 0 #0D71C9,
-                1px 1px 0 #0D71C9`,
-            }}
-          >
-            Traditional
-          </span>
-
-          <Circle size={12} className="text-[#0D71C9] fill-[#0D71C9]" />
-
-          <span
-            className="text-[#0D71C9] hover:opacity-80 transition-colors cursor-default"
-            style={{
-              textShadow: `
-                -1px -1px 0 #FFF,  
-                1px -1px 0 #FFF,
-                -1px 1px 0 #FFF,
-                1px 1px 0 #FFF`,
-            }}
-          >
-            Homemade
-          </span>
-        </div>
-      </Container>
+      </div>
     </div>
   );
 }

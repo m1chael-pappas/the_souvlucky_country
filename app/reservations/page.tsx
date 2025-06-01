@@ -4,8 +4,8 @@ import React from 'react';
 
 import Image from 'next/image';
 
+import { Button } from '@/components/ui/button';
 import {
-  Button,
   Notification,
   Select,
   Textarea,
@@ -20,7 +20,7 @@ export default function ReservationsPage() {
       name: "",
       email: "",
       phone: "",
-      datetime: '', 
+      datetime: "",
       partySize: "2 guests",
       note: "",
     },
@@ -31,8 +31,7 @@ export default function ReservationsPage() {
       email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
       phone: (value) =>
         value.trim().length === 0 ? "Phone is required" : null,
-      datetime: (value) =>
-        !value ? "Date and time are required" : null,
+      datetime: (value) => (!value ? "Date and time are required" : null),
     },
   });
 
@@ -44,7 +43,7 @@ export default function ReservationsPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...values,
-          datetime: reservationDateTime, 
+          datetime: reservationDateTime,
         }),
       });
       const data = await response.json();
@@ -73,11 +72,11 @@ export default function ReservationsPage() {
       {/* Hero Image */}
       <div className="container mx-auto mb-8 px-4">
         <Image
-          src="/your-restaurant.jpg"
+          src="/Rectangle 37.png"
           alt="Restaurant interior"
           width={1200}
           height={800}
-          className="mx-auto border-4 border-dashed border-[#0D71C9]"
+          className="mx-auto border-4 border-dashed rounded-2xl border-[#0D71C9]"
         />
       </div>
 
@@ -90,72 +89,76 @@ export default function ReservationsPage() {
       </div>
 
       {/* Form */}
-      <div className="container mx-auto border-2 rounded-xl  border-[#0D71C9] p-7 mb-8 max-w-xl">
-        <form
-          onSubmit={form.onSubmit((values) => handleSubmit(values))}
-          className="space-y-4"
-        >
-          <TextInput
-            label="Name"
-            placeholder="Name"
-            withAsterisk
-            {...form.getInputProps("name")}
-          />
-
-          <TextInput
-            label="Email"
-            placeholder="Email address"
-            withAsterisk
-            {...form.getInputProps("email")}
-          />
-
-          <TextInput
-            label="Phone"
-            placeholder="Phone number"
-            withAsterisk
-            {...form.getInputProps("phone")}
-          />
-
-          <div className="grid grid-cols-2 gap-4">
-            <DateTimePicker
-              label="Date & Time"
-              placeholder="Select date & time"
+      <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
+        <div className="container mx-auto border-2 rounded-xl border-[#0D71C9] p-7 mb-8 max-w-xl">
+          <div className="space-y-4">
+            <TextInput
+              label="Name"
+              placeholder="Name"
               withAsterisk
-              {...form.getInputProps("datetime")}
+              {...form.getInputProps("name")}
             />
 
-            <Select
-              label="Party size"
-              data={[
-                "1 guest",
-                "2 guests",
-                "3 guests",
-                "4 guests",
-                "5 guests",
-                "6 guests",
-                "7 guests",
-                "8 guests",
-                "9 guests",
-                "10 guests",
-              ]}
-              {...form.getInputProps("partySize")}
+            <TextInput
+              label="Email"
+              placeholder="Email address"
+              withAsterisk
+              {...form.getInputProps("email")}
+            />
+
+            <TextInput
+              label="Phone"
+              placeholder="Phone number"
+              withAsterisk
+              {...form.getInputProps("phone")}
+            />
+
+            <div className="grid grid-cols-2 gap-4">
+              <DateTimePicker
+                label="Date & Time"
+                placeholder="Select date & time"
+                withAsterisk
+                {...form.getInputProps("datetime")}
+              />
+
+              <Select
+                label="Party size"
+                data={[
+                  "1 guest",
+                  "2 guests",
+                  "3 guests",
+                  "4 guests",
+                  "5 guests",
+                  "6 guests",
+                  "7 guests",
+                  "8 guests",
+                  "9 guests",
+                  "10 guests",
+                ]}
+                {...form.getInputProps("partySize")}
+              />
+            </div>
+
+            <Textarea
+              label="Note"
+              placeholder="Any special requests (optional)"
+              {...form.getInputProps("note")}
             />
           </div>
+        </div>
 
-          <Textarea
-            label="Note"
-            placeholder="Any special requests (optional)"
-            {...form.getInputProps("note")}
-          />
-
+        {/* Button outside the bordered container but inside the form */}
+        <div className="container mx-auto max-w-xl text-center">
           <Button
             type="submit"
-            className="mx-auto block bg-[#0D71C9] hover:bg-[#0c5da3]"
+            variant={"default"}
+            size={"lg"}
+            className="bg-[#0D71C9] hover:bg-[#0c5da3] text-white py-7 px-15 rounded-full text-xl! font-semibold transition-colors duration-200"
           >
             Send
           </Button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 }

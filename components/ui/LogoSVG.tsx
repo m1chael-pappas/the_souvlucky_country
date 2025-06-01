@@ -1,9 +1,14 @@
-const LogoSVG = () => {
+interface LogoSVGProps {
+  width?: string | number;
+  height?: string | number;
+}
+
+export function LogoSVG({ width = "224", height }: LogoSVGProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="448" 
-      height="228"
+      width={width}
+      height={height}
       viewBox="0 0 224 114"
       fill="none"
     >
@@ -43,6 +48,4 @@ const LogoSVG = () => {
       </defs>
     </svg>
   );
-};
-
-export default LogoSVG;
+}
