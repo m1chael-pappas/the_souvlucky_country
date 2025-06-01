@@ -15,7 +15,7 @@
     "@mantine/dates": "^7.15.1",
     "@mantine/form": "^7.15.1",
     "@mantine/hooks": "^7.15.1",
-    "@mantine/notifications": "^7.15.1",
+    "@mantine/notifications": "^8.0.2",
     "@mantine/spotlight": "^7.15.1",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-popover": "^1.0.7",
