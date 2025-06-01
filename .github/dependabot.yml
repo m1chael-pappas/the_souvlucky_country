@@ -6,6 +6,27 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 10
+    groups:
+      # Group patch updates
+      patch-updates:
+        update-types:
+          - "patch"
+        patterns:
+          - "*"
+
+      # Group minor updates
+      minor-updates:
+        update-types:
+          - "minor"
+        patterns:
+          - "*"
+
+      # Group major updates (keep separate for careful review)
+      major-updates:
+        update-types:
+          - "major"
+        patterns:
+          - "*"
     reviewers:
       - "m1chael-pappas"
     assignees:
