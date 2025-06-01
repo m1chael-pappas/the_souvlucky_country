@@ -27,8 +27,7 @@ updates:
           - "major"
         patterns:
           - "*"
-    reviewers:
-      - "m1chael-pappas"
+
     assignees:
       - "m1chael-pappas"
     commit-message:
