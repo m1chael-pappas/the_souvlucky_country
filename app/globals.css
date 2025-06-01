@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave&family=Roboto:wght@300;400;500&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   body {
@@ -36,7 +34,7 @@
   .menu-item-hover {
     @apply transition-all duration-300;
   }
-  
+
   .menu-item-hover:hover {
     @apply bg-blue-50;
   }
