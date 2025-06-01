@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   authors: [{ name: "The Souvlucky Country" }],
   creator: "The Souvlucky Country",
   publisher: "The Souvlucky Country",
-  metadataBase: new URL("https://thesouvluckycountry.com.au"), // Replace with your actual domain
+  metadataBase: new URL("https://thesouvluckycountry.com.au"),
   alternates: {
     canonical: "/",
   },
