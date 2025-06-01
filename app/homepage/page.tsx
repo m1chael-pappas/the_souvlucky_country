@@ -8,6 +8,8 @@ export const metadata: Metadata = {
     "Greek restaurant Parramatta",
     "souvlaki near me",
     "gyros Sydney",
+    "best Greek food Sydney",
+    "best gyros Parramatta",
     "Mediterranean food Parramatta",
     "family-owned Greek restaurant",
     "kebabs Parramatta",
