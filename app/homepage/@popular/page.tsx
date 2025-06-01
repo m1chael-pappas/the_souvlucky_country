@@ -10,7 +10,7 @@ import {
 const MostPopular = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
-  const popularItems = [
+  const popularItems: PopularItem[] = [
     {
       id: 1,
       name: "Souvlaki Pita",
