@@ -13,6 +13,7 @@ import {
   MantineProvider,
 } from "@mantine/core";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -160,7 +161,7 @@ export default function RootLayout({
         <MantineProvider>
           <Header />
           <main id="main-content">
-            {children} <Analytics />
+            {children} <Analytics /> <SpeedInsights />
           </main>
           <Footer />
         </MantineProvider>
