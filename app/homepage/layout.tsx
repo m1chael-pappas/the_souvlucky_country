@@ -6,7 +6,6 @@ interface HomepageLayoutProps {
   popular?: React.ReactNode;
   menu: React.ReactNode;
   social: React.ReactNode;
-  reservations: React.ReactNode;
   story: React.ReactNode;
 }
 
@@ -16,7 +15,6 @@ export default function HomepageLayout({
   hero,
   popular,
   social,
-  reservations,
   story,
 }: HomepageLayoutProps) {
   return (
@@ -26,7 +24,6 @@ export default function HomepageLayout({
       {popular}
       {story}
       {social}
-      {reservations}
       {children}
     </div>
   );

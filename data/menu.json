@@ -1,0 +1,624 @@
+{
+  "food": {
+    "dips": [
+      {
+        "name": "Tzatziki",
+        "description": "Creamy Greek yogurt dip with fresh garlic and cucumber - the perfect Mediterranean starter",
+        "price": "11.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Spicy Cheese",
+        "description": "Fiery feta blend that'll awaken your taste buds - not for the faint-hearted!",
+        "price": "11.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Taramosalata",
+        "description": "Traditional pink fish roe dip - a taste of the Greek islands",
+        "price": "11.00"
+      },
+      {
+        "name": "Eggplant",
+        "description": "Smoky roasted eggplant dip with Mediterranean herbs and olive oil",
+        "price": "11.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Skordalia",
+        "description": "Garlic lovers' dream! Creamy potato and garlic dip with a serious kick",
+        "price": "11.00",
+        "vegetarian": true
+      }
+    ],
+    "starters": [
+      {
+        "name": "Spanakopita",
+        "description": "Flaky phyllo pastry filled with spinach and feta - crispy perfection",
+        "price": "16.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Spanakopita with Side of Greek Salad",
+        "description": "Our famous spanakopita paired with fresh Greek village salad",
+        "price": "21.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Meatballs",
+        "description": "Juicy Greek-style meatballs in rich tomato sauce - comfort food at its finest",
+        "price": "14.00"
+      },
+      {
+        "name": "Haloumi Plate",
+        "description": "Four pieces of golden grilled haloumi cheese - squeaky, salty, irresistible",
+        "price": "16.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Feta Roll with Honey",
+        "description": "Sweet meets salty in this heavenly phyllo-wrapped feta drizzled with honey",
+        "price": "16.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Dolmades",
+        "description": "Eight tender vine leaves stuffed with herbed rice - little parcels of joy",
+        "price": "15.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Chargrilled Octopus",
+        "description": "Tender Mediterranean octopus with smoky char marks - pure ocean bliss",
+        "price": "22.00"
+      },
+      {
+        "name": "Calamari Rings",
+        "description": "Golden, crispy squid rings that'll transport you straight to the Greek coast",
+        "price": "19.00"
+      }
+    ],
+    "pitas": [
+      {
+        "name": "Gyros Pita",
+        "description": "Authentic Greek street food - tender gyros meat wrapped in warm pita with fresh salad",
+        "variations": [
+          {
+            "name": "Pork",
+            "price": "16.70"
+          },
+          {
+            "name": "Chicken",
+            "price": "16.70"
+          },
+          {
+            "name": "Lamb",
+            "price": "17.20"
+          }
+        ]
+      },
+      {
+        "name": "Souvlaki Pita",
+        "description": "Grilled skewer meat wrapped in soft pita - handheld heaven",
+        "variations": [
+          {
+            "name": "Pork",
+            "price": "16.70"
+          },
+          {
+            "name": "Chicken",
+            "price": "16.70"
+          },
+          {
+            "name": "Lamb",
+            "price": "17.20"
+          }
+        ]
+      },
+      {
+        "name": "Bifteki Pita",
+        "description": "Handmade bifteki(beef patty) with chips, fresh tomato, red onion, tzatziki and homemade tomato sauce",
+        "price": "18.00"
+      },
+      {
+        "name": "Fish Pita",
+        "description": "Fresh fish with the usual complements",
+        "price": "18.00"
+      },
+      {
+        "name": "Vegetarian Pita",
+        "description": "Choice of protein with tomato, onion, lettuce and tzatziki",
+        "variations": [
+          {
+            "name": "Haloumi",
+            "price": "17.00"
+          },
+          {
+            "name": "Chickpea Fritters (Falafel)",
+            "price": "17.00"
+          }
+        ],
+        "vegetarian": true
+      },
+      {
+        "name": "Kotobacon Pita",
+        "description": "Chicken gyros with crispy bacon, tomato, onion, lettuce and special sauce",
+        "price": "17.50"
+      }
+    ],
+    "mains": [
+      {
+        "name": "Gyros Plate",
+        "description": "Succulent marinated meat carved fresh, served with warm pita, crispy chips, fresh salad and cool tzatziki",
+        "variations": [
+          {
+            "name": "Pork",
+            "price": "34.50"
+          },
+          {
+            "name": "Chicken",
+            "price": "34.50"
+          },
+          {
+            "name": "Lamb",
+            "price": "37.50"
+          }
+        ]
+      },
+      {
+        "name": "Souvlaki Plate",
+        "description": "Three perfectly grilled skewers of marinated meat with all the Greek essentials",
+        "variations": [
+          {
+            "name": "Pork",
+            "price": "34.50"
+          },
+          {
+            "name": "Chicken",
+            "price": "34.50"
+          },
+          {
+            "name": "Lamb",
+            "price": "37.50"
+          }
+        ]
+      },
+      {
+        "name": "Bifteki Plate",
+        "description": "Three handmade Greek beef patties bursting with herbs and spices - like mama used to make",
+        "price": "37.50"
+      },
+      {
+        "name": "Vegetarian Plate",
+        "description": "Mediterranean vegetarian feast with dolmades, falafel, and golden haloumi",
+        "price": "30.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Moussaka",
+        "description": "Traditional Greek layered casserole",
+        "variations": [
+          {
+            "name": "Regular (Meat) - served with chips",
+            "price": "32.00"
+          },
+          {
+            "name": "Vegetarian (Mushroom) - served with cabbage salad",
+            "price": "29.00"
+          }
+        ]
+      },
+      {
+        "name": "Greek Pack",
+        "description": "Your choice of gyros meat piled high on chips with four amazing sauces",
+        "variations": [
+          {
+            "name": "Pork",
+            "price": "28.00"
+          },
+          {
+            "name": "Chicken",
+            "price": "28.00"
+          },
+          {
+            "name": "Lamb",
+            "price": "30.00"
+          }
+        ]
+      },
+      {
+        "name": "Mix & Match",
+        "description": "Create your perfect combo - fresh seasonal salad topped with your favorite gyros meat",
+        "variations": [
+          {
+            "name": "Pork",
+            "price": "28.00"
+          },
+          {
+            "name": "Chicken",
+            "price": "28.00"
+          },
+          {
+            "name": "Lamb",
+            "price": "30.00"
+          }
+        ]
+      },
+      {
+        "name": "Pastitsio",
+        "description": "Greek lasagna",
+        "price": "28.00"
+      },
+      {
+        "name": "Individual Skewer",
+        "description": "Single grilled skewer",
+        "variations": [
+          {
+            "name": "Pork",
+            "price": "8.00"
+          },
+          {
+            "name": "Chicken",
+            "price": "8.00"
+          },
+          {
+            "name": "Lamb",
+            "price": "8.50"
+          }
+        ]
+      },
+      {
+        "name": "Paidakia",
+        "description": "Lamb chops served with skordalia and baked lemon potatoes",
+        "price": "38.00"
+      },
+      {
+        "name": "Skepasti",
+        "description": "Greek club sandwich",
+        "variations": [
+          {
+            "name": "Pork",
+            "price": "26.00"
+          },
+          {
+            "name": "Chicken",
+            "price": "26.00"
+          },
+          {
+            "name": "Lamb",
+            "price": "27.00"
+          },
+          {
+            "name": "Haloumi",
+            "price": "27.00"
+          }
+        ]
+      },
+      {
+        "name": "Fish & Chips",
+        "description": "Fresh catch of the day with golden chips and lemony roasted potatoes",
+        "price": "17.00"
+      },
+      {
+        "name": "Mix Grill",
+        "description": "The ultimate Greek feast - skewers, gyros, bifteki, haloumi and all the trimmings",
+        "price": "55.00"
+      },
+      {
+        "name": "Olympus Plate",
+        "description": "Fit for the gods! All three skewers, all three gyros meats, bifteki, two dips, haloumi and mountains of chips",
+        "price": "55.00"
+      }
+    ],
+    "chips": [
+      {
+        "name": "Plain",
+        "description": "Golden, crispy perfection - sometimes simple is best",
+        "price": "9.80",
+        "vegetarian": true
+      },
+      {
+        "name": "With Feta Cheese",
+        "description": "Crispy chips topped with crumbled Greek feta - salty, creamy goodness",
+        "price": "10.80",
+        "vegetarian": true
+      },
+      {
+        "name": "With Bacon & Cheese",
+        "description": "Loaded chips with crispy bacon and melted cheese - pure indulgence",
+        "price": "12.00"
+      }
+    ],
+    "salads": [
+      {
+        "name": "Greek Salad",
+        "description": "Village-style salad with juicy tomatoes, crisp cucumber, olives, feta and oregano",
+        "variations": [
+          {
+            "name": "Small",
+            "price": "11.00"
+          },
+          {
+            "name": "Large",
+            "price": "19.00"
+          }
+        ],
+        "vegetarian": true
+      },
+      {
+        "name": "Cabbage Salad",
+        "description": "Crunchy rainbow coleslaw with fresh carrots, lemon and olive oil dressing",
+        "variations": [
+          {
+            "name": "Small",
+            "price": "10.00"
+          },
+          {
+            "name": "Large",
+            "price": "16.00"
+          }
+        ],
+        "vegetarian": true
+      },
+      {
+        "name": "Potato Salad",
+        "description": "Creamy potato salad with peas, corn, celery and herbs - comfort in a bowl",
+        "variations": [
+          {
+            "name": "Small",
+            "price": "11.00"
+          },
+          {
+            "name": "Large",
+            "price": "16.00"
+          }
+        ],
+        "vegetarian": true
+      },
+      {
+        "name": "Dakos",
+        "description": "Rustic Cretan barley rusk topped with crushed tomatoes, feta and herbs",
+        "price": "17.00",
+        "vegetarian": true
+      }
+    ],
+    "kids": [
+      {
+        "name": "1 Skewer",
+        "description": "Perfect portion for little ones - grilled meat skewer with pita and chips",
+        "variations": [
+          {
+            "name": "Lamb",
+            "price": "12.00"
+          },
+          {
+            "name": "Chicken",
+            "price": "12.00"
+          },
+          {
+            "name": "Pork",
+            "price": "12.00"
+          }
+        ]
+      }
+    ],
+    "extras": [
+      {
+        "name": "Lettuce",
+        "description": "Fresh and crispy",
+        "price": "3.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Gluten Free Pita Bread",
+        "description": "Everyone deserves great Greek food",
+        "price": "4.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Tasty Cheese",
+        "description": "Melty goodness",
+        "price": "4.00",
+        "vegetarian": true
+      },
+      {
+        "name": "Feta Cheese",
+        "description": "Authentic Greek flavor",
+        "price": "4.50",
+        "vegetarian": true
+      },
+      {
+        "name": "Bacon",
+        "description": "Crispy perfection",
+        "price": "4.50"
+      },
+      {
+        "name": "Haloumi Cheese",
+        "description": "Golden grilled delight",
+        "price": "5.00",
+        "vegetarian": true
+      }
+    ]
+  },
+  "drinks": {
+    "spirits": [
+      {
+        "name": "Ouzo",
+        "description": "Traditional Greek spirit",
+        "variations": [
+          {
+            "name": "Glass",
+            "price": "12.00"
+          },
+          {
+            "name": "Bottle",
+            "price": "30.00"
+          }
+        ]
+      },
+      {
+        "name": "Beer",
+        "description": "Various Greek and international beers",
+        "price": "8.00 - 13.00"
+      },
+      {
+        "name": "Gin",
+        "description": "Premium gin selection",
+        "price": "12.00"
+      }
+    ],
+    "wine": [
+      {
+        "name": "Red Wine",
+        "description": "Various red wines and varieties",
+        "price": "39.00 - 49.00"
+      },
+      {
+        "name": "White Wine",
+        "description": "Selection of white wines",
+        "price": "35.00 - 44.00"
+      },
+      {
+        "name": "Prosecco",
+        "description": "Italian sparkling wine",
+        "price": "36.00"
+      },
+      {
+        "name": "Retsina",
+        "description": "Traditional Greek wine",
+        "price": "36.00"
+      },
+      {
+        "name": "Rosé",
+        "description": "Light and refreshing rosé",
+        "price": "39.00"
+      },
+      {
+        "name": "House Wine",
+        "description": "Red or white house selection",
+        "variations": [
+          {
+            "name": "Glass",
+            "price": "10.00"
+          },
+          {
+            "name": "Bottle",
+            "price": "17.00"
+          }
+        ]
+      }
+    ],
+    "beverages": [
+      {
+        "name": "Coffee",
+        "description": "Fresh brewed coffee",
+        "price": "5.00"
+      },
+      {
+        "name": "Frappe",
+        "description": "Greek iced coffee",
+        "price": "6.50"
+      },
+      {
+        "name": "Cappuccino",
+        "description": "Classic Italian coffee",
+        "price": "4.50"
+      },
+      {
+        "name": "Espresso",
+        "description": "Strong Italian coffee",
+        "price": "4.50"
+      },
+      {
+        "name": "Hot Chocolate",
+        "description": "Rich and creamy",
+        "price": "4.50"
+      },
+      {
+        "name": "Tea",
+        "description": "Various tea selections",
+        "price": "4.00"
+      },
+      {
+        "name": "Soft Drinks",
+        "description": "Coca-Cola, Sprite, etc.",
+        "price": "4.50"
+      }
+    ]
+  },
+  "desserts": [
+    {
+      "name": "Loukoumades",
+      "description": "Greek donuts",
+      "variations": [
+        {
+          "name": "Honey, Cinnamon, Walnut",
+          "price": "14.00"
+        },
+        {
+          "name": "Nutella, Walnut",
+          "price": "14.00"
+        }
+      ],
+      "vegetarian": true
+    },
+    {
+      "name": "Greek Yogurt",
+      "description": "Thick and creamy traditional yogurt",
+      "variations": [
+        {
+          "name": "Greek Honey",
+          "price": "9.00"
+        },
+        {
+          "name": "Greek Traditional Preserved (Gluko tou Koutaliou)",
+          "price": "9.00"
+        }
+      ],
+      "vegetarian": true
+    },
+    {
+      "name": "Pita Nutella",
+      "description": "Warm, crispy pita meets rich, melted Nutella - a heavenly combination that'll make your sweet dreams come true",
+      "price": "10.00",
+      "vegetarian": true
+    },
+    {
+      "name": "Homemade Rice Pudding",
+      "description": "Yiayia's original recipe",
+      "price": "7.50",
+      "vegetarian": true
+    },
+    {
+      "name": "Kormos",
+      "description": "Biscuit with dark chocolate cake",
+      "price": "7.50",
+      "vegetarian": true
+    },
+    {
+      "name": "Baklava",
+      "description": "Honey and nut phyllo pastry",
+      "variations": [
+        {
+          "name": "Pistachio",
+          "price": "5.00"
+        },
+        {
+          "name": "Walnut",
+          "price": "5.00"
+        },
+        {
+          "name": "Chocolate",
+          "price": "5.50"
+        }
+      ],
+      "vegetarian": true
+    },
+    {
+      "name": "Galaktoboureko",
+      "description": "Greek custard pastry pie - Maria's famous recipe, ask to order a full tray",
+      "price": "9.00",
+      "vegetarian": true
+    }
+  ]
+}

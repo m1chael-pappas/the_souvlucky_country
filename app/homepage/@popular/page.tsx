@@ -1,11 +1,8 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 
-import {
-  ChevronLeft,
-  ChevronRight,
-} from 'lucide-react';
+import Image from "next/image";
 
 const MostPopular = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -13,72 +10,49 @@ const MostPopular = () => {
   const popularItems: PopularItem[] = [
     {
       id: 1,
-      name: "Souvlaki Pita",
-      description:
-        "Pita bread filled with marinated lamb, pork or chicken skewers, chips, tomato, red onion, tzatziki or handmade traditional tomato sauce, paprika & parsley",
-      price: "$15.00",
-      image: "/souvlaki-pita.jpg", // Replace with actual image path
+      name: "Gyros Pita",
+      description: {
+        highlight: "Greek street food at its best.",
+        main: "Our most-loved handheld meal. Warm pita packed with your choice of meat, perfect for a quick bite or a satisfying lunch. Simple, bold, and full of flavour.",
+      },
+      price: "$16.70/$17.20",
+      image: "/popylar_01.png",
     },
     {
       id: 2,
-      name: "Souvlaki Pita",
-      description:
-        "Pita bread filled with marinated lamb, pork or chicken skewers, chips, tomato, red onion, tzatziki or handmade traditional tomato sauce, paprika & parsley",
-      price: "$15.00",
-      image: "/souvlaki-pita.jpg",
+      name: "Olympus Plate",
+      description: {
+        highlight: "The ultimate feast to share",
+        main: "A generous mix of grilled meats, haloumi, dips, chips and pita. Perfect for sharing with friends or family when you're craving a little bit of everything.",
+      },
+      price: "$79.00",
+      image: "/popular_02.png",
     },
     {
       id: 3,
-      name: "Souvlaki Pita",
-      description:
-        "Pita bread filled with marinated lamb, pork or chicken skewers, chips, tomato, red onion, tzatziki or handmade traditional tomato sauce, paprika & parsley",
-      price: "$15.00",
-      image: "/souvlaki-pita.jpg",
-    },
-    {
-      id: 4,
-      name: "Greek Salad",
-      description:
-        "Fresh tomatoes, cucumbers, olives, feta cheese with olive oil and herbs",
-      price: "$12.00",
-      image: "/greek-salad.jpg",
-    },
-    {
-      id: 5,
-      name: "Moussaka",
-      description:
-        "Traditional layered dish with eggplant, meat sauce and béchamel",
-      price: "$18.00",
-      image: "/moussaka.jpg",
+      name: "Souvlaki Plate",
+      description: {
+        highlight: "Classic, wholesome and filling.",
+        main: "Three juicy skewers served with pita, tzatziki, salad and chips. A balanced plate that brings the taste of Greece straight to your table – every bite satisfying.",
+      },
+      price: "$34.50/$37.50",
+      image: "/popular_03.png",
     },
   ];
 
   const itemsPerSlide = 3;
   const totalSlides = Math.ceil(popularItems.length / itemsPerSlide);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-
   interface PopularItem {
     id: number;
     name: string;
-    description: string;
+    description: string | { highlight: string; main: string };
     price: string;
     image: string;
   }
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-  };
-
-  const getCurrentItems = () => {
-    const startIndex = currentSlide * itemsPerSlide;
-    return popularItems.slice(startIndex, startIndex + itemsPerSlide);
   };
 
   return (
@@ -97,8 +71,8 @@ const MostPopular = () => {
             </p>
           </div>
 
-          {/* Navigation Arrows */}
-          <div className="flex gap-2">
+          {/* Navigation Arrows - Commented out for now, may need later */}
+          {/* <div className="flex gap-2">
             <button
               onClick={prevSlide}
               className="w-12 h-12 rounded-full border-2 border-[#0D71C9] text-[#0D71C9] hover:bg-[#0D71C9] hover:text-white transition-all duration-200 flex items-center justify-center"
@@ -113,7 +87,7 @@ const MostPopular = () => {
             >
               <ChevronRight size={20} />
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Carousel */}
@@ -136,15 +110,14 @@ const MostPopular = () => {
                         className="bg-white  rounded-2xl p-6 shadow-lg/20 hover:shadow-md transition-shadow duration-200"
                       >
                         {/* Food Image */}
-                        <div className="relative w-full h-48 mb-6 bg-gray-100 rounded-xl overflow-hidden">
-                          <div className="w-full h-full flex items-center justify-center">
-                            {/* Placeholder for food image */}
-                            <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center">
-                              <span className="text-gray-400 text-sm">
-                                Food Image
-                              </span>
-                            </div>
-                          </div>
+                        <div className="relative w-full h-64 mb-6 bg-gray-100 rounded-xl overflow-hidden">
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          />
                         </div>
 
                         {/* Item Details */}
@@ -152,9 +125,18 @@ const MostPopular = () => {
                           <h3 className="text-xl font-semibold text-gray-800">
                             {item.name}
                           </h3>
-                          <p className="text-gray-600 text-sm leading-relaxed">
-                            {item.description}
-                          </p>
+                          <div className="text-gray-600 text-sm leading-relaxed">
+                            {typeof item.description === "string" ? (
+                              <p>{item.description}</p>
+                            ) : (
+                              <>
+                                <p>
+                                  <strong>{item.description.highlight}</strong>
+                                </p>
+                                <p>{item.description.main}</p>
+                              </>
+                            )}
+                          </div>
                           <div className="pt-2">
                             <span className="text-2xl font-bold text-gray-800">
                               {item.price}

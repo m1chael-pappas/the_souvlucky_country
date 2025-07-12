@@ -1,18 +1,13 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import { Button } from '@/components/ui/button';
-import {
-  Notification,
-  Select,
-  Textarea,
-  TextInput,
-} from '@mantine/core';
-import { DateTimePicker } from '@mantine/dates';
-import { useForm } from '@mantine/form';
+import { Button } from "@/components/ui/button";
+import { Notification, Select, Textarea, TextInput } from "@mantine/core";
+import { DateTimePicker } from "@mantine/dates";
+import { useForm } from "@mantine/form";
 
 export default function ReservationsPage() {
   const form = useForm({
@@ -76,7 +71,7 @@ export default function ReservationsPage() {
           alt="Restaurant interior"
           width={1200}
           height={800}
-          className="mx-auto border-4 border-dashed rounded-2xl border-[#0D71C9]"
+          className="mx-auto rounded-2xl "
         />
       </div>
 
@@ -90,7 +85,7 @@ export default function ReservationsPage() {
 
       {/* Form */}
       <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
-        <div className="container mx-auto border-2 rounded-xl border-[#0D71C9] p-7 mb-8 max-w-xl">
+        <div className="container mx-auto  p-7 mb-8 max-w-xl">
           <div className="space-y-4">
             <TextInput
               label="Name"

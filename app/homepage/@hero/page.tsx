@@ -1,6 +1,6 @@
 "use client";
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -24,10 +24,10 @@ export default function Hero() {
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/order"
+                href="/reservations"
                 className="bg-[#0D71C9] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#0A4E8C] transition-colors duration-200"
               >
-                Order Now
+                Book Now
               </Link>
 
               <Link
@@ -44,23 +44,11 @@ export default function Hero() {
             {/* Large background image - positioned to the right */}
             <div className="absolute -top-20 -right-0 ">
               <Image
-                src="/Hero visual 1.png"
+                src="/home_hero.png"
                 alt="Greek Food Visual 1"
                 width={1000}
                 height={1000}
                 className="w-full h-full object-contain"
-                priority
-              />
-            </div>
-
-            {/* Smaller overlapping image - positioned to overlap from the left */}
-            <div className="absolute top-30 -left-0  z-10">
-              <Image
-                src="/Hero visual 2.png"
-                alt="Greek Food Visual 2"
-                width={1111}
-                height={400}
-                className="w-sm h-sm object-contain"
                 priority
               />
             </div>

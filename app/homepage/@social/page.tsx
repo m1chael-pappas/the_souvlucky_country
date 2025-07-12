@@ -1,40 +1,75 @@
-import React from 'react';
+"use client";
 
-import Image from 'next/image';
+import React, { useState } from "react";
+
+import Image from "next/image";
 
 const FollowUsSection = () => {
+  const [activePost, setActivePost] = useState<number | null>(null);
   const socialPosts = [
     {
       id: 1,
-      image: "/Rectangle 36.png",
-      alt: "Greek souvlaki skewers with pita bread",
-      text: "Giving you the authentic Greek experience 🇬🇷🇬🇷🇬🇷",
+      image: "/instagram_01.jpg",
+      alt: "Succulent Greek gyros with fresh pita",
+      text: "Succulent, crispy, flavoursome slow-cooked lamb gyros that'll make your taste buds dance! 😋🇬🇷",
       hashtags:
-        "#thesouvluckycountry #greekfoods #greekfoodlovers #greekeats #eatgreek #eatdelicious #eatyummy #yummyfood #greektaste #greekrestaurant #parramattaeats #sydneyeats #delicious #greekgyro #souvlakia #souvlaki #gyros",
+        "#thesouvluckycountry #parramattaeats #sydneyeats #lambgyros #greekgyros #succulent #crispy #yummyinmytummy #greekfoodporn #souvlucky",
     },
     {
       id: 2,
-      image: "/Frame 43.png",
-      alt: "Greek food experience post",
-      text: "Fresh ingredients, traditional recipes 🍽️",
+      image: "/instagram_02.jpg",
+      alt: "Fresh traditional Greek ingredients",
+      text: "Fresh ingredients meet ancient recipes - this is how authentic Greek magic happens! ✨🍽️",
       hashtags:
-        "#authenticgreek #freshingredients #traditional #homemade #greekflavors #mediterraneandiet #healthyfood #greekculture",
+        "#authenticgreek #freshingredients #traditionalrecipes #greekmagic #homemade #mediterraneanlove #greekflavors #foodieheaven",
     },
     {
       id: 3,
       image: "/Rectangle 39.png",
-      alt: "Vintage pin-up style woman with Greek food",
-      text: "Taste the passion of Athens ✨",
+      alt: "Greek food passion and heritage",
+      text: "Taste the passion of Athens in every bite - where tradition meets incredible flavour! 🏛️💙",
       hashtags:
-        "#greekpassion #athens #greekheritage #foodlove #greekstyle #mediterranean #authentic #greektradition",
+        "#greekpassion #athensvibes #greekheritage #incredibleflavour #traditionmeetsflavour #mediterranean #authenticgreek #greektradition",
     },
     {
       id: 4,
       image: "/Rectangle 40.png",
-      alt: "Mixed Greek platter with grilled meats",
-      text: "Perfect for sharing with friends 👥",
+      alt: "Mixed Greek sharing platter",
+      text: "Epic Greek platters perfect for sharing with your favourite people! 👥🍖",
       hashtags:
-        "#sharingiscaring #greekplatter #friends #familytime #greeknight #souvlaki #gyros #greekfeast",
+        "#epicplatters #sharingiscaring #greekfeast #favouritepeople #mixedgrill #souvlaki #gyros #greeknight",
+    },
+    {
+      id: 5,
+      image: "/Rectangle 36.png",
+      alt: "Golden grilled Greek specialties",
+      text: "Golden, grilled to perfection - every skewer tells a story of Greek tradition! 🔥🥄",
+      hashtags:
+        "#goldenperfection #grillmaster #everyskewermatters #greektradition #grilled #souvlaki #perfection #flamecooked",
+    },
+    {
+      id: 6,
+      image: "/instagram_03.jpg",
+      alt: "Mouthwatering Greek feast",
+      text: "When the aroma hits and you know it's going to be absolutely divine! 🤤👨‍🍳",
+      hashtags:
+        "#aromatherapy #absolutelydivine #mouthwatering #greekchef #divinegreekfood #aromahits #greekfeast #chefsspecial",
+    },
+    {
+      id: 7,
+      image: "/instagram_04.jpg",
+      alt: "Greek comfort food perfection",
+      text: "Comfort food that hugs your soul - this is what Greek hospitality tastes like! 🤗💛",
+      hashtags:
+        "#comfortfood #hugsforyoursoul #greekhospitality #soulwarming #greekcomfort #heartwarming #tastes like love",
+    },
+    {
+      id: 8,
+      image: "/Rectangle 37.png",
+      alt: "The ultimate Greek experience",
+      text: "The ultimate Greek experience on a plate - come hungry, leave happy! 🍽️😊",
+      hashtags:
+        "#ultimategreek #comeingry #leavehappy #greekexperience #happiness #ultimateexperience #greekjoy #happyvibes",
     },
   ];
 
@@ -73,6 +108,11 @@ const FollowUsSection = () => {
             <div
               key={post.id}
               className="relative aspect-square group cursor-pointer overflow-hidden"
+              onClick={() =>
+                setActivePost(activePost === post.id ? null : post.id)
+              }
+              onMouseEnter={() => setActivePost(post.id)}
+              onMouseLeave={() => setActivePost(null)}
             >
               {/* Image */}
               <div className="relative w-full h-full">
@@ -80,12 +120,18 @@ const FollowUsSection = () => {
                   src={post.image}
                   alt={post.alt}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className={`object-cover transition-transform duration-300 ${
+                    activePost === post.id ? "scale-105" : ""
+                  }`}
                 />
               </div>
 
               {/* Sliding Text Overlay */}
-              <div className="absolute inset-x-0 bottom-0 h-full bg-[#0D71C9] bg-opacity-90 text-white p-4 flex flex-col justify-center items-center text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
+              <div
+                className={`absolute inset-x-0 bottom-0 h-full bg-[#0D71C9] bg-opacity-90 text-white p-4 flex flex-col justify-center items-center text-center transform transition-transform duration-500 ease-in-out ${
+                  activePost === post.id ? "translate-y-0" : "translate-y-full"
+                }`}
+              >
                 <div className="space-y-3">
                   <p className="text-sm lg:text-base font-medium leading-relaxed">
                     {post.text}
