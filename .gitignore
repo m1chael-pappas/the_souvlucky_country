@@ -36,3 +36,4 @@ next-env.d.ts
 
 # Windows Zone.Identifier files
 *:Zone.Identifier
+CLAUDE.md
