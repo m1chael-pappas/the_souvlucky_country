@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 
+// Enable ISR - revalidate every hour for social media content
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Home - Authentic Greek Restaurant in Parramatta",
   description:

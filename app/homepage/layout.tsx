@@ -1,5 +1,3 @@
-"use client";
-
 interface HomepageLayoutProps {
   children: React.ReactNode;
   hero: React.ReactNode;
