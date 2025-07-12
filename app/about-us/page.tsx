@@ -83,7 +83,7 @@ export default function AboutUs() {
                 Bondi Junction, inspired by the food and family spirit of our
                 Greek heritage. With recipes handed down through generations, we
                 brought the aromas and flavours of Greece—oregano, lemon,
-                grilled meats—to Sydney's Eastern suburbs. It was a humble
+                grilled meats—to Sydney&apos;s Eastern suburbs. It was a humble
                 start, but one full of heart.
               </p>
             </div>
@@ -156,7 +156,7 @@ export default function AboutUs() {
             Book a Table
           </h2>
           <p className="text-gray-700 leading-relaxed text-lg mb-8">
-            Whether it's your first visit or your fiftieth, there's always
+            Whether it&apos;s your first visit or your fiftieth, there&apos;s always
             something special waiting for you at SouvLucky Country.
           </p>
           <Link href="/reservations">
