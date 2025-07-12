@@ -64,11 +64,11 @@ const MostPopular = () => {
             <h2 className="text-4xl font-bold text-[#0D71C9] mb-4">
               Most popular
             </h2>
-            <p className="text-gray-600 max-w-2xl">
+            {/* <p className="text-gray-600 max-w-2xl">
               Greek cuisine has a variety of flavours, tastes and colours.
               Delicious plates, best ingredients that remind us the energy and
               the passion of Athens or the summer breeze of the Greek islands.
-            </p>
+            </p> */}
           </div>
 
           {/* Navigation Arrows - Commented out for now, may need later */}
