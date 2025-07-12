@@ -10,7 +10,7 @@ const FollowUsSection = () => {
     {
       id: 1,
       image: "/instagram_01.jpg",
-      alt: "Succulent Greek gyros with fresh pita",
+      alt: "Close-up of juicy lamb gyros wrapped in warm pita bread with fresh vegetables and tzatziki sauce",
       text: "Succulent, crispy, flavoursome slow-cooked lamb gyros that'll make your taste buds dance! 😋🇬🇷",
       hashtags:
         "#thesouvluckycountry #parramattaeats #sydneyeats #lambgyros #greekgyros #succulent #crispy #yummyinmytummy #greekfoodporn #souvlucky",
@@ -18,7 +18,7 @@ const FollowUsSection = () => {
     {
       id: 2,
       image: "/instagram_02.jpg",
-      alt: "Fresh traditional Greek ingredients",
+      alt: "Fresh Mediterranean ingredients including tomatoes, onions, herbs and olive oil used in Greek cooking",
       text: "Fresh ingredients meet ancient recipes - this is how authentic Greek magic happens! ✨🍽️",
       hashtags:
         "#authenticgreek #freshingredients #traditionalrecipes #greekmagic #homemade #mediterraneanlove #greekflavors #foodieheaven",
@@ -26,7 +26,7 @@ const FollowUsSection = () => {
     {
       id: 3,
       image: "/Rectangle 39.png",
-      alt: "Greek food passion and heritage",
+      alt: "Traditional Greek mezze platter showcasing authentic Mediterranean dishes and family recipes",
       text: "Taste the passion of Athens in every bite - where tradition meets incredible flavour! 🏛️💙",
       hashtags:
         "#greekpassion #athensvibes #greekheritage #incredibleflavour #traditionmeetsflavour #mediterranean #authenticgreek #greektradition",
@@ -34,7 +34,7 @@ const FollowUsSection = () => {
     {
       id: 4,
       image: "/Rectangle 40.png",
-      alt: "Mixed Greek sharing platter",
+      alt: "Large Greek sharing platter with mixed grilled meats, pita bread, salads and traditional sides",
       text: "Epic Greek platters perfect for sharing with your favourite people! 👥🍖",
       hashtags:
         "#epicplatters #sharingiscaring #greekfeast #favouritepeople #mixedgrill #souvlaki #gyros #greeknight",
@@ -42,7 +42,7 @@ const FollowUsSection = () => {
     {
       id: 5,
       image: "/Rectangle 36.png",
-      alt: "Golden grilled Greek specialties",
+      alt: "Golden grilled souvlaki skewers cooked to perfection over open flame",
       text: "Golden, grilled to perfection - every skewer tells a story of Greek tradition! 🔥🥄",
       hashtags:
         "#goldenperfection #grillmaster #everyskewermatters #greektradition #grilled #souvlaki #perfection #flamecooked",
@@ -50,7 +50,7 @@ const FollowUsSection = () => {
     {
       id: 6,
       image: "/instagram_03.jpg",
-      alt: "Mouthwatering Greek feast",
+      alt: "Complete Greek feast spread with souvlaki, gyros, Greek salad and traditional accompaniments",
       text: "When the aroma hits and you know it's going to be absolutely divine! 🤤👨‍🍳",
       hashtags:
         "#aromatherapy #absolutelydivine #mouthwatering #greekchef #divinegreekfood #aromahits #greekfeast #chefsspecial",
@@ -58,7 +58,7 @@ const FollowUsSection = () => {
     {
       id: 7,
       image: "/instagram_04.jpg",
-      alt: "Greek comfort food perfection",
+      alt: "Hearty Greek comfort food featuring traditional recipes and generous portions",
       text: "Comfort food that hugs your soul - this is what Greek hospitality tastes like! 🤗💛",
       hashtags:
         "#comfortfood #hugsforyoursoul #greekhospitality #soulwarming #greekcomfort #heartwarming #tastes like love",
@@ -66,7 +66,7 @@ const FollowUsSection = () => {
     {
       id: 8,
       image: "/Rectangle 37.png",
-      alt: "The ultimate Greek experience",
+      alt: "Ultimate Greek dining experience plate with variety of authentic Mediterranean specialties",
       text: "The ultimate Greek experience on a plate - come hungry, leave happy! 🍽️😊",
       hashtags:
         "#ultimategreek #comeingry #leavehappy #greekexperience #happiness #ultimateexperience #greekjoy #happyvibes",

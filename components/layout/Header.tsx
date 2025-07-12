@@ -29,11 +29,20 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md py-4" : "bg-transparent py-8"
-      }`}
-    >
+    <>
+      {/* Skip Link for Accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#0D71C9] text-white px-4 py-2 rounded z-[60] focus:z-[60]"
+      >
+        Skip to main content
+      </a>
+      
+      <header
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          scrolled ? "bg-white shadow-md py-4" : "bg-transparent py-8"
+        }`}
+      >
       <div className="flex items-center gap-8 ml-5">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -49,7 +58,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">
           <Link
             href="/homepage"
             className={`transition-colors duration-200 text-2xl tracking-wide ${
@@ -111,6 +120,8 @@ const Header = () => {
           className="lg:hidden flex flex-col gap-1 p-2 ml-auto mr-5"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           <span
             className={`w-6 h-0.5 bg-current transition-all duration-300 ${
@@ -132,8 +143,8 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-24 bg-white bg-opacity-95 backdrop-blur-sm">
-          <nav className="flex flex-col items-center gap-8 pt-8">
+        <div id="mobile-menu" className="lg:hidden fixed inset-0 top-24 bg-white bg-opacity-95 backdrop-blur-sm">
+          <nav className="flex flex-col items-center gap-8 pt-8" role="navigation" aria-label="Mobile navigation">
             <Link
               href="/homepage"
               className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
@@ -177,6 +188,7 @@ const Header = () => {
         </div>
       )}
     </header>
+    </>
   );
 };
 

@@ -12,9 +12,9 @@ const Footer = () => {
     <footer id='footer' className="bg-[#0D71C9] w-full py-10 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h1 className="text-white text-3xl md:text-4xl text-center font-sedgwick mb-12">
+        <h2 className="text-white text-3xl md:text-4xl text-center font-sedgwick mb-12">
           Locations & Hours
-        </h1>
+        </h2>
 
         {/* Content Container */}
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16">

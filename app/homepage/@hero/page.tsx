@@ -9,9 +9,9 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-8 z-20">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold mt-50 text-gray-800 leading-tight">
+              <h2 className="text-5xl lg:text-6xl font-bold mt-50 text-gray-800 leading-tight">
                 Taste of Greece
-              </h1>
+              </h2>
 
               <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
                 Greek cuisine has a variety of flavours, tastes and colours.
@@ -44,7 +44,7 @@ export default function Hero() {
             <div className="absolute -top-20 -right-0 ">
               <Image
                 src="/home_hero.png"
-                alt="Greek Food Visual 1"
+                alt="Traditional Greek food spread featuring souvlaki, gyros, and Mediterranean dishes at The Souvlucky Country"
                 width={1000}
                 height={1000}
                 className="w-full h-full object-contain"

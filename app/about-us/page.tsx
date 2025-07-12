@@ -69,7 +69,7 @@ export default function AboutUs() {
             <div className="relative h-96">
               <Image
                 src="/about_01.png"
-                alt="SouvLucky Country Bondi Location"
+                alt="The original SouvLucky Country restaurant in Bondi Junction where the family business began in 2015"
                 fill
                 className="object-cover rounded-lg shadow-lg"
               />
@@ -109,7 +109,7 @@ export default function AboutUs() {
             <div className="relative h-96">
               <Image
                 src="/about_02_update.png"
-                alt="SouvLucky Country Parramatta Location"
+                alt="SouvLucky Country current location in Parramatta showcasing the warm, welcoming restaurant atmosphere"
                 fill
                 className="object-cover rounded-lg shadow-lg"
               />
@@ -125,7 +125,7 @@ export default function AboutUs() {
             <div className="relative h-96">
               <Image
                 src="/about_03_update.png"
-                alt="Maria and Harry - SouvLucky Country Owners"
+                alt="Maria and Harry, the husband and wife owners of SouvLucky Country, in their Parramatta restaurant kitchen"
                 fill
                 className="object-cover rounded-lg shadow-lg"
               />

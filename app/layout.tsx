@@ -159,7 +159,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <MantineProvider>
           <Header />
-          <main>
+          <main id="main-content">
             {children} <Analytics />
           </main>
           <Footer />
