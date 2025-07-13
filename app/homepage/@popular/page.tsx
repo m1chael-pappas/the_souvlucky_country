@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const MostPopular = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -97,18 +98,29 @@ const MostPopular = () => {
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-              <div key={slideIndex} className="w-full p-3 flex-shrink-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div key={slideIndex} className="w-full p-3 pb-8 flex-shrink-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                   {popularItems
                     .slice(
                       slideIndex * itemsPerSlide,
                       (slideIndex + 1) * itemsPerSlide
                     )
-                    .map((item) => (
-                      <div
+                    .map((item, index) => (
+                      <motion.div
                         key={item.id}
-                        className="bg-white  rounded-2xl p-6 shadow-lg/20 hover:shadow-md transition-shadow duration-200"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ 
+                          duration: 0.5, 
+                          delay: index * 0.1,
+                          ease: "easeOut" 
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.98 }}
                       >
+                        <Link href="/menu" className="block">
+                          <div className="bg-white rounded-2xl p-6 shadow-lg/20 hover:shadow-md transition-shadow duration-200 cursor-pointer"
+                          >
                         {/* Food Image */}
                         <div className="relative w-full h-64 mb-6 bg-gray-100 rounded-xl overflow-hidden">
                           <Image
@@ -147,7 +159,9 @@ const MostPopular = () => {
                             </span>
                           </div>
                         </div>
-                      </div>
+                          </div>
+                        </Link>
+                      </motion.div>
                     ))}
                 </div>
               </div>
@@ -155,22 +169,6 @@ const MostPopular = () => {
           </div>
         </div>
 
-        {/* Dots Indicator */}
-        <div className="flex justify-center mt-8 gap-2">
-          {Array.from({ length: totalSlides }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                index === currentSlide
-                  ? "bg-[#0D71C9]"
-                  : "bg-gray-300 hover:bg-gray-400"
-              }`}
-              aria-label={`Go to slide ${index + 1} of ${totalSlides}`}
-              aria-current={index === currentSlide ? "true" : "false"}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );

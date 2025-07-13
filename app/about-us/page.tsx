@@ -177,7 +177,7 @@ export default function AboutUs() {
             something special waiting for you at SouvLucky Country.
           </p>
           <Link href="/reservations">
-            <button className="bg-[#0D71C9] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors duration-200">
+            <button className="bg-[#0D71C9] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors duration-200 cursor-pointer">
               Discover More
             </button>
           </Link>

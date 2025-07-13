@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const FollowUsSection = () => {
@@ -87,7 +87,7 @@ const FollowUsSection = () => {
               href="https://instagram.com/the_souvlucky_country"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#0D71C9] text-white px-8 py-3 rounded-full font-medium hover:bg-[#0A4E8C] transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-[#0D71C9] text-white px-8 py-3 rounded-full font-medium hover:bg-[#0A4E8C] transition-all duration-200 hover:scale-105"
               aria-label="Follow SouvLucky Country on Instagram (opens in new tab)"
             >
               <svg
@@ -105,8 +105,17 @@ const FollowUsSection = () => {
 
         {/* Instagram Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 max-w-6xl mx-auto">
-          {socialPosts.map((post) => (
-            <button
+          {socialPosts.map((post, index) => (
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.1,
+                ease: "easeOut" 
+              }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               key={post.id}
               className="relative aspect-square group cursor-pointer overflow-hidden w-full h-full border-0 bg-transparent p-0"
               onClick={() =>
@@ -160,7 +169,7 @@ const FollowUsSection = () => {
                   </div>
                 </div>
               </div>
-            </button>
+            </motion.button>
           ))}
         </div>
       </div>

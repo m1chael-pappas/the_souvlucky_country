@@ -148,7 +148,7 @@ export default function ReservationsPage() {
             type="submit"
             variant={"default"}
             size={"lg"}
-            className="bg-[#0D71C9] hover:bg-[#0c5da3] text-white py-7 px-15 rounded-full text-xl! font-semibold transition-colors duration-200"
+            className="bg-[#0D71C9] hover:bg-[#0c5da3] text-white py-7 px-15 rounded-full text-xl! font-semibold transition-colors duration-200 cursor-pointer"
           >
             Send
           </Button>

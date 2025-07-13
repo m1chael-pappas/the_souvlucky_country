@@ -1,13 +1,27 @@
-import Link from "next/link";
+"use client";
 
+import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Container } from "@mantine/core";
 
 export default function Story() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+  
+  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.8, 1, 1, 0.8]);
   return (
-    <div
+    <motion.div
+      ref={ref}
       className="bg-white h-196 flex items-center justify-center bg-cover bg-center"
       style={{
         backgroundImage: "url(/souvlucky3.png)",
+        opacity,
+        scale,
       }}
     >
       <Container
@@ -23,11 +37,11 @@ export default function Story() {
         </p>
 
         <Link href="/about-us">
-          <button className="bg-[#0D71C9] text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors duration-200">
+          <button className="bg-[#0D71C9] text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors duration-200 cursor-pointer">
             Discover More
           </button>
         </Link>
       </Container>
-    </div>
+    </motion.div>
   );
 }
