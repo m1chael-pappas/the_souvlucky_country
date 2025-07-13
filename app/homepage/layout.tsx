@@ -1,7 +1,7 @@
 interface HomepageLayoutProps {
   children: React.ReactNode;
   hero: React.ReactNode;
-  popular?: React.ReactNode;
+  popular: React.ReactNode;
   menu: React.ReactNode;
   social: React.ReactNode;
   story: React.ReactNode;

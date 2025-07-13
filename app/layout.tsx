@@ -157,6 +157,7 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+
       </head>
       <body className={inter.className}>
         <MantineProvider>

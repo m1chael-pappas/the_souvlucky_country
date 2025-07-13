@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Container } from "@mantine/core";
+import { Container } from '@mantine/core';
 
 export const metadata: Metadata = {
   title: "About Us - SouvLucky Country",
@@ -38,7 +38,10 @@ export default function AboutUs() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="mt-40 relative flex items-center justify-center" style={{ height: "500px" }}>
+      <div
+        className="mt-40 relative flex items-center justify-center"
+        style={{ height: "500px" }}
+      >
         <Image
           src="/about_header.png"
           alt="SouvLucky Country restaurant interior showcasing authentic Greek atmosphere"
@@ -173,8 +176,8 @@ export default function AboutUs() {
             Book a Table
           </h2>
           <p className="text-gray-700 leading-relaxed text-lg mb-8">
-            Whether it&apos;s your first visit or your fiftieth, there&apos;s always
-            something special waiting for you at SouvLucky Country.
+            Whether it&apos;s your first visit or your fiftieth, there&apos;s
+            always something special waiting for you at SouvLucky Country.
           </p>
           <Link href="/reservations">
             <button className="bg-[#0D71C9] text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors duration-200 cursor-pointer">
