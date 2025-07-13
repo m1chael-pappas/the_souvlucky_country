@@ -1,26 +1,92 @@
 "use client";
 
-import React from 'react';
-import Script from 'next/script';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function ReservationsPage() {
+  const [buttonReady, setButtonReady] = useState(false);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+
+  useEffect(() => {
+    // Force load and cache the Quandoo script
+    const loadQuandooScript = () => {
+      // Check if script is already cached in localStorage
+      const cachedScript = localStorage.getItem('quandoo-widget-script');
+      const scriptVersion = '1.0.0'; // Change this to force re-cache if needed
+      
+      if (cachedScript && localStorage.getItem('quandoo-script-version') === scriptVersion) {
+        // Execute cached script
+        try {
+          const scriptFunc = new Function(cachedScript);
+          scriptFunc();
+          console.log('Quandoo script loaded from cache');
+          setScriptLoaded(true);
+          initializeButton();
+          return;
+        } catch (error) {
+          console.error('Cached script execution failed:', error);
+          localStorage.removeItem('quandoo-widget-script');
+          localStorage.removeItem('quandoo-script-version');
+        }
+      }
+
+      // Load script fresh and cache it
+      const script = document.createElement('script');
+      script.src = 'https://s3-eu-west-1.amazonaws.com/quandoo-website/widget-builder/quandoo-widget-builder.js';
+      script.onload = () => {
+        console.log('Quandoo script loaded fresh');
+        setScriptLoaded(true);
+        
+        // Cache the script content
+        fetch(script.src)
+          .then(response => response.text())
+          .then(scriptContent => {
+            localStorage.setItem('quandoo-widget-script', scriptContent);
+            localStorage.setItem('quandoo-script-version', scriptVersion);
+            console.log('Quandoo script cached');
+          })
+          .catch(error => console.error('Failed to cache script:', error));
+        
+        initializeButton();
+      };
+      script.onerror = () => {
+        console.error('Failed to load Quandoo script');
+        setButtonReady(true); // Show fallback button
+      };
+      
+      document.head.appendChild(script);
+    };
+
+    const initializeButton = () => {
+      // Force re-initialize the button
+      setTimeout(() => {
+        const buttonContainer = document.querySelector('.quandoo-widget-builder');
+        if (buttonContainer && (window as any).QuandooWidgetBuilder) {
+          try {
+            (window as any).QuandooWidgetBuilder.init();
+            console.log('Quandoo button initialized');
+            setButtonReady(true);
+          } catch (error) {
+            console.error('Button initialization failed:', error);
+            setButtonReady(true); // Show fallback
+          }
+        } else {
+          console.log('Button container or QuandooWidgetBuilder not found, retrying...');
+          setTimeout(initializeButton, 500);
+        }
+      }, 100);
+    };
+
+    loadQuandooScript();
+  }, []);
+
+  const openQuandooDirectly = () => {
+    // Fallback: open Quandoo directly in new tab
+    window.open('https://www.quandoo.com.au/restaurants/105769', '_blank');
+  };
 
   return (
     <>
-      {/* Quandoo Booking Script */}
-      <Script
-        src="https://booking-widget.quandoo.com/index.js"
-        strategy="afterInteractive"
-        data-merchant-id="105769"
-        data-theme="brand"
-        onLoad={() => {
-          console.log('Quandoo booking widget loaded successfully');
-        }}
-        onError={(e) => {
-          console.error('Failed to load Quandoo booking widget:', e);
-        }}
-      />
       
       <div className="min-h-screen bg-blue-50 py-36">
       {/* Title */}
@@ -67,8 +133,27 @@ export default function ReservationsPage() {
 
           {/* Quandoo Widget Container */}
           <div className="flex justify-center">
-            <div className="w-full max-w-2xl">
-              <div id="quandoo-booking-widget" className="min-h-[500px]"></div>
+            <div className="w-full max-w-2xl text-center">
+              {/* Always show the button container */}
+              <div 
+                className="quandoo-widget-builder" 
+                data-config='{"format":"text-button","bgcolor":"#0D71C9","txcolor":"#ffffff","round":"yes","position":"center","font":"md","merchant":105769,"txt":"Book Now"}'
+              ></div>
+              
+              {/* Fallback button if Quandoo fails */}
+              {buttonReady && !scriptLoaded && (
+                <div className="text-center mt-4">
+                  <button
+                    onClick={openQuandooDirectly}
+                    className="bg-[#0D71C9] text-white px-8 py-3 rounded-lg hover:bg-[#03233C] transition-colors font-medium"
+                  >
+                    Book Now
+                  </button>
+                  <p className="text-sm text-gray-500 mt-2">
+                    Click here to make a reservation directly
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>

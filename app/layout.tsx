@@ -148,7 +148,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#0D71C9" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/site.webmanifest" />
 
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -158,12 +158,9 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link rel="preconnect" href="https://booking-widget.quandoo.com" />
+        <link rel="preconnect" href="https://www.quandoo.com.au" />
+        <link rel="preconnect" href="https://assets-www.prod.quandoo.com" />
 
-        {/* Content Security Policy */}
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="script-src 'self' 'unsafe-inline' https://booking-widget.quandoo.com https://vercel.live https://*.vercel-insights.com; object-src 'none';"
-        />
 
       </head>
       <body className={inter.className}>
