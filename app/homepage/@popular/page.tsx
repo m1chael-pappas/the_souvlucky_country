@@ -113,10 +113,14 @@ const MostPopular = () => {
                         <div className="relative w-full h-64 mb-6 bg-gray-100 rounded-xl overflow-hidden">
                           <Image
                             src={item.image}
-                            alt={item.name}
+                            alt={`${item.name} - Premium Greek dish at SouvLucky Country restaurant`}
                             fill
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            priority={item.id <= 3} // Priority for first 3 items (above fold)
+                            quality={80}
+                            placeholder="blur"
+                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z"
                           />
                         </div>
 
@@ -162,6 +166,8 @@ const MostPopular = () => {
                   ? "bg-[#0D71C9]"
                   : "bg-gray-300 hover:bg-gray-400"
               }`}
+              aria-label={`Go to slide ${index + 1} of ${totalSlides}`}
+              aria-current={index === currentSlide ? "true" : "false"}
             />
           ))}
         </div>

@@ -7,6 +7,7 @@ import { Inter } from "next/font/google";
 
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import ImagePreloader from "@/components/ImagePreloader";
 import {
   ColorSchemeScript,
   mantineHtmlProps,
@@ -159,6 +160,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <MantineProvider>
+          <ImagePreloader />
           <Header />
           <main id="main-content">
             {children} <Analytics /> <SpeedInsights />

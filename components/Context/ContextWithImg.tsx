@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const ContentWithImage = () => {
   return (
@@ -27,10 +28,16 @@ const ContentWithImage = () => {
         </button>
       </div>
       <div className="relative flex-shrink-0 w-[500px] h-[500px]">
-        <img
+        <Image
           className="object-none object-left-bottom max-w-xs max-h-fit"
           src="/souvlucky1.jpeg"
-          alt="Souvlucky"
+          alt="Authentic Greek food preparation at SouvLucky Country - handmade with traditional recipes"
+          width={500}
+          height={500}
+          sizes="500px"
+          quality={80}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z"
         />
       </div>
     </div>

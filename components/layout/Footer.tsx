@@ -54,6 +54,7 @@ const Footer = () => {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                title="Interactive map showing SouvLucky Country restaurant location at 316 Church St, Parramatta NSW 2150"
               />
             )}
           </div>

@@ -88,6 +88,7 @@ const FollowUsSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#0D71C9] text-white px-8 py-3 rounded-full font-medium hover:bg-[#0A4E8C] transition-colors duration-200"
+              aria-label="Follow SouvLucky Country on Instagram (opens in new tab)"
             >
               <svg
                 className="w-5 h-5"
@@ -105,14 +106,23 @@ const FollowUsSection = () => {
         {/* Instagram Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 max-w-6xl mx-auto">
           {socialPosts.map((post) => (
-            <div
+            <button
               key={post.id}
-              className="relative aspect-square group cursor-pointer overflow-hidden"
+              className="relative aspect-square group cursor-pointer overflow-hidden w-full h-full border-0 bg-transparent p-0"
               onClick={() =>
                 setActivePost(activePost === post.id ? null : post.id)
               }
               onMouseEnter={() => setActivePost(post.id)}
               onMouseLeave={() => setActivePost(null)}
+              aria-label={`View Instagram post: ${post.text.substring(0, 50)}...`}
+              aria-expanded={activePost === post.id}
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setActivePost(activePost === post.id ? null : post.id);
+                }
+              }}
             >
               {/* Image */}
               <div className="relative w-full h-full">
@@ -123,6 +133,11 @@ const FollowUsSection = () => {
                   className={`object-cover transition-transform duration-300 ${
                     activePost === post.id ? "scale-105" : ""
                   }`}
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw"
+                  priority={post.id <= 4} // Priority for first 4 visible images
+                  quality={75}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z"
                 />
               </div>
 
@@ -145,7 +160,7 @@ const FollowUsSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
