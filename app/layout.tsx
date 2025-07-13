@@ -157,6 +157,13 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        <link rel="preconnect" href="https://booking-widget.quandoo.com" />
+
+        {/* Content Security Policy */}
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="script-src 'self' 'unsafe-inline' https://booking-widget.quandoo.com https://vercel.live https://*.vercel-insights.com; object-src 'none';"
+        />
 
       </head>
       <body className={inter.className}>

@@ -1,24 +1,28 @@
 "use client";
 
-import React, { useEffect } from 'react';
-
+import React from 'react';
+import Script from 'next/script';
 import Image from 'next/image';
 
 export default function ReservationsPage() {
-  useEffect(() => {
-    // Always load Quandoo booking widget script
-    const script = document.createElement("script");
-    script.src = "https://booking-widget.quandoo.com/index.js";
-    script.setAttribute("data-merchant-id", "105769");
-    script.setAttribute("data-theme", "brand");
-    script.async = true;
-
-    // Always add the script
-    document.head.appendChild(script);
-  }, []);
 
   return (
-    <div className="min-h-screen bg-blue-50 py-36">
+    <>
+      {/* Quandoo Booking Script */}
+      <Script
+        src="https://booking-widget.quandoo.com/index.js"
+        strategy="afterInteractive"
+        data-merchant-id="105769"
+        data-theme="brand"
+        onLoad={() => {
+          console.log('Quandoo booking widget loaded successfully');
+        }}
+        onError={(e) => {
+          console.error('Failed to load Quandoo booking widget:', e);
+        }}
+      />
+      
+      <div className="min-h-screen bg-blue-50 py-36">
       {/* Title */}
       <h1 className="text-5xl font-semibold font-sedgwick text-center text-[#0D71C9] mb-8">
         Make a reservation
@@ -80,5 +84,6 @@ export default function ReservationsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
