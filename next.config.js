@@ -118,10 +118,112 @@ const nextConfig = {
     
     async redirects() {
       return [
+        // Legacy menu redirects
         {
           source: '/our-menu',
           destination: '/menu',
-          permanent: true, // 301 redirect for SEO
+          permanent: true,
+        },
+        {
+          source: '/food-menu',
+          destination: '/menu',
+          permanent: true,
+        },
+        {
+          source: '/menu-items',
+          destination: '/menu',
+          permanent: true,
+        },
+        
+        // Common restaurant page variations
+        {
+          source: '/home',
+          destination: '/?utm_source=redirect&utm_medium=home',
+          permanent: true,
+        },
+        {
+          source: '/restaurant',
+          destination: '/?utm_source=redirect&utm_medium=restaurant',
+          permanent: true,
+        },
+        {
+          source: '/about',
+          destination: '/about-us',
+          permanent: true,
+        },
+        {
+          source: '/contact',
+          destination: '/#footer',
+          permanent: true,
+        },
+        {
+          source: '/location',
+          destination: '/#footer',
+          permanent: true,
+        },
+        {
+          source: '/hours',
+          destination: '/#footer', 
+          permanent: true,
+        },
+        {
+          source: '/book',
+          destination: '/reservations',
+          permanent: true,
+        },
+        {
+          source: '/booking',
+          destination: '/reservations',
+          permanent: true,
+        },
+        {
+          source: '/reserve',
+          destination: '/reservations',
+          permanent: true,
+        },
+        
+        // Food-specific redirects for SEO
+        {
+          source: '/greek-food',
+          destination: '/menu?utm_source=redirect&utm_medium=greek-food',
+          permanent: true,
+        },
+        {
+          source: '/souvlaki-menu',
+          destination: '/souvlaki',
+          permanent: true,
+        },
+        {
+          source: '/greek-restaurant',
+          destination: '/?utm_source=redirect&utm_medium=greek-restaurant',
+          permanent: true,
+        },
+        
+        // Social media redirects
+        {
+          source: '/facebook',
+          destination: 'https://www.facebook.com/SouvLuckyCountryParra/',
+          permanent: true,
+        },
+        {
+          source: '/instagram',
+          destination: 'https://www.instagram.com/the_souvlucky_country/?hl=en',
+          permanent: true,
+        },
+        {
+          source: '/tripadvisor',
+          destination: 'https://www.tripadvisor.com.au/Restaurant_Review-g1234132-d20151018-Reviews-The_Souvlucky_Country-Parramatta_Greater_Sydney_New_South_Wales.html',
+          permanent: true,
+        },
+        {
+          source: '/doordash',
+          destination: 'https://www.doordash.com/en-AU/store/souvlucky-country-parramatta-24317144/17387354/',
+          permanent: true,
+        },
+        {
+          source: '/delivery',
+          destination: 'https://www.doordash.com/en-AU/store/souvlucky-country-parramatta-24317144/17387354/',
+          permanent: true,
         },
       ];
     },

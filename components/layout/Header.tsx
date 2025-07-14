@@ -1,8 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState,
+} from 'react';
 
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+
+import { LogoSVG } from '@/components/ui/LogoSVG';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,167 +35,168 @@ const Header = () => {
   return (
     <>
       {/* Skip Link for Accessibility */}
-      <a 
-        href="#main-content" 
+      <a
+        href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#0D71C9] text-white px-4 py-2 rounded z-[60] focus:z-[60]"
       >
         Skip to main content
       </a>
-      
+
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           scrolled ? "bg-white shadow-md py-4" : "bg-transparent py-8"
         }`}
       >
-      <div className="flex items-center gap-8 ml-5">
-        {/* Logo */}
-        <div className="flex-shrink-0">
-          <Link href="/homepage">
-            <Image
-              src="/logo.png"
-              alt="SouvLucky Country Logo"
-              width={200}
-              height={100}
-              priority
-              sizes="200px"
-              quality={90}
-              placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z"
-            />
-          </Link>
-        </div>
+        <div className="flex items-center gap-8 ml-5">
+          {/* Logo */}
+          <div className="flex-shrink-0 bg-transparent">
+            <Link href="/homepage" className="block bg-transparent">
+              <LogoSVG width={200} height={100} />
+            </Link>
+          </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">
-          <Link
-            href="/homepage"
-            className={`transition-colors duration-200 text-2xl tracking-wide ${
-              scrolled
-                ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
-                : "text-[#03233C] hover:text-[#0A4E8C] hover:underline"
-            }`}
+          {/* Desktop Navigation */}
+          <nav
+            className="hidden lg:flex items-center gap-8"
+            role="navigation"
+            aria-label="Main navigation"
           >
-            Home
-          </Link>
-
-          <Link
-            href="/about-us"
-            className={`transition-colors duration-200 text-2xl tracking-wide ${
-              scrolled
-                ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
-                : "text-[#03233C] hover:text-[#0A4E8C] hover:underline"
-            }`}
-          >
-            About Us
-          </Link>
-
-          <Link
-            href="/menu"
-            className={`transition-colors duration-200 text-2xl tracking-wide ${
-              scrolled
-                ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
-                : "text-[#03233C] hover:text-[#0A4E8C] hover:underline"
-            }`}
-          >
-            Menu
-          </Link>
-
-          <Link
-            href="/reservations"
-            className={`transition-colors duration-200 text-2xl tracking-wide ${
-              scrolled
-                ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
-                : "text-[#03233C] hover:text-[#0A4E8C] hover:underline"
-            }`}
-          >
-            Reservations
-          </Link>
-
-          <Link
-            href="#footer"
-            className={`transition-colors duration-200 text-2xl tracking-wide ${
-              scrolled
-                ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
-                : "text-[#03233C] hover:text-[#0A4E8C] hover:underline"
-            }`}
-          >
-            Location & Hours
-          </Link>
-        </nav>
-
-        {/* Mobile Hamburger Button */}
-        <button
-          className="lg:hidden flex flex-col gap-1 p-2 ml-auto mr-5"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-          aria-expanded={mobileMenuOpen}
-          aria-controls="mobile-menu"
-        >
-          <span
-            className={`w-6 h-0.5 bg-current transition-all duration-300 ${
-              mobileMenuOpen ? "rotate-45 translate-y-2" : ""
-            } ${scrolled ? "text-[#0D71C9]" : "text-[#03233C]"}`}
-          ></span>
-          <span
-            className={`w-6 h-0.5 bg-current transition-all duration-300 ${
-              mobileMenuOpen ? "opacity-0" : ""
-            } ${scrolled ? "text-[#0D71C9]" : "text-[#03233C]"}`}
-          ></span>
-          <span
-            className={`w-6 h-0.5 bg-current transition-all duration-300 ${
-              mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-            } ${scrolled ? "text-[#0D71C9]" : "text-[#03233C]"}`}
-          ></span>
-        </button>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      {mobileMenuOpen && (
-        <div id="mobile-menu" className="lg:hidden fixed inset-0 top-24 bg-white bg-opacity-95 backdrop-blur-sm">
-          <nav className="flex flex-col items-center gap-8 pt-8" role="navigation" aria-label="Mobile navigation">
             <Link
               href="/homepage"
-              className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
-              onClick={closeMobileMenu}
+              className={`transition-colors duration-200 text-2xl tracking-wide ${
+                scrolled
+                  ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
+                  : "text-[#03233C] hover:text-[#0A4E8C] hover:underline"
+              }`}
             >
               Home
             </Link>
 
             <Link
               href="/about-us"
-              className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
-              onClick={closeMobileMenu}
+              className={`transition-colors duration-200 text-2xl tracking-wide ${
+                scrolled
+                  ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
+                  : "text-[#03233C] hover:text-[#0A4E8C] hover:underline"
+              }`}
             >
               About Us
             </Link>
 
             <Link
               href="/menu"
-              className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
-              onClick={closeMobileMenu}
+              className={`transition-colors duration-200 text-2xl tracking-wide ${
+                scrolled
+                  ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
+                  : "text-[#03233C] hover:text-[#0A4E8C] hover:underline"
+              }`}
             >
               Menu
             </Link>
 
             <Link
               href="/reservations"
-              className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
-              onClick={closeMobileMenu}
+              className={`transition-colors duration-200 text-2xl tracking-wide ${
+                scrolled
+                  ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
+                  : "text-[#03233C] hover:text-[#0A4E8C] hover:underline"
+              }`}
             >
               Reservations
             </Link>
 
             <Link
               href="#footer"
-              className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
-              onClick={closeMobileMenu}
+              className={`transition-colors duration-200 text-2xl tracking-wide ${
+                scrolled
+                  ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
+                  : "text-[#03233C] hover:text-[#0A4E8C] hover:underline"
+              }`}
             >
               Location & Hours
             </Link>
           </nav>
+
+          {/* Mobile Hamburger Button */}
+          <button
+            className="lg:hidden flex flex-col gap-1 p-2 ml-auto mr-5"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+          >
+            <span
+              className={`w-6 h-0.5 bg-current transition-all duration-300 ${
+                mobileMenuOpen ? "rotate-45 translate-y-2" : ""
+              } ${scrolled ? "text-[#0D71C9]" : "text-[#03233C]"}`}
+            ></span>
+            <span
+              className={`w-6 h-0.5 bg-current transition-all duration-300 ${
+                mobileMenuOpen ? "opacity-0" : ""
+              } ${scrolled ? "text-[#0D71C9]" : "text-[#03233C]"}`}
+            ></span>
+            <span
+              className={`w-6 h-0.5 bg-current transition-all duration-300 ${
+                mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              } ${scrolled ? "text-[#0D71C9]" : "text-[#03233C]"}`}
+            ></span>
+          </button>
         </div>
-      )}
-    </header>
+
+        {/* Mobile Menu Overlay */}
+        {mobileMenuOpen && (
+          <div
+            id="mobile-menu"
+            className="lg:hidden fixed inset-0 top-24 bg-white bg-opacity-95 backdrop-blur-sm"
+          >
+            <nav
+              className="flex flex-col items-center gap-8 pt-8"
+              role="navigation"
+              aria-label="Mobile navigation"
+            >
+              <Link
+                href="/homepage"
+                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
+                onClick={closeMobileMenu}
+              >
+                Home
+              </Link>
+
+              <Link
+                href="/about-us"
+                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
+                onClick={closeMobileMenu}
+              >
+                About Us
+              </Link>
+
+              <Link
+                href="/menu"
+                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
+                onClick={closeMobileMenu}
+              >
+                Menu
+              </Link>
+
+              <Link
+                href="/reservations"
+                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
+                onClick={closeMobileMenu}
+              >
+                Reservations
+              </Link>
+
+              <Link
+                href="#footer"
+                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
+                onClick={closeMobileMenu}
+              >
+                Location & Hours
+              </Link>
+            </nav>
+          </div>
+        )}
+      </header>
     </>
   );
 };

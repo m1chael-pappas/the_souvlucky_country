@@ -211,6 +211,13 @@ const structuredData = {
       },
     },
   ],
+  sameAs: [
+    "https://www.facebook.com/SouvLuckyCountryParra/",
+    "https://www.instagram.com/the_souvlucky_country/?hl=en",
+    "https://www.tripadvisor.com.au/Restaurant_Review-g1234132-d20151018-Reviews-The_Souvlucky_Country-Parramatta_Greater_Sydney_New_South_Wales.html",
+    "https://www.doordash.com/en-AU/store/souvlucky-country-parramatta-24317144/17387354/",
+    "https://www.ubereats.com/au/store/the-souvlucky-country-parramatta/CawTnbD_QOORDymCMgztBA?srsltid=AfmBOopUu941Yyd_9w09WBGLql-MY1PiexHhbjOknuSXK7kDMecb0qT7",
+  ],
   knowsAbout: [
     "Greek Cuisine",
     "Mediterranean Food",
