@@ -1,20 +1,20 @@
-import "./globals.css";
-import "@mantine/core/styles.css";
-import "@mantine/dates/styles.css";
+import './globals.css';
+import '@mantine/core/styles.css';
+import '@mantine/dates/styles.css';
 
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
-import ImagePreloader from "@/components/ImagePreloader";
+import ImagePreloader from '@/components/ImagePreloader';
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
 import {
   ColorSchemeScript,
   mantineHtmlProps,
   MantineProvider,
-} from "@mantine/core";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+} from '@mantine/core';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,16 +26,26 @@ export const metadata: Metadata = {
   description:
     "Experience authentic Greek cuisine in Parramatta. Family-owned restaurant serving traditional souvlaki, gyros, and Mediterranean dishes since 2015. Book your table today!",
   keywords: [
-    "Greek restaurant Parramatta",
+    "best Greek restaurant Sydney",
+    "authentic Greek food Parramatta",
     "souvlaki Sydney",
-    "authentic Greek food",
-    "Mediterranean cuisine",
     "Greek restaurant near me",
-    "family restaurant Parramatta",
-    "traditional Greek dishes",
+    "traditional Greek dishes Sydney",
+    "Mediterranean cuisine Parramatta",
+    "best Greek food Western Sydney",
     "gyros Sydney",
-    "Greek takeaway",
-    "restaurant reservations Parramatta",
+    "Greek dips Sydney",
+    "spanakopita Sydney",
+    "tzatziki Sydney",
+    "Greek family restaurant",
+    "authentic souvlaki near me",
+    "Greek takeaway Parramatta",
+    "best restaurant Parramatta",
+    "traditional Mediterranean food",
+    "Greek restaurant Church Street",
+    "Parramatta dining",
+    "Sydney Greek cuisine",
+    "fresh Greek food",
   ],
   authors: [{ name: "The Souvlucky Country" }],
   creator: "The Souvlucky Country",
@@ -87,10 +97,16 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
+  "@id": "https://thesouvluckycountry.com.au/#restaurant",
   name: "The Souvlucky Country",
+  alternateName: "Souvlucky Country Greek Restaurant",
   description:
-    "Authentic Greek restaurant serving traditional Mediterranean cuisine in Parramatta",
-  image: "https://thesouvluckycountry.com.au/main_hero.png",
+    "Authentic Greek restaurant serving traditional Mediterranean cuisine in Parramatta, Sydney. Specializing in fresh souvlaki, homemade dips, and traditional Greek dishes.",
+  image: [
+    "https://thesouvluckycountry.com.au/main_hero.png",
+    "https://thesouvluckycountry.com.au/popular_02.png",
+    "https://thesouvluckycountry.com.au/about_01.png",
+  ],
   logo: "https://thesouvluckycountry.com.au/Logo1.png",
   address: {
     "@type": "PostalAddress",
@@ -107,16 +123,109 @@ const structuredData = {
   },
   telephone: "0298914174",
   url: "https://thesouvluckycountry.com.au",
-  servesCuisine: ["Greek", "Mediterranean"],
+  email: "souvlucky62@gmail.com",
+  servesCuisine: ["Greek", "Mediterranean", "European"],
   priceRange: "$$",
+  paymentAccepted: ["Cash", "Credit Card", "Debit Card"],
+  currenciesAccepted: "AUD",
   openingHours: ["Mo-Su 12:00-22:00"],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "12:00",
+      closes: "22:00",
+    },
+  ],
   acceptsReservations: true,
-  hasMenu: "https://thesouvluckycountry.com.au/our-menu/",
+  hasMenu: "https://thesouvluckycountry.com.au/menu",
+  menu: "https://thesouvluckycountry.com.au/menu",
   foundingDate: "2015",
   founder: {
     "@type": "Organization",
     name: "Greek Family Restaurant",
   },
+  amenityFeature: [
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Takeaway Available",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Dine-in Available",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Family Friendly",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Vegetarian Options",
+      value: true,
+    },
+  ],
+  makesOffer: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Restaurant Reservations",
+        description: "Book a table at our authentic Greek restaurant",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Takeaway Service",
+        description: "Fresh Greek food for takeaway",
+      },
+    },
+  ],
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Parramatta",
+      containedInPlace: {
+        "@type": "State",
+        name: "New South Wales",
+      },
+    },
+    {
+      "@type": "City",
+      name: "Sydney",
+      containedInPlace: {
+        "@type": "State",
+        name: "New South Wales",
+      },
+    },
+  ],
+  knowsAbout: [
+    "Greek Cuisine",
+    "Mediterranean Food",
+    "Souvlaki",
+    "Traditional Greek Dishes",
+    "Fresh Ingredients",
+    "Authentic Recipes",
+  ],
+  speciality: [
+    "Authentic Greek Souvlaki",
+    "Homemade Greek Dips",
+    "Traditional Spanakopita",
+    "Fresh Greek Salads",
+    "Mediterranean Mains",
+  ],
 };
 
 export default function RootLayout({
@@ -160,8 +269,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://booking-widget.quandoo.com" />
         <link rel="preconnect" href="https://www.quandoo.com.au" />
         <link rel="preconnect" href="https://assets-www.prod.quandoo.com" />
-
-
       </head>
       <body className={inter.className}>
         <MantineProvider>
