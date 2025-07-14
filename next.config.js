@@ -115,6 +115,16 @@ const nextConfig = {
         },
       ];
     },
+    
+    async redirects() {
+      return [
+        {
+          source: '/our-menu',
+          destination: '/menu',
+          permanent: true, // 301 redirect for SEO
+        },
+      ];
+    },
   };
   
   module.exports = nextConfig;
