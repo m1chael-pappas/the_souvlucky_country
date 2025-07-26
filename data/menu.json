@@ -214,15 +214,15 @@
         "variations": [
           {
             "name": "Pork",
-            "price": "28.00"
+            "price": "23.00"
           },
           {
             "name": "Chicken",
-            "price": "28.00"
+            "price": "23.00"
           },
           {
             "name": "Lamb",
-            "price": "30.00"
+            "price": "25.00"
           }
         ]
       },
@@ -307,7 +307,7 @@
       {
         "name": "Olympus Plate",
         "description": "Fit for the gods! All three skewers, all three gyros meats, bifteki, two dips, haloumi and mountains of chips",
-        "price": "55.00"
+        "price": "79.00"
       }
     ],
     "chips": [

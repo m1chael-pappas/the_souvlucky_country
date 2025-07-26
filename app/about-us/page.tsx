@@ -3,6 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Container } from '@mantine/core';
+import AboutUsHero from '@/components/AboutUsHero';
+
+// Enable static generation for better performance
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "About Us - SouvLucky Country",
@@ -37,38 +41,8 @@ export const metadata: Metadata = {
 export default function AboutUs() {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <div
-        className="mt-40 relative flex items-center justify-center"
-        style={{ height: "500px" }}
-      >
-        <Image
-          src="/about_header.png"
-          alt="SouvLucky Country restaurant interior showcasing authentic Greek atmosphere"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-          quality={85}
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z"
-        />
-        <Container
-          size="lg"
-          className="relative z-10 text-center bg-white bg-opacity-90 p-8 rounded-lg shadow-lg"
-        >
-          <h1 className="text-4xl font-bold text-[#0D71C9] mb-4">
-            SouvLucky Country
-          </h1>
-          <p className="text-gray-700 leading-relaxed text-lg">
-            SouvLucky Country is a family-owned Greek restaurant bringing the
-            heart and soul of the Mediterranean to Parramatta. Inspired by
-            generations of tradition, we serve authentic souvlaki and classic
-            dishes made with passion, warmth, and a whole lot of love. Step
-            inside and discover a little slice of Greece, right here in Sydney.
-          </p>
-        </Container>
-      </div>
+      {/* Hero Section - Client Component with Animation */}
+      <AboutUsHero />
 
       {/* Our Story Begins in Bondi Section */}
       <section className="py-16" style={{ backgroundColor: "#F2FDFF" }}>
@@ -147,7 +121,7 @@ export default function AboutUs() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 quality={80}
                 placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z"
               />
             </div>
             <div className="space-y-6">
