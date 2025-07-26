@@ -5,7 +5,15 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-const MostPopular = () => {
+interface PopularItem {
+  id: number;
+  name: string;
+  description: string | { highlight: string; main: string };
+  price: string;
+  image: string;
+}
+
+export default function PopularSection() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   const popularItems: PopularItem[] = [
@@ -44,18 +52,6 @@ const MostPopular = () => {
   const itemsPerSlide = 3;
   const totalSlides = Math.ceil(popularItems.length / itemsPerSlide);
 
-  interface PopularItem {
-    id: number;
-    name: string;
-    description: string | { highlight: string; main: string };
-    price: string;
-    image: string;
-  }
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
     <section className="py-16  bg-[#F2FDFF]">
       <div className="container mt-30 mb-50 mx-auto px-6">
@@ -65,30 +61,7 @@ const MostPopular = () => {
             <h2 className="text-4xl font-bold text-[#0D71C9] mb-4">
               Most popular
             </h2>
-            {/* <p className="text-gray-600 max-w-2xl">
-              Greek cuisine has a variety of flavours, tastes and colours.
-              Delicious plates, best ingredients that remind us the energy and
-              the passion of Athens or the summer breeze of the Greek islands.
-            </p> */}
           </div>
-
-          {/* Navigation Arrows - Commented out for now, may need later */}
-          {/* <div className="flex gap-2">
-            <button
-              onClick={prevSlide}
-              className="w-12 h-12 rounded-full border-2 border-[#0D71C9] text-[#0D71C9] hover:bg-[#0D71C9] hover:text-white transition-all duration-200 flex items-center justify-center"
-              disabled={currentSlide === 0}
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="w-12 h-12 rounded-full bg-[#0D71C9] text-white hover:bg-[#0A4E8C] transition-all duration-200 flex items-center justify-center"
-              disabled={currentSlide === totalSlides - 1}
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div> */}
         </div>
 
         {/* Carousel */}
@@ -172,8 +145,4 @@ const MostPopular = () => {
       </div>
     </section>
   );
-};
-
-export default function MostPopularPage() {
-  return <MostPopular />;
 }

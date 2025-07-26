@@ -58,12 +58,12 @@ const Header = () => {
         <header className="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-8">
           <div className="flex items-center gap-8 ml-5">
             <div className="flex-shrink-0 bg-transparent">
-              <Link href="/homepage" className="block bg-transparent">
+              <Link href="/" className="block bg-transparent">
                 <LogoSVG width={200} height={100} />
               </Link>
             </div>
             <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">
-              <Link href="/homepage" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Home</Link>
+              <Link href="/" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Home</Link>
               <Link href="/about-us" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">About Us</Link>
               <Link href="/menu" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Menu</Link>
               <Link href="/blog" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Blog</Link>
@@ -98,7 +98,7 @@ const Header = () => {
         <div className="flex items-center gap-8 ml-5">
           {/* Logo */}
           <div className="flex-shrink-0 bg-transparent">
-            <Link href="/homepage" className="block bg-transparent">
+            <Link href="/" className="block bg-transparent">
               <LogoSVG width={200} height={100} />
             </Link>
           </div>
@@ -111,7 +111,7 @@ const Header = () => {
             suppressHydrationWarning
           >
             <Link
-              href="/homepage"
+              href="/"
               className={`transition-colors duration-200 text-2xl tracking-wide ${linkScrolledClass}`}
             >
               Home
@@ -191,7 +191,7 @@ const Header = () => {
               aria-label="Mobile navigation"
             >
               <Link
-                href="/homepage"
+                href="/"
                 className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
                 onClick={closeMobileMenu}
               >

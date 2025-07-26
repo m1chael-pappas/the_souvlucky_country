@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Container } from "@mantine/core";
 
-export default function Story() {
+export default function StorySection() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -14,6 +14,7 @@ export default function Story() {
   
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.8, 1, 1, 0.8]);
+  
   return (
     <motion.div
       ref={ref}

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const FollowUsSection = () => {
+export default function SocialSection() {
   const [activePost, setActivePost] = useState<number | null>(null);
   const socialPosts = [
     {
@@ -175,6 +175,4 @@ const FollowUsSection = () => {
       </div>
     </section>
   );
-};
-
-export default FollowUsSection;
+}
