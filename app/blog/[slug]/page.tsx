@@ -103,11 +103,318 @@ const blogPosts = {
       <p>This commitment to authenticity is why our customers travel from across Sydney to experience our souvlaki. It is not just a meal - it is a connection to Greek culture and tradition, served fresh in the heart of Parramatta.</p>
     `
   },
+  'best-greek-restaurant-western-sydney-parramatta': {
+    title: 'Best Greek Restaurant in Western Sydney: What to Look For in 2025',
+    excerpt: 'Searching for authentic Greek food in Parramatta or Western Sydney? Here\'s how to find the best Greek restaurant and what sets The Souvlucky Country apart.',
+    category: 'Local Guide',
+    date: '2025-01-02',
+    content: `
+      <p>Western Sydney has become a hotspot for authentic international cuisine, and Greek food is no exception. With so many options from Parramatta to Penrith, how do you find the best Greek restaurant that serves genuine, traditional dishes?</p>
+
+      <p>Whether you are a local searching for your new favourite spot or visiting the area and craving Mediterranean flavours, this guide will help you identify what makes a Greek restaurant truly exceptional—and why The Souvlucky Country in Parramatta has become the go-to destination for Greek food lovers across Western Sydney.</p>
+
+      <h2>What Makes a Greek Restaurant the "Best"?</h2>
+      <p>Not all Greek restaurants are created equal. Here are the key factors that separate authentic Greek dining from the rest:</p>
+
+      <h3>1. Authentic Cooking Methods</h3>
+      <p>The best Greek restaurants use traditional cooking techniques that have been passed down through generations:</p>
+      <ul>
+        <li><strong>Charcoal grilling:</strong> Authentic souvlaki and meat dishes should be cooked over real charcoal, not gas grills. The smoky flavour is irreplaceable.</li>
+        <li><strong>Vertical rotisserie for gyros:</strong> Traditional gyros meat should be stacked and slow-cooked on a vertical spit, then shaved fresh to order.</li>
+        <li><strong>Fresh daily preparation:</strong> Marinades, dips, and sauces should be made fresh—not from packets or pre-made bases.</li>
+      </ul>
+
+      <h3>2. Quality Ingredients</h3>
+      <p>Greek cuisine is simple, which means ingredient quality matters enormously:</p>
+      <ul>
+        <li><strong>Premium Australian meat:</strong> Look for restaurants using quality local suppliers, not imported frozen products.</li>
+        <li><strong>Real Greek yogurt:</strong> Authentic tzatziki requires proper strained Greek yogurt, not regular yogurt.</li>
+        <li><strong>Extra virgin olive oil:</strong> A staple of Greek cooking—the best restaurants use it generously.</li>
+        <li><strong>Fresh vegetables:</strong> Tomatoes, cucumbers, and onions should be fresh and flavourful.</li>
+      </ul>
+
+      <h3>3. Traditional Recipes</h3>
+      <p>Authentic Greek food follows time-tested recipes:</p>
+      <ul>
+        <li>Marinades using olive oil, lemon, oregano, and garlic—not artificial seasonings</li>
+        <li>Tzatziki with fresh cucumber, garlic, and dill</li>
+        <li>Traditional Greek salad with feta, olives, and simple dressing</li>
+        <li>Pita bread that is soft, warm, and freshly prepared</li>
+      </ul>
+
+      <h3>4. Generous Portions</h3>
+      <p>Greek hospitality (philoxenia) means generous portions. The best Greek restaurants send you home satisfied, not searching for a second dinner.</p>
+
+      <h3>5. Family Atmosphere</h3>
+      <p>Greek dining is meant to be shared. Look for restaurants that welcome families, offer sharing platters, and create a warm, welcoming environment.</p>
+
+      <h2>Greek Restaurants in Western Sydney: The Landscape</h2>
+      <p>Western Sydney offers diverse dining options, but finding authentic Greek cuisine requires knowing where to look. The area spans from Parramatta to the Blue Mountains, with most Greek restaurants concentrated in:</p>
+      <ul>
+        <li><strong>Parramatta:</strong> The dining hub of Western Sydney with the highest concentration of restaurants</li>
+        <li><strong>Harris Park:</strong> Known for its multicultural food scene</li>
+        <li><strong>Blacktown:</strong> Growing restaurant precinct with various cuisines</li>
+        <li><strong>Penrith:</strong> Western Sydney's western gateway with family dining options</li>
+      </ul>
+
+      <p>While there are several options, not all deliver on authenticity. Many restaurants cut corners with pre-made sauces, gas grills, or frozen ingredients. Finding a place that honours Greek traditions while using fresh, quality ingredients is the key.</p>
+
+      <h2>Why The Souvlucky Country Stands Out</h2>
+      <p>Located in the heart of Parramatta, The Souvlucky Country has earned its reputation as Western Sydney's premier Greek restaurant. Here is what sets us apart:</p>
+
+      <h3>Authentic Charcoal Cooking</h3>
+      <p>We cook all our souvlaki and grilled meats over real charcoal. This is not just tradition for tradition's sake—the difference in flavour is unmistakable. That smoky char you taste? That is the real thing, not liquid smoke or gas grill imitation.</p>
+
+      <h3>Fresh Daily Preparation</h3>
+      <p>Every morning, our kitchen team:</p>
+      <ul>
+        <li>Prepares fresh marinades using traditional family recipes</li>
+        <li>Makes tzatziki from scratch with hand-grated cucumber</li>
+        <li>Cuts and skewers meat fresh for that day's service</li>
+        <li>Bakes fresh pita bread throughout the day</li>
+      </ul>
+      <p>Nothing sits overnight. When you eat at The Souvlucky Country, you are eating food made that day.</p>
+
+      <h3>Premium Australian Ingredients</h3>
+      <p>We source our meat from trusted Australian suppliers who share our commitment to quality. Our lamb comes from farms known for producing tender, flavourful meat. Our chicken is free-range. Our pork is premium grade.</p>
+
+      <h3>Family Recipes, Perfected Over Generations</h3>
+      <p>Our recipes are not from a cookbook—they are family heirlooms. Our tzatziki recipe has been perfected over three generations. Our marinade blend is a closely guarded secret that makes our souvlaki instantly recognisable to regular customers.</p>
+
+      <h3>Generous Greek Hospitality</h3>
+      <p>We believe in the Greek tradition of philoxenia—love of strangers. Every guest is treated like family, and no one leaves hungry. Our portions reflect this philosophy: generous, satisfying, and meant for sharing.</p>
+
+      <h2>What Our Customers Say</h2>
+      <p>The Souvlucky Country has built its reputation through word of mouth. Customers travel from across Sydney—from the Eastern Suburbs to the Blue Mountains—specifically for our souvlaki and gyros. Here is what keeps them coming back:</p>
+
+      <ul>
+        <li><strong>"Finally, real Greek food in Western Sydney"</strong> - Customers who have been to Greece tell us our food takes them back</li>
+        <li><strong>"The charcoal makes all the difference"</strong> - Once you taste charcoal-grilled souvlaki, you cannot go back</li>
+        <li><strong>"Best tzatziki I have ever had"</strong> - Our fresh-made tzatziki is legendary</li>
+        <li><strong>"The portions are incredible"</strong> - Greek generosity at its finest</li>
+      </ul>
+
+      <h2>How to Find the Best Greek Food Near You</h2>
+      <p>If you are searching for Greek food in Western Sydney, here are our tips:</p>
+
+      <h3>Questions to Ask</h3>
+      <ul>
+        <li>Do they cook over charcoal or gas?</li>
+        <li>Is the tzatziki made fresh in-house?</li>
+        <li>Where do they source their meat?</li>
+        <li>Is the gyros shaved fresh from the spit?</li>
+      </ul>
+
+      <h3>Signs of Authenticity</h3>
+      <ul>
+        <li>You can see (and smell) the charcoal grill</li>
+        <li>The menu focuses on Greek classics, not a fusion of everything</li>
+        <li>Portions are generous</li>
+        <li>The owners and staff are passionate about Greek food</li>
+      </ul>
+
+      <h3>Red Flags to Avoid</h3>
+      <ul>
+        <li>Pre-packaged sauces and dips</li>
+        <li>Frozen, imported meat</li>
+        <li>Gyros meat that looks processed or uniform</li>
+        <li>No visible grill or cooking area</li>
+      </ul>
+
+      <h2>Visit The Souvlucky Country</h2>
+      <p>If you are searching for the best Greek restaurant in Western Sydney, we invite you to experience The Souvlucky Country for yourself. We are located in Parramatta—the heart of Western Sydney—and we are passionate about serving authentic Greek cuisine that honours our heritage.</p>
+
+      <p>Whether you are craving a quick souvlaki wrap for lunch, a family feast for dinner, or catering for your next event, we are here to serve you the best Greek food in the west.</p>
+
+      <h3>Find Us</h3>
+      <ul>
+        <li><strong>Location:</strong> Parramatta, NSW</li>
+        <li><strong>Cuisine:</strong> Authentic Greek - Souvlaki, Gyros, Grilled Meats</li>
+        <li><strong>Perfect for:</strong> Families, date nights, quick lunches, group gatherings</li>
+      </ul>
+
+      <p><strong>Ready to taste the difference?</strong> Make a reservation or view our menu to start planning your Greek feast. We cannot wait to welcome you to The Souvlucky Country family.</p>
+
+      <p><em>Searching for "best Greek restaurant near me" or "Greek food Parramatta"? You have found it. Come visit us and discover why locals call The Souvlucky Country the best Greek restaurant in Western Sydney.</em></p>
+    `
+  },
+  'souvlaki-vs-gyros-vs-kebab': {
+    title: 'Souvlaki vs Gyros vs Kebab: What\'s the Difference? A Complete Guide',
+    excerpt: 'Confused about the difference between souvlaki, gyros, and kebab? Learn how these beloved Mediterranean dishes differ in origin, preparation, and taste.',
+    category: 'Food Guide',
+    date: '2025-01-03',
+    content: `
+      <p>If you have ever stood at a Greek restaurant counter wondering whether to order souvlaki, gyros, or kebab, you are not alone. These three Mediterranean favourites are often confused, but each has a distinct history, preparation method, and flavour profile that makes it unique.</p>
+
+      <p>At The Souvlucky Country in Parramatta, we serve authentic versions of these dishes daily, and our customers frequently ask us to explain the differences. Let us break it down for you.</p>
+
+      <h2>Quick Comparison: Souvlaki vs Gyros vs Kebab</h2>
+      <p>Before we dive deep, here is a quick overview:</p>
+
+      <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+        <thead>
+          <tr style="background-color: #0D71C9; color: white;">
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Feature</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Souvlaki</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Gyros</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Kebab</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;"><strong>Origin</strong></td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Greece</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Greece</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Turkey/Middle East</td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 12px; border: 1px solid #ddd;"><strong>Cooking Method</strong></td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Skewered & grilled</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Vertical rotisserie</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Vertical rotisserie or grilled</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;"><strong>Meat Type</strong></td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Cubed pieces</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Stacked, shaved slices</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Minced or stacked</td>
+          </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 12px; border: 1px solid #ddd;"><strong>Typical Sauce</strong></td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Tzatziki</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Tzatziki</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Garlic sauce, chilli</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;"><strong>Bread</strong></td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Pita bread</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Pita bread</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">Turkish bread or pide</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>What is Souvlaki?</h2>
+      <p>Souvlaki (pronounced soo-VLAH-kee) is one of Greece's oldest and most beloved dishes. The name comes from the Greek word "souvla," meaning skewer.</p>
+
+      <h3>How Souvlaki is Made</h3>
+      <p>Traditional souvlaki consists of small cubes of meat—typically pork, chicken, or lamb—threaded onto wooden or metal skewers and grilled over charcoal. The meat is marinated in a simple but flavourful mixture of:</p>
+      <ul>
+        <li>Extra virgin olive oil</li>
+        <li>Fresh lemon juice</li>
+        <li>Garlic</li>
+        <li>Dried oregano</li>
+        <li>Salt and pepper</li>
+      </ul>
+
+      <p>What makes souvlaki special is the char from the open flame and the simplicity of the seasoning, which allows the quality of the meat to shine through.</p>
+
+      <h3>How Souvlaki is Served</h3>
+      <p>Souvlaki can be enjoyed in several ways:</p>
+      <ul>
+        <li><strong>On the skewer (Kalamaki):</strong> The traditional way, served with pita and tzatziki on the side</li>
+        <li><strong>Wrapped in pita:</strong> With tomatoes, onions, and tzatziki sauce</li>
+        <li><strong>On a plate:</strong> With Greek salad, chips, and dips</li>
+      </ul>
+
+      <h2>What is Gyros?</h2>
+      <p>Gyros (pronounced YEE-ros, meaning "turn" in Greek) refers to meat cooked on a vertical rotisserie—the tall spinning cone you see in Greek restaurants.</p>
+
+      <h3>How Gyros is Made</h3>
+      <p>The preparation of gyros is quite different from souvlaki:</p>
+      <ul>
+        <li>Thin slices of marinated meat are stacked layer upon layer on a vertical spit</li>
+        <li>The meat rotates slowly next to a heat source</li>
+        <li>As the outer layer cooks and crisps, it is shaved off to order</li>
+        <li>The result is thin, flavourful strips with crispy edges</li>
+      </ul>
+
+      <p>Traditional Greek gyros uses pork or chicken, while lamb gyros is also popular. The marinade typically includes oregano, thyme, rosemary, and garlic.</p>
+
+      <h3>The Gyros Experience</h3>
+      <p>What makes gyros irresistible is the texture contrast—crispy caramelised edges from the rotisserie combined with juicy, tender meat inside. It is typically served in a warm pita with:</p>
+      <ul>
+        <li>Tzatziki sauce</li>
+        <li>Sliced tomatoes</li>
+        <li>Red onions</li>
+        <li>Optional chips inside the wrap (the Greek way!)</li>
+      </ul>
+
+      <h2>What is Kebab?</h2>
+      <p>Kebab is a broad term covering various meat dishes that originated in the Middle East and Turkey. The word comes from the Arabic "kabāb," meaning grilled meat.</p>
+
+      <h3>Types of Kebab</h3>
+      <p>There are many varieties of kebab:</p>
+      <ul>
+        <li><strong>Doner Kebab:</strong> Similar to gyros, cooked on a vertical rotisserie. The Turkish precursor to Greek gyros.</li>
+        <li><strong>Shish Kebab:</strong> Cubed meat on skewers, similar to souvlaki but with different spices.</li>
+        <li><strong>Kofta Kebab:</strong> Minced meat formed around skewers and grilled.</li>
+        <li><strong>Adana Kebab:</strong> Spicy minced lamb from Turkey's Adana region.</li>
+      </ul>
+
+      <h3>Key Differences from Greek Dishes</h3>
+      <p>While kebab and Greek meat dishes may look similar, there are important differences:</p>
+      <ul>
+        <li><strong>Spicing:</strong> Kebabs often use cumin, sumac, and chilli, while Greek dishes favour oregano and lemon</li>
+        <li><strong>Sauces:</strong> Kebabs typically come with garlic sauce, chilli sauce, or tahini rather than tzatziki</li>
+        <li><strong>Bread:</strong> Turkish bread or pide is used instead of Greek pita</li>
+        <li><strong>Meat preparation:</strong> Doner often uses minced and formed meat, while traditional gyros uses whole meat slices</li>
+      </ul>
+
+      <h2>Souvlaki vs Gyros: The Greek Showdown</h2>
+      <p>Since both souvlaki and gyros are Greek, people often wonder which to choose. Here is how they compare:</p>
+
+      <h3>Choose Souvlaki When You Want:</h3>
+      <ul>
+        <li>Distinct, chargrilled flavour from the open flame</li>
+        <li>Larger, more substantial pieces of meat</li>
+        <li>A more traditional, ancient Greek experience</li>
+        <li>The ability to taste each individual piece of meat</li>
+      </ul>
+
+      <h3>Choose Gyros When You Want:</h3>
+      <ul>
+        <li>Crispy, caramelised meat with tender interior</li>
+        <li>A classic street food experience</li>
+        <li>More meat packed into your pita</li>
+        <li>That signature rotisserie flavour</li>
+      </ul>
+
+      <h2>Which is Better: Souvlaki, Gyros, or Kebab?</h2>
+      <p>There is no wrong answer here—it truly depends on your mood and preferences:</p>
+
+      <ul>
+        <li><strong>For authentic Greek flavour:</strong> Choose souvlaki or gyros with tzatziki</li>
+        <li><strong>For bold, spicy flavours:</strong> Try a traditional kebab with chilli sauce</li>
+        <li><strong>For chargrilled taste:</strong> Souvlaki wins with its open-flame cooking</li>
+        <li><strong>For crispy, shaved meat:</strong> Gyros delivers that rotisserie magic</li>
+        <li><strong>For a filling meal:</strong> All three are excellent wrapped in bread with salad</li>
+      </ul>
+
+      <h2>Where to Find Authentic Souvlaki and Gyros in Parramatta</h2>
+      <p>At The Souvlucky Country, we specialise in authentic Greek souvlaki and gyros made the traditional way. Our meat is marinated fresh daily using family recipes, and we cook everything over charcoal for that genuine Greek flavour.</p>
+
+      <p>Whether you are team souvlaki or team gyros, we have you covered with:</p>
+      <ul>
+        <li><strong>Pork, chicken, and lamb souvlaki</strong> grilled to perfection</li>
+        <li><strong>Traditional gyros</strong> shaved fresh from the spit</li>
+        <li><strong>Mixed plates</strong> so you can try both</li>
+        <li><strong>Authentic tzatziki</strong> made fresh in-house</li>
+      </ul>
+
+      <h2>The Bottom Line</h2>
+      <p>Now that you know the difference between souvlaki, gyros, and kebab, you can order with confidence. Each dish has its own charm and tradition, but they all share one thing in common: they are delicious ways to enjoy grilled meat.</p>
+
+      <p>Next time you visit The Souvlucky Country in Parramatta, try our souvlaki and gyros side by side. It is the best way to truly appreciate what makes each one special.</p>
+
+      <p><em>Have more questions about Greek food? Follow us on Instagram or stop by our restaurant at Parramatta—we love sharing our passion for authentic Greek cuisine!</em></p>
+    `
+  },
   'greek-meat-dishes-guide': {
     title: 'From Gyros to Paidakia: A Complete Guide to Greek Meat Dishes',
     excerpt: 'Explore the rich world of Greek meat dishes and understand what makes each one special.',
     category: 'Menu Guide',
-    date: '2024-01-05', 
+    date: '2024-01-05',
     content: `
       <p>Greek cuisine offers some of the most flavorful and satisfying meat dishes in the world. At The Souvlucky Country, we are proud to serve authentic versions of these beloved classics. Let us explore the rich tradition behind each dish on our menu.</p>
 

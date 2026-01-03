@@ -28,6 +28,28 @@ export const metadata: Metadata = {
 // Mock blog posts data - in a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    slug: 'best-greek-restaurant-western-sydney-parramatta',
+    title: 'Best Greek Restaurant in Western Sydney: What to Look For in 2025',
+    excerpt: 'Searching for authentic Greek food in Parramatta or Western Sydney? Here\'s how to find the best Greek restaurant and what sets The Souvlucky Country apart.',
+    category: 'Local Guide',
+    date: '2025-01-02',
+    readTime: '8 min read',
+    featured: true,
+    image: '/instagram_04.jpg',
+    imageAlt: 'Best Greek restaurant in Western Sydney - The Souvlucky Country'
+  },
+  {
+    slug: 'souvlaki-vs-gyros-vs-kebab',
+    title: 'Souvlaki vs Gyros vs Kebab: What\'s the Difference? A Complete Guide',
+    excerpt: 'Confused about the difference between souvlaki, gyros, and kebab? Learn how these beloved Mediterranean dishes differ in origin, preparation, and taste.',
+    category: 'Food Guide',
+    date: '2025-01-03',
+    readTime: '10 min read',
+    featured: true,
+    image: '/Rectangle 39.png',
+    imageAlt: 'Greek souvlaki and gyros comparison'
+  },
+  {
     slug: 'story-behind-signature-tzatziki',
     title: 'The Story Behind Our Signature Tzatziki Recipe',
     excerpt: 'Discover the family secrets and traditional techniques that make our tzatziki the talk of Parramatta.',
