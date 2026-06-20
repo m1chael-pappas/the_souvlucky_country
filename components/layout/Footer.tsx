@@ -160,6 +160,17 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center text-white text-sm font-light mt-12">
           © {new Date().getFullYear()} by The Souvlucky Country
+          <span className="opacity-90">
+            {" "}· Built by{" "}
+            <a
+              href="https://onthedot.au/?utm_source=souvlucky-country&utm_medium=built-by&utm_campaign=footer"
+              target="_blank"
+              rel="noopener"
+              className="underline-offset-2 hover:underline"
+            >
+              OnTheDot.
+            </a>
+          </span>
         </div>
       </div>
     </footer>
