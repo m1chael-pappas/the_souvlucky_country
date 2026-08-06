@@ -31,6 +31,72 @@ export const metadata: Metadata = {
 // Mock blog posts data - in a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    slug: 'greek-festival-parramatta-guide',
+    title: "Let's Go Greek Festival Parramatta: A Local Restaurateur's Guide to the Day",
+    excerpt: 'Tens of thousands of people, a kilometre from our door. Where to park, what to queue for, what most first-timers skip, and where to sit down afterwards.',
+    category: 'Local Guide',
+    date: '2026-08-06',
+    readTime: '7 min read',
+    featured: false,
+    image: '/instagram_03.jpg',
+    imageAlt: 'Greek festival food spread with traditional dishes'
+  },
+  {
+    slug: 'eat-before-eels-game-commbank-stadium',
+    title: 'Where to Eat Before an Eels Game: A Church St Guide to CommBank Stadium',
+    excerpt: 'The real question is not where the food is, it is whether you will make kickoff. Timing, what to order on a deadline, and the walk to the ground.',
+    category: 'Local Guide',
+    date: '2026-08-06',
+    readTime: '5 min read',
+    featured: false,
+    image: '/popylar_01.png',
+    imageAlt: 'Greek gyros pita, a fast meal before a game'
+  },
+  {
+    slug: 'pre-theatre-dinner-riverside-parramatta',
+    title: 'Pre-Theatre Dinner Near Riverside Theatres: Eat Well, Make Curtain-Up',
+    excerpt: 'Riverside says arrive an hour early. That hour is the problem. How to eat properly before a show without watching the clock.',
+    category: 'Local Guide',
+    date: '2026-08-06',
+    readTime: '5 min read',
+    featured: false,
+    image: '/Rectangle 36.png',
+    imageAlt: 'Grilled Greek skewers plated for an early dinner'
+  },
+  {
+    slug: 'vegetarian-greek-food-parramatta',
+    title: 'Vegetarian at a Greek Restaurant: A Complete Parramatta Ordering Guide',
+    excerpt: 'No, you will not be eating chips and a salad. Exactly what to order if you do not eat meat, plus the one thing vegans need to watch for.',
+    category: 'Food Guide',
+    date: '2026-08-06',
+    readTime: '7 min read',
+    featured: false,
+    image: '/instagram_02.jpg',
+    imageAlt: 'Fresh Mediterranean vegetables, herbs and olive oil'
+  },
+  {
+    slug: 'greek-food-for-groups-what-to-order',
+    title: 'Greek Food for Groups: What to Order for 6, 10 or 20 People',
+    excerpt: 'Order most of the food for the middle of the table, not for individuals. A practical ordering guide by group size.',
+    category: 'Group Dining',
+    date: '2026-08-06',
+    readTime: '6 min read',
+    featured: false,
+    image: '/Rectangle 40.png',
+    imageAlt: 'Large Greek sharing platter with mixed grilled meats and sides'
+  },
+  {
+    slug: 'birthday-dinner-parramatta-greek',
+    title: 'Birthday Dinner in Parramatta: Why a Greek Table Beats a Function Room',
+    excerpt: 'No room hire, no minimum spend, and food built to be shared. The case for a long table over a private function space.',
+    category: 'Occasions',
+    date: '2026-08-06',
+    readTime: '5 min read',
+    featured: false,
+    image: '/Rectangle 37.png',
+    imageAlt: 'Greek dining spread laid out for a celebration'
+  },
+  {
     slug: 'christmas-party-venue-parramatta',
     title: 'Christmas Party Venues in Parramatta: How to Book Before December Fills Up',
     excerpt: 'The good December tables in Parramatta are gone by October. How a Greek table works for a work lunch, what to order for a group, and what to sort out before you call.',

@@ -2,6 +2,224 @@
 // permits its own known exports from a page module, and the sitemap needs
 // to read this list so a new post is never omitted.
 export const blogPosts = {
+  'greek-festival-parramatta-guide': {
+    title: 'Let\'s Go Greek Festival Parramatta: A Local Restaurateur\'s Guide to the Day',
+    excerpt: 'Tens of thousands of people, a kilometre from our door. Where to park, what to queue for, what most first-timers skip, and where to sit down afterwards.',
+    category: 'Local Guide',
+    date: '2026-08-06',
+    content: `
+      <p>Every September, tens of thousands of people fill the grounds of St Ioannis on George St for the Let's Go Greek Festival. It is one of the biggest Greek community events in Sydney, and it happens about a kilometre from our front door.</p>
+      <p>We are not affiliated with the festival and we do not run a stall. We are just a Greek family who cooks on Church St and goes every year. So here is a practical guide.</p>
+
+      <h2>Getting there and parking</h2>
+      <p>Do not drive to George St on the day. Parramatta CBD parking is difficult on a normal Saturday and the festival makes it worse. Park once in the CBD, or better, take the train to Parramatta station and walk. Everything worth doing that day is within about fifteen minutes on foot.</p>
+
+      <h2>Go hungry, but pace yourself</h2>
+      <p>The obvious mistake is eating everything in the first hour. Festival food is queue food: you order standing up, you eat standing up, and by mid-afternoon you have had four heavy things and nowhere to sit.</p>
+      <p>Our advice, which is admittedly self-interested but also true: graze at the festival, then sit down properly. The loukoumades are worth the queue. Most other things are worth a taste rather than a full serve.</p>
+
+      <h2>What to look for</h2>
+      <ul>
+        <li><strong>The dancing.</strong> The community groups perform through the day and it is the part most first-timers skip because they are busy eating. Do not skip it.</li>
+        <li><strong>The sweets stalls.</strong> Loukoumades fresh out of the fryer, and whatever the yiayias have baked, which is always better than anything commercial.</li>
+        <li><strong>The church itself.</strong> Worth stepping inside for five quiet minutes even if you are not Orthodox.</li>
+      </ul>
+
+      <h2>When you want to sit down</h2>
+      <p>By late afternoon most people have had enough of standing. We are at 316 Church St, about a fifteen minute walk, open until 10pm on weeknights and 11pm on weekends.</p>
+      <p>If you are coming after the festival with a group, call us on (02) 9891 4174 so we can hold you a proper table. It is a busy day on Church St and walking in with eight people is optimistic.</p>
+      <p><em>Festival dates change year to year. Check letsgogreekfestival.com.au before you plan your day.</em></p>
+`
+  },
+  'eat-before-eels-game-commbank-stadium': {
+    title: 'Where to Eat Before an Eels Game: A Church St Guide to CommBank Stadium',
+    excerpt: 'The real question is not where the food is, it is whether you will make kickoff. Timing, what to order when you have a deadline, and the walk to the ground.',
+    category: 'Local Guide',
+    date: '2026-08-06',
+    content: `
+      <p>You have tickets to an Eels game at CommBank Stadium and you want to eat first. The question is not really where the food is, it is whether you will make kickoff.</p>
+      <p>Here is the honest version from a restaurant eleven minutes' walk from the ground.</p>
+
+      <h2>The timing that actually works</h2>
+      <p>For a 7:50pm kickoff, book a table for 5:30 or 6pm. That gives you a proper sit-down meal, time to pay without rushing, and a walk to the ground that is not a jog. If you book at 6:30 you will spend the meal watching the clock, and Greek food does not reward being rushed.</p>
+      <p>For an afternoon game, eat after rather than before. The walk back up Church St once the crowd has thinned is far more pleasant than fighting toward the ground on a full stomach.</p>
+
+      <h2>What to order when you have a deadline</h2>
+      <p>Skip the long build. Order dips and pita to start, they arrive fast, then go straight to something off the grill.</p>
+      <ul>
+        <li><strong>A Souvlaki Plate or Gyros Plate</strong> in pork, chicken or lamb. Substantial, quick off the grill, and comes with pita, tzatziki, salad and chips.</li>
+        <li><strong>A pita</strong> if you are tight for time. Gyros or souvlaki wrapped and eaten in twenty minutes.</li>
+        <li><strong>The Mix Grill</strong> if there are four or more of you and you have booked early enough to share properly.</li>
+      </ul>
+      <p>Tell us you are going to the game when you sit down. We will get you out on time.</p>
+
+      <h2>Getting to the ground</h2>
+      <p>From 316 Church St it is a straight walk south down Church, across the river, and into the stadium precinct. Around eleven or twelve minutes at a normal pace, longer if the crowd is thick close to kickoff. Allow twenty on a big night.</p>
+
+      <h2>After the game</h2>
+      <p>We are open until 10pm Monday to Friday and 11pm on weekends, so an early evening game usually means you can come back afterwards. If you have won, the Olympus Plate is the correct response. If you have lost, the dips and a long sit are the correct response.</p>
+      <p>Book online, or call (02) 9891 4174 for a group. On game nights, please book, do not walk in and hope.</p>
+      <p><em>Check the official draw at parraeels.com.au for fixture times before you plan.</em></p>
+`
+  },
+  'pre-theatre-dinner-riverside-parramatta': {
+    title: 'Pre-Theatre Dinner Near Riverside Theatres: Eat Well, Make Curtain-Up',
+    excerpt: 'Riverside says arrive an hour early. That hour is the problem. How to eat properly before a show without watching the clock through dessert.',
+    category: 'Local Guide',
+    date: '2026-08-06',
+    content: `
+      <p>Riverside Theatres recommends arriving at least an hour before your show. That hour is the whole problem: it is too long to stand around in the foyer and too short for a leisurely dinner somewhere that has not been told you have a curtain to make.</p>
+      <p>Here is how to eat properly before a show at Riverside without watching the clock through dessert.</p>
+
+      <h2>The timing</h2>
+      <p>For a 7:30pm curtain, book dinner for 5:45 or 6pm. That is ninety minutes at the table, which is enough for a shared start and a main without rushing, and it puts you at the theatre with time to find your seat and read the programme.</p>
+      <p>If your show starts at 8pm, 6:15 works. Later than 6:30 and you are eating fast, which defeats the point.</p>
+      <p>Tell us your curtain time when you book. We will pace the kitchen around it rather than making you ask twice.</p>
+
+      <h2>What to order before a show</h2>
+      <p>Two courses, not three. A shared start while you decide, then something off the grill.</p>
+      <ul>
+        <li><strong>To share:</strong> tzatziki and taramosalata with pita, plus spanakopita or haloumi. These arrive quickly and give the table something to do.</li>
+        <li><strong>Then:</strong> a Souvlaki Plate, a Gyros Plate, or the paidakia if you want the best thing on the grill. All come out at a sensible pace.</li>
+        <li><strong>Skip:</strong> a heavy dessert. Have coffee after the show instead, we are open until 10pm on weeknights and 11pm on weekends.</li>
+      </ul>
+
+      <h2>Getting to Riverside</h2>
+      <p>From 316 Church St it is a short walk north along Church Street to Church Street Mall and across to the theatre on Market Street. Under ten minutes at a gentle pace. It is one of the easier pre-theatre walks in Sydney, entirely flat and entirely lit.</p>
+
+      <h2>For a group booking</h2>
+      <p>Theatre parties are usually four to eight people who all need to leave at the same time. That is exactly the sort of booking worth phoning about rather than doing online. Call (02) 9891 4174, tell us the curtain time and the numbers, and we will handle the rest.</p>
+`
+  },
+  'vegetarian-greek-food-parramatta': {
+    title: 'Vegetarian at a Greek Restaurant: A Complete Parramatta Ordering Guide',
+    excerpt: 'No, you will not be eating chips and a salad. Exactly what to order if you do not eat meat, plus the one thing vegans need to watch for.',
+    category: 'Food Guide',
+    date: '2026-08-06',
+    content: `
+      <p>The assumption is that a Greek restaurant is a meat restaurant, and that a vegetarian at a Greek table is going to end up eating chips and a salad while everyone else has lamb.</p>
+      <p>That has not been true of Greek cooking for a very long time, and it is not true here. Here is exactly what to order at The Souvlucky Country if you do not eat meat, and the one thing to watch out for.</p>
+
+      <h2>Start with the dips</h2>
+      <p>All five of our dips are meat free: tzatziki, spicy cheese, taramosalata, eggplant, and skordalia. They come with pita and they are the natural start to any Greek meal.</p>
+      <p><strong>One caveat if you are vegan rather than vegetarian:</strong> tzatziki is yoghurt based, spicy cheese and skordalia are dairy, and taramosalata is made with fish roe. The eggplant dip is the one to look at. Ask us and we will tell you plainly, we would rather you asked than assumed.</p>
+
+      <h2>Starters worth ordering</h2>
+      <ul>
+        <li><strong>Spanakopita</strong> — spinach and feta in filo. The dish most people order twice.</li>
+        <li><strong>Haloumi plate</strong> — grilled, salty, the vegetarian answer to something off the grill.</li>
+        <li><strong>Feta roll with honey</strong> — sweet and savoury together, and better than it sounds on paper.</li>
+        <li><strong>Dolmades</strong> — vine leaves stuffed with rice.</li>
+      </ul>
+
+      <h2>Actual mains, not side dishes</h2>
+      <p>This is where a lot of Greek menus give up. Ours does not:</p>
+      <ul>
+        <li><strong>Vegetarian Plate</strong> — a proper main built as a main, not a main with the meat removed.</li>
+        <li><strong>Vegetarian Moussaka</strong> — made with mushroom instead of mince, served with cabbage salad. The dish we would point a first-time vegetarian diner toward.</li>
+        <li><strong>Vegetarian Pita</strong> — with either grilled haloumi or chickpea fritters. The falafel version is the closest thing we do to a vegan handheld, minus the sauces.</li>
+        <li><strong>Skepasti with haloumi</strong> — the same dish everyone else at the table is eating, in a version that suits you.</li>
+      </ul>
+      <p>Add a Greek salad, a dakos, or a cabbage salad, and chips with feta, and it is a full table.</p>
+
+      <h2>Eating with a mixed group</h2>
+      <p>Most of our vegetarian orders come from tables where only one or two people are vegetarian. Greek food handles that better than a lot of cuisines, because the meal is shared rather than plated per person. Order dips, salads and vegetable starters for the middle, then let everyone take their own main. Nobody has to eat around anything.</p>
+      <p>We see a lot of this in Parramatta, and vegetarian ordering is a normal part of our week rather than a special request.</p>
+
+      <h2>Other dietary needs</h2>
+      <p>We keep gluten free pita bread, so the pita dishes can be adapted. Our chicken and lamb are halal-sourced through our butcher, though pork is on the menu and cooked in the same kitchen, so we do not describe ourselves as a halal venue. If any of that matters to your table, tell us when you book and we will give you a straight answer rather than a hopeful one.</p>
+
+      <h2>Come and test it</h2>
+      <p>316 Church St, Parramatta. Open Monday to Friday 12pm to 10pm, Saturday and Sunday 12pm to 11pm. Book a table online, or call (02) 9891 4174.</p>
+`
+  },
+  'greek-food-for-groups-what-to-order': {
+    title: 'Greek Food for Groups: What to Order for 6, 10 or 20 People',
+    excerpt: 'Order most of the food for the middle of the table, not for individuals. A practical ordering guide by group size, and how much is actually enough.',
+    category: 'Group Dining',
+    date: '2026-08-06',
+    content: `
+      <p>Ordering for a group at a Greek restaurant is not complicated, but it is easy to get wrong in one specific way: people order individually, everyone gets a large plate, and half the food goes home in containers.</p>
+      <p>Greek food is built to be shared. Here is how to order for six, ten or twenty people so the table works properly.</p>
+
+      <h2>The principle</h2>
+      <p>Order most of the food for the middle of the table, and only a few things per person. The middle is where dips, starters, salads and shared grills go. Individual mains are the exception, not the default.</p>
+      <p>This is also why Greek suits a mixed group. Vegetarians, people avoiding pork, kids, and someone who is not very hungry all end up fed without anyone having to negotiate.</p>
+
+      <h2>For six people</h2>
+      <ul>
+        <li>Three dips with pita — tzatziki plus two others</li>
+        <li>Three or four starters — spanakopita, haloumi, dolmades, calamari</li>
+        <li>One <strong>Mix Grill</strong> for the middle</li>
+        <li>One large Greek salad and one large cabbage salad</li>
+        <li>Chips with feta</li>
+      </ul>
+      <p>Add one or two individual plates if there is someone who really wants their own gyros.</p>
+
+      <h2>For ten to twelve people</h2>
+      <ul>
+        <li>All five dips, with plenty of pita</li>
+        <li>Six or so starters, doubling whatever the table likes most</li>
+        <li>One <strong>Olympus Plate</strong>, our largest shared platter</li>
+        <li>Two large salads, plus a dakos</li>
+        <li>Two serves of chips</li>
+        <li>Paidakia for the table if it is an occasion</li>
+      </ul>
+
+      <h2>For twenty or more</h2>
+      <p>At this size, stop building the order from the menu and call us instead. Twenty people is a different job: it is about timing the kitchen and getting the food out together, not just quantity. Call (02) 9891 4174 and we will work it out with you.</p>
+      <p>What we will ask: your numbers, how firm they are, your dietary needs, and whether anyone has to be somewhere afterwards.</p>
+
+      <h2>How much is enough</h2>
+      <p>The most common mistake is over-ordering mains and under-ordering starters. Dips and starters are what people actually remember, and they arrive while everyone is still settling in. The grill is the centrepiece, but it is not the whole meal.</p>
+      <p>If you are unsure, order slightly less than you think and add more later. We would rather cook a second round than watch food go back to the kitchen.</p>
+
+      <h2>Dietary needs at a big table</h2>
+      <p>Tell us at booking, not on the night. Vegetarians are well covered — there is a Vegetarian Plate, a mushroom moussaka, vegetarian pitas, all five dips and the salads. We keep gluten free pita. Our chicken and lamb are halal-sourced through our butcher, though we serve pork in the same kitchen, so we will not call ourselves a halal venue. Ask us and we will tell you exactly what we are doing.</p>
+
+      <h2>Booking</h2>
+      <p>316 Church St, Parramatta. Monday to Friday 12pm to 10pm, Saturday and Sunday 12pm to 11pm. For anything above six people, call (02) 9891 4174 rather than booking online.</p>
+`
+  },
+  'birthday-dinner-parramatta-greek': {
+    title: 'Birthday Dinner in Parramatta: Why a Greek Table Beats a Function Room',
+    excerpt: 'No room hire, no minimum spend, and food built to be shared. The case for a long table over a private function space.',
+    category: 'Occasions',
+    date: '2026-08-06',
+    content: `
+      <p>Most birthday venue guides assume you want a private room, a minimum spend and a set menu. For a lot of birthdays, that is more infrastructure than the occasion needs. You want a good long table, food that keeps arriving, and nobody hurrying you.</p>
+      <p>Here is the case for doing a birthday dinner at a Greek restaurant in Parramatta instead of hiring a function space.</p>
+
+      <h2>No room hire, no minimum spend</h2>
+      <p>We are a family restaurant, not a function venue. That means there is no room to hire and no minimum to hit. You book a table, you order what you want, and you pay for the food you ate.</p>
+      <p>For a group of eight to fifteen, that is usually a better deal and a better night than a private room that needs filling.</p>
+
+      <h2>Shared food suits a birthday</h2>
+      <p>A birthday table is almost always mixed: old friends, family, someone's partner nobody has met. Plated individual mains make everyone eat in parallel. Shared food makes them eat together, which is the entire point of the occasion.</p>
+      <p>The <strong>Olympus Plate</strong> is our largest sharing platter and it lands in the middle of a table like a centrepiece. Around it, dips, spanakopita, haloumi, dolmades and salads keep arriving while people talk.</p>
+
+      <h2>It handles everyone at the table</h2>
+      <p>Birthdays are where dietary requirements pile up. Ours is a menu that copes:</p>
+      <ul>
+        <li>Vegetarians get a real main — a Vegetarian Plate or the mushroom moussaka — not a side dish.</li>
+        <li>We keep gluten free pita bread for the pita dishes.</li>
+        <li>Our chicken and lamb are halal-sourced through our butcher. Pork is also on the menu and cooked in the same kitchen, so we are not a halal venue, but we will always tell you exactly what we are serving.</li>
+        <li>There is a kids' skewer if the birthday includes younger family.</li>
+      </ul>
+      <p>Parramatta is one of the most mixed places in Sydney and our tables reflect that. Feeding a group with different needs is a normal night here.</p>
+
+      <h2>What to sort when you book</h2>
+      <ul>
+        <li>Numbers, and how firm they are</li>
+        <li>Whether you want everything shared or a mix of shared and individual</li>
+        <li>Dietary requirements, all of them</li>
+        <li>Anything you are bringing — ask us about cake when you call rather than assuming either way</li>
+      </ul>
+
+      <h2>Book the table</h2>
+      <p>316 Church St, Parramatta. Monday to Friday 12pm to 10pm, Saturday and Sunday 12pm to 11pm. For a birthday group, call (02) 9891 4174 so we can put you somewhere you can all hear each other.</p>
+`
+  },
   'christmas-party-venue-parramatta': {
     title: 'Christmas Party Venues in Parramatta: How to Book Before December Fills Up',
     excerpt: 'The good December tables in Parramatta are gone by October. Here is how a Greek table works for a work lunch, what to order for a group, and what to sort out before you call.',
