@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 import {
   MapPin,
@@ -54,7 +55,7 @@ const Footer = () => {
     <footer id="footer" className="bg-[#0D71C9] w-full py-10 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h2 className="text-white text-3xl md:text-4xl text-center font-sedgwick mb-12">
+        <h2 className="text-white text-3xl md:text-4xl text-center mb-12">
           Locations & Hours
         </h2>
 
@@ -157,8 +158,39 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Secondary navigation */}
+        <nav
+          className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-12 text-white"
+          aria-label="Footer navigation"
+        >
+          <Link
+            href="/menu"
+            className="font-light text-lg underline-offset-4 hover:underline transition-colors duration-200"
+          >
+            Menu
+          </Link>
+          <Link
+            href="/about-us"
+            className="font-light text-lg underline-offset-4 hover:underline transition-colors duration-200"
+          >
+            About Us
+          </Link>
+          <Link
+            href="/blog"
+            className="font-light text-lg underline-offset-4 hover:underline transition-colors duration-200"
+          >
+            Blog
+          </Link>
+          <Link
+            href="/reservations"
+            className="font-light text-lg underline-offset-4 hover:underline transition-colors duration-200"
+          >
+            Reservations
+          </Link>
+        </nav>
+
         {/* Copyright */}
-        <div className="text-center text-white text-sm font-light mt-12">
+        <div className="text-center text-white text-sm font-light mt-8">
           © {new Date().getFullYear()} by The Souvlucky Country
           <span className="opacity-90">
             {" "}· Built by{" "}

@@ -10,6 +10,18 @@
 
   html {
     scroll-behavior: smooth;
+    caret-color: #0d71c9;
+    scrollbar-color: #0d71c9 #dff4ff;
+  }
+
+  ::selection {
+    background-color: #0d71c9;
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #0d71c9;
+    outline-offset: 3px;
   }
 
   h1,
@@ -19,23 +31,105 @@
   }
 }
 
+@layer utilities {
+  /* Elevation tokens (DESIGN.md → Shadow Vocabulary). Depth is tinted with
+     Midnight Harbour rather than neutral black so shadows stay in-palette. */
+  .shadow-card {
+    box-shadow:
+      0 10px 15px -3px rgb(3 35 60 / 0.2),
+      0 4px 6px -4px rgb(3 35 60 / 0.2);
+  }
+
+  .shadow-card-hover {
+    box-shadow:
+      0 20px 30px -8px rgb(3 35 60 / 0.28),
+      0 8px 12px -8px rgb(3 35 60 / 0.28);
+  }
+
+  .shadow-cta {
+    box-shadow:
+      0 10px 15px -3px rgb(3 35 60 / 0.25),
+      0 4px 6px -4px rgb(3 35 60 / 0.25);
+  }
+
+  .shadow-cta-hover {
+    box-shadow:
+      0 16px 24px -6px rgb(3 35 60 / 0.3),
+      0 6px 10px -6px rgb(3 35 60 / 0.3);
+  }
+
+  .shadow-panel {
+    box-shadow:
+      0 20px 40px -12px rgb(3 35 60 / 0.35),
+      0 8px 12px -8px rgb(3 35 60 / 0.3);
+  }
+
+  /* The signboard stroke: content is painted on left-to-right, the same
+     gesture the Instagram tiles use when their blue panel wipes up. */
+  /* Insets bleed past the border box: Sedgwick Ave's glyphs overhang their
+     own box, so a flush inset(0) would shave the swashes and descenders. */
+  @keyframes paint-on {
+    from {
+      clip-path: inset(-30% 100% -30% -10%);
+    }
+    to {
+      clip-path: inset(-30% -30% -30% -10%);
+    }
+  }
+
+  @keyframes settle-in {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* The photograph opens from the outer edge inward, so the two strokes
+     travel toward each other and meet at the centre of the hero. */
+  @keyframes paint-in {
+    from {
+      clip-path: inset(-30% -10% -30% 100%);
+    }
+    to {
+      clip-path: inset(-30% -10% -30% -30%);
+    }
+  }
+
+  .paint-on {
+    animation: paint-on 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .paint-in {
+    animation: paint-in 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .settle-in {
+    animation: settle-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paint-on,
+  .paint-in,
+  .settle-in {
+    animation: none;
+    clip-path: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @layer components {
   .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .nav-link {
-    @apply text-white/90 hover:text-white transition-all duration-200 text-lg font-light
-    relative after:content-[''] after:absolute after:bottom-0 after:left-0 
-    after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300
-    hover:after:w-full;
-  }
-
-  .menu-item-hover {
-    @apply transition-all duration-300;
-  }
-
-  .menu-item-hover:hover {
-    @apply bg-blue-50;
-  }
 }

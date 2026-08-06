@@ -28,7 +28,7 @@ export default function MenuSection() {
         <div className="w-full lg:w-1/2 p-6  lg:py-0">
           <div className="border border-[#0D71C9] rounded-xl p-8 lg:p-12 w-full h-[700px] flex flex-col justify-center">
             {" "}
-            <h2 className="text-[#0D71C9] font-sedgwick text-5xl mb-10">
+            <h2 className="text-[#0D71C9] text-5xl mb-10">
               {" "}
               Our Menus
             </h2>

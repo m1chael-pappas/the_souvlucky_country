@@ -90,7 +90,7 @@ export default function ReservationsPage() {
       
       <div className="min-h-screen bg-blue-50 py-36">
       {/* Title */}
-      <h1 className="text-5xl font-semibold font-sedgwick text-center text-[#0D71C9] mb-8">
+      <h1 className="text-5xl font-semibold text-center text-[#0D71C9] mb-8">
         Make a reservation
       </h1>
 

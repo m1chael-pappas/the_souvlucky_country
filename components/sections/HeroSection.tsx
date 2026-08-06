@@ -1,97 +1,64 @@
 "use client";
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
+import PillButton from '@/components/ui/PillButton';
+
+const HEADLINE = ['Taste', 'of', 'Greece'];
 
 export default function HeroSection() {
   return (
-    <div className="@container relative min-h-[900px] bg-gradient-to-r from-white via-[#DFF4FF] to-blue-500 flex items-center">
+    <div className="@container relative min-h-[900px] bg-gradient-to-r from-[#F2FDFF] via-[#DFF4FF] to-[#0D71C9] flex items-center">
       <div className="container mx-auto px-6 relative ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
-            className="space-y-8 z-20"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <div className="space-y-6">
-              <motion.h2
-                className="text-5xl lg:text-6xl font-bold mt-50 text-gray-800 leading-tight"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                Taste of Greece
-              </motion.h2>
+          <div className="space-y-10 z-20">
+            <div className="space-y-8">
+              {/* The headline letters itself onto the board, word by word */}
+              <h2 className="text-6xl lg:text-8xl text-[#03233C] leading-[1.1] max-w-[12ch]">
+                {HEADLINE.map((word, i) => (
+                  <span key={word}>
+                    <span
+                      className="paint-on inline-block"
+                      style={{ animationDelay: `${120 + i * 130}ms` }}
+                    >
+                      {word}
+                    </span>
+                    {i < HEADLINE.length - 1 ? ' ' : null}
+                  </span>
+                ))}
+              </h2>
 
-              <motion.p
-                className="text-lg text-gray-600 leading-relaxed max-w-lg"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+              <p
+                className="settle-in text-xl text-[#4B5563] leading-relaxed max-w-xl"
+                style={{ animationDelay: '520ms' }}
               >
                 Greek cuisine has a variety of flavours, tastes and colours.
                 Delicious plates, best ingredients that remind us the energy and
                 the passion of Athens or the summer breeze of the Greek islands.
-              </motion.p>
+              </p>
             </div>
 
             {/* Action Buttons */}
-            <motion.div
-              className="flex flex-wrap gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+            <div
+              className="settle-in flex flex-wrap gap-4"
+              style={{ animationDelay: '640ms' }}
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                <Link
-                  href="/reservations"
-                  className="bg-[#0D71C9] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-[#0A4E8C] transition-colors duration-200 block"
-                >
-                  Book Now
-                </Link>
-              </motion.div>
+              <PillButton href="/reservations" size="lg">
+                Book Now
+              </PillButton>
 
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                <Link
-                  href="/menu"
-                  className="border-2 bg-white border-[#0D71C9] text-[#0D71C9] px-8 py-3 rounded-full text-lg font-medium hover:bg-[#0D71C9] hover:text-white transition-all duration-200 block"
-                >
-                  Menu
-                </Link>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+              {/* Outline button fills by the same left-to-right stroke */}
+              <PillButton href="/menu" variant="outline" size="lg">
+                Menu
+              </PillButton>
+            </div>
+          </div>
 
-          {/* Right Visual Content */}
-          <motion.div
-            className="relative h-96 lg:h-[500px]"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            {/* Large background image - positioned to the right */}
-            <motion.div
-              className="absolute -top-20 -right-0"
-              animate={{
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 4,
-                ease: "easeInOut",
-                repeat: Infinity,
-              }}
-              whileHover={{ scale: 1.05 }}
+          {/* Right Visual Content — the stroke carries into the photograph */}
+          <div className="relative h-96 lg:h-[500px]">
+            <div
+              className="paint-in absolute -top-20 -right-0"
+              style={{ animationDelay: '380ms', animationDuration: '1000ms' }}
             >
               <Image
                 src="/home_hero.png"
@@ -104,8 +71,8 @@ export default function HeroSection() {
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z"
               />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

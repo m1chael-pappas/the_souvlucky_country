@@ -1,48 +1,40 @@
 "use client";
 
-import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import PillButton from "@/components/ui/PillButton";
+import { motion } from "framer-motion";
 import { Container } from "@mantine/core";
+import PaintHeading from "@/components/ui/PaintHeading";
 
 export default function StorySection() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
-  
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0.8, 1, 1, 0.8]);
-  
   return (
-    <motion.div
-      ref={ref}
+    <div
       className="bg-white h-196 flex items-center justify-center bg-cover bg-center"
-      style={{
-        backgroundImage: "url(/souvlucky3.png)",
-        opacity,
-        scale,
-      }}
+      style={{ backgroundImage: "url(/souvlucky3.png)" }}
     >
-      <Container
-        size="md"
-        className="text-center bg-white bg-opacity-80 p-8 pt-10 rounded-lg shadow-lg"
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        className="w-full"
       >
-        <h2 className="text-4xl font-bold text-[#0D71C9] mb-8">Our Story</h2>
+        <Container
+          size="md"
+          className="text-center bg-white/90 p-10 pt-12 rounded-2xl shadow-panel"
+        >
+          <PaintHeading className="text-5xl lg:text-6xl text-[#0D71C9] mb-8">
+            Our Story
+          </PaintHeading>
 
-        <p className="text-gray-700 leading-relaxed mb-6 text-center px-0 md:px-[7.5rem]">
-          A family-run Greek eatery in Parramatta. We serve authentic flavours
-          from the islands of Greece, made with heart and heritage. Join us for
-          fresh souvlaki, warm hospitality, and a true taste of tradition.
-        </p>
+          <p className="text-lg text-[#4B5563] leading-relaxed mb-10 text-center px-0 md:px-[7.5rem]">
+            A family-run Greek eatery in Parramatta. We serve authentic flavours
+            from the islands of Greece, made with heart and heritage. Join us for
+            fresh souvlaki, warm hospitality, and a true taste of tradition.
+          </p>
 
-        <Link href="/about-us">
-          <button className="bg-[#0D71C9] text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors duration-200 cursor-pointer">
-            Discover More
-          </button>
-        </Link>
-      </Container>
-    </motion.div>
+          <PillButton href="/about-us">Discover More</PillButton>
+        </Container>
+      </motion.div>
+    </div>
   );
 }

@@ -1,147 +1,115 @@
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import PaintHeading from "@/components/ui/PaintHeading";
 
 interface PopularItem {
   id: number;
   name: string;
-  description: string | { highlight: string; main: string };
+  description: { highlight: string; main: string };
   price: string;
   image: string;
 }
 
+const BLUR_DATA_URL =
+  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z";
+
+const popularItems: PopularItem[] = [
+  {
+    id: 1,
+    name: "Gyros Pita",
+    description: {
+      highlight: "Greek street food at its best.",
+      main: "Our most-loved handheld meal. Warm pita packed with your choice of meat, perfect for a quick bite or a satisfying lunch. Simple, bold, and full of flavour.",
+    },
+    price: "$16.70/$17.20",
+    image: "/popylar_01.png",
+  },
+  {
+    id: 2,
+    name: "Olympus Plate",
+    description: {
+      highlight: "The ultimate feast to share",
+      main: "A generous mix of grilled meats, haloumi, dips, chips and pita. Perfect for sharing with friends or family when you're craving a little bit of everything.",
+    },
+    price: "$79.00",
+    image: "/popular_02.png",
+  },
+  {
+    id: 3,
+    name: "Souvlaki Plate",
+    description: {
+      highlight: "Classic, wholesome and filling.",
+      main: "Three juicy skewers served with pita, tzatziki, salad and chips. A balanced plate that brings the taste of Greece straight to your table – every bite satisfying.",
+    },
+    price: "$34.50/$37.50",
+    image: "/popular_03.png",
+  },
+];
+
 export default function PopularSection() {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
-
-  const popularItems: PopularItem[] = [
-    {
-      id: 1,
-      name: "Gyros Pita",
-      description: {
-        highlight: "Greek street food at its best.",
-        main: "Our most-loved handheld meal. Warm pita packed with your choice of meat, perfect for a quick bite or a satisfying lunch. Simple, bold, and full of flavour.",
-      },
-      price: "$16.70/$17.20",
-      image: "/popylar_01.png",
-    },
-    {
-      id: 2,
-      name: "Olympus Plate",
-      description: {
-        highlight: "The ultimate feast to share",
-        main: "A generous mix of grilled meats, haloumi, dips, chips and pita. Perfect for sharing with friends or family when you're craving a little bit of everything.",
-      },
-      price: "$79.00",
-      image: "/popular_02.png",
-    },
-    {
-      id: 3,
-      name: "Souvlaki Plate",
-      description: {
-        highlight: "Classic, wholesome and filling.",
-        main: "Three juicy skewers served with pita, tzatziki, salad and chips. A balanced plate that brings the taste of Greece straight to your table – every bite satisfying.",
-      },
-      price: "$34.50/$37.50",
-      image: "/popular_03.png",
-    },
-  ];
-
-  const itemsPerSlide = 3;
-  const totalSlides = Math.ceil(popularItems.length / itemsPerSlide);
-
   return (
-    <section className="py-16  bg-[#F2FDFF]">
+    <section className="py-16 bg-[#F2FDFF]">
       <div className="container mt-30 mb-50 mx-auto px-6">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h2 className="text-4xl font-bold text-[#0D71C9] mb-4">
-              Most popular
-            </h2>
-          </div>
+        <div className="mb-8">
+          <PaintHeading className="text-5xl lg:text-6xl text-[#0D71C9] mb-4">
+            Most popular
+          </PaintHeading>
         </div>
 
-        {/* Carousel */}
-        <div className="relative overflow-hidden">
-          <div
-            className="flex transition-transform duration-300 ease-in-out"
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
-            {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-              <div key={slideIndex} className="w-full p-3 pb-8 flex-shrink-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                  {popularItems
-                    .slice(
-                      slideIndex * itemsPerSlide,
-                      (slideIndex + 1) * itemsPerSlide
-                    )
-                    .map((item, index) => (
-                      <motion.div
-                        key={item.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ 
-                          duration: 0.5, 
-                          delay: index * 0.1,
-                          ease: "easeOut" 
-                        }}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <Link href="/menu" className="block">
-                          <div className="bg-white rounded-2xl p-6 shadow-lg/20 hover:shadow-md transition-shadow duration-200 cursor-pointer"
-                          >
-                        {/* Food Image */}
-                        <div className="relative w-full h-64 mb-6 bg-gray-100 rounded-xl overflow-hidden">
-                          <Image
-                            src={item.image}
-                            alt={`${item.name} - Premium Greek dish at SouvLucky Country restaurant`}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            priority={item.id <= 3} // Priority for first 3 items (above fold)
-                            quality={80}
-                            placeholder="blur"
-                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z"
-                          />
-                        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {popularItems.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.08,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+            >
+              <Link href="/menu" className="block group h-full">
+                <div className="h-full bg-white rounded-2xl p-6 shadow-card group-hover:shadow-card-hover transition-shadow duration-300 ease-out cursor-pointer">
+                  {/* Food Image */}
+                  <div className="relative w-full h-64 mb-6 bg-gray-100 rounded-xl overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={`${item.name} - Premium Greek dish at SouvLucky Country restaurant`}
+                      fill
+                      className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      priority
+                      quality={80}
+                      placeholder="blur"
+                      blurDataURL={BLUR_DATA_URL}
+                    />
+                  </div>
 
-                        {/* Item Details */}
-                        <div className="space-y-3">
-                          <h3 className="text-xl font-semibold text-gray-800">
-                            {item.name}
-                          </h3>
-                          <div className="text-gray-600 text-sm leading-relaxed">
-                            {typeof item.description === "string" ? (
-                              <p>{item.description}</p>
-                            ) : (
-                              <>
-                                <p>
-                                  <strong>{item.description.highlight}</strong>
-                                </p>
-                                <p>{item.description.main}</p>
-                              </>
-                            )}
-                          </div>
-                          <div className="pt-2">
-                            <span className="text-2xl font-bold text-gray-800">
-                              {item.price}
-                            </span>
-                          </div>
-                        </div>
-                          </div>
-                        </Link>
-                      </motion.div>
-                    ))}
+                  {/* Item Details */}
+                  <div className="space-y-3">
+                    <h3 className="text-2xl text-[#03233C]">{item.name}</h3>
+                    <div className="text-[#4B5563] text-sm leading-relaxed">
+                      <p>
+                        <strong>{item.description.highlight}</strong>
+                      </p>
+                      <p>{item.description.main}</p>
+                    </div>
+                    <div className="pt-2">
+                      <span className="text-2xl font-medium text-[#111827]">
+                        {item.price}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
-
       </div>
     </section>
   );

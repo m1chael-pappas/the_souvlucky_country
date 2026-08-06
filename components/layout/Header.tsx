@@ -66,7 +66,6 @@ const Header = () => {
               <Link href="/" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Home</Link>
               <Link href="/about-us" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">About Us</Link>
               <Link href="/menu" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Menu</Link>
-              <Link href="/blog" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Blog</Link>
               <Link href="/reservations" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Reservations</Link>
               <Link href="#footer" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Location & Hours</Link>
             </nav>
@@ -129,13 +128,6 @@ const Header = () => {
               className={`transition-colors duration-200 text-2xl tracking-wide ${linkScrolledClass}`}
             >
               Menu
-            </Link>
-
-            <Link
-              href="/blog"
-              className={`transition-colors duration-200 text-2xl tracking-wide ${linkScrolledClass}`}
-            >
-              Blog
             </Link>
 
             <Link
@@ -212,14 +204,6 @@ const Header = () => {
                 onClick={closeMobileMenu}
               >
                 Menu
-              </Link>
-
-              <Link
-                href="/blog"
-                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
-                onClick={closeMobileMenu}
-              >
-                Blog
               </Link>
 
               <Link
