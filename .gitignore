@@ -37,3 +37,6 @@ next-env.d.ts
 # Windows Zone.Identifier files
 *:Zone.Identifier
 CLAUDE.md
+# impeccable transient session state (config + design system are tracked)
+.impeccable/hook.cache.json
+.impeccable/live/
