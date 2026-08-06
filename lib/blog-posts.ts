@@ -2,6 +2,81 @@
 // permits its own known exports from a page module, and the sitemap needs
 // to read this list so a new post is never omitted.
 export const blogPosts = {
+  'christmas-party-venue-parramatta': {
+    title: 'Christmas Party Venues in Parramatta: How to Book Before December Fills Up',
+    excerpt: 'The good December tables in Parramatta are gone by October. Here is how a Greek table works for a work lunch, what to order for a group, and what to sort out before you call.',
+    category: 'Group Dining',
+    date: '2026-08-06',
+    content: `
+      <p>If you are organising the work Christmas lunch, the honest advice is this: the good tables in Parramatta are gone by October. Venues start getting shortlisted in August, and by the time most people think about booking, the date they wanted has been taken by someone who thought about it in winter.</p>
+
+      <p>So here is how we handle December at The Souvlucky Country, what a Greek table actually looks like for a group, and what to sort out before you call.</p>
+
+      <h2>Why Greek works for a work lunch</h2>
+      <p>Most function venues sell you a room. You get a private space, a minimum spend, and a set menu chosen weeks in advance by whoever drew the short straw.</p>
+      <p>A Greek table works the other way around. The food arrives in the middle and people help themselves. Nobody is locked into the chicken because they ticked chicken in a spreadsheet in November. It suits a group that has not eaten together much, because passing plates does the work that small talk usually has to.</p>
+      <p>It also solves the problem every office organiser knows: the colleague who does not eat meat, the one who cannot have gluten, the one who quietly does not eat pork. A shared table absorbs all of that without anyone having to announce it.</p>
+
+      <h2>What to order for a group</h2>
+      <p>Two dishes on our menu are built for sharing:</p>
+      <ul>
+        <li><strong>The Olympus Plate</strong> is our largest, a mix of grilled meats, haloumi, dips, chips and pita. It is designed to land in the middle of a table and feed several people.</li>
+        <li><strong>The Mix Grill</strong> is the smaller version of the same idea, good for four to six.</li>
+      </ul>
+      <p>Around those, dips and starters do the heavy lifting. Tzatziki, taramosalata, skordalia, eggplant and spicy cheese all come with pita. Spanakopita, haloumi, dolmades and chargrilled octopus are the plates people reach for first. A large Greek salad and a large cabbage salad between every six or so keeps the table balanced.</p>
+      <p>As a rough guide for a longer sitting: allow two or three dips across the table, three or four starters per six people, then the shared grills, then salads. It is more food than people expect and that is the point.</p>
+
+      <h2>Dietary needs, honestly</h2>
+      <p>We cook for a lot of different tables in Parramatta and we would rather tell you plainly what we can do than have you find out on the night.</p>
+      <ul>
+        <li><strong>Vegetarian.</strong> This is not an afterthought on our menu. There is a Vegetarian Plate, a vegetarian moussaka made with mushroom, a Vegetarian Pita with either haloumi or chickpea fritters, plus haloumi, spanakopita, dolmades, feta roll with honey, all five dips and the salads. A vegetarian at a Greek table eats very well.</li>
+        <li><strong>Halal.</strong> Our chicken and lamb are halal-sourced through our butcher. We also serve pork, which is on the menu and cooked in the same kitchen, so we will not tell you we are a halal venue. What we can say is that if that matters to your table, tell us when you book and we will talk you through exactly what we are serving and how.</li>
+        <li><strong>Gluten.</strong> We keep gluten free pita bread, so the pita dishes can be adapted. Ask us about anything else and we will check with the kitchen rather than guess.</li>
+      </ul>
+      <p>We are a family restaurant in one of the most mixed parts of Sydney. Accommodating people is not a special request here, it is most nights.</p>
+
+      <h2>What to sort before you call</h2>
+      <p>Have these ready and the booking takes two minutes:</p>
+      <ul>
+        <li><strong>Numbers, and how firm they are.</strong> A rough number now is more useful than a precise one in November.</li>
+        <li><strong>Date and a backup date.</strong> December Fridays go first, then Thursdays. A Tuesday or Wednesday gives you much more choice.</li>
+        <li><strong>Sitting or standing.</strong> We are a sit-down restaurant, so this is a long table, not a cocktail function.</li>
+        <li><strong>Dietary needs.</strong> All of them, at booking rather than on the day.</li>
+        <li><strong>Timing.</strong> Whether people need to be somewhere afterwards.</li>
+      </ul>
+
+      <h2>Book it now, not in November</h2>
+      <p>We are at 316 Church St, Parramatta, open Monday to Friday from 12pm to 10pm and Saturday and Sunday from 12pm to 11pm.</p>
+      <p>For a group, call us on (02) 9891 4174 rather than booking online. Large tables need a conversation, and we would rather work out what your group actually needs than have you guess from a menu.</p>
+`
+  },
+  'fathers-day-lunch-parramatta': {
+    title: "Father's Day Lunch in Parramatta: A Greek Table for Dad",
+    excerpt: 'Father\'s Day falls on Sunday 6 September. A straightforward case for lamb cutlets, a shared grill, and a long table in Parramatta.',
+    category: 'Occasions',
+    date: '2026-08-06',
+    content: `
+      <p>Father's Day falls on Sunday 6 September this year, and if you are looking for somewhere in Parramatta to take him, here is a straightforward case for a Greek table.</p>
+
+      <h2>What Dad actually wants</h2>
+      <p>Not a degustation. Not something described as deconstructed. In our experience, what most fathers want on a Sunday is a decent piece of grilled meat, more food than is strictly sensible, and enough time at the table to actually talk to everyone.</p>
+      <p>That is essentially the entire Greek approach to lunch.</p>
+
+      <h2>What to order him</h2>
+      <p>If he likes lamb, order the <strong>paidakia</strong>. Lamb cutlets off the grill, and the dish we would put in front of anyone who wants to understand what we do. It is the order we see fathers quietly enjoying most.</p>
+      <p>If the table is larger, the <strong>Mix Grill</strong> or the <strong>Olympus Plate</strong> are both built to be shared, which is usually the better move on a family occasion. Everyone picks at everything and no one is stuck watching someone else's meal look better than theirs.</p>
+      <p>If he is a creature of habit, a <strong>Souvlaki Plate</strong> or a <strong>Gyros Plate</strong> in pork, chicken or lamb does the job, with pita, tzatziki, salad and chips.</p>
+      <p>Start with dips and pita for the table, and add spanakopita and haloumi. Finish with something sweet if anyone still has room, which they will not.</p>
+
+      <h2>Bringing the whole family</h2>
+      <p>Father's Day tables are usually mixed. Grandparents, kids, someone's new partner, someone who does not eat meat. A Greek table handles that better than most because the food is shared rather than plated per person.</p>
+      <p>There is a kids' skewer for the younger ones. There is a Vegetarian Plate, a mushroom moussaka and a vegetarian pita for anyone who does not eat meat, along with all five dips and the salads. Our chicken and lamb are halal-sourced through our butcher, though we do serve pork in the same kitchen, so if that matters to your table just mention it when you book and we will walk you through it.</p>
+
+      <h2>Book early, Sunday fills up</h2>
+      <p>Father's Day is one of the busiest Sundays of the year in Parramatta, and we are a small family restaurant, not a function centre. The tables that suit a big family group are the first to go.</p>
+      <p>We are at 316 Church St, Parramatta, open Sunday from 12pm to 11pm. Book a table online, or call us on (02) 9891 4174 if you are bringing a larger group and want us to put you somewhere you can all hear each other.</p>
+`
+  },
   'story-behind-signature-tzatziki': {
     title: 'The Story Behind Our Signature Tzatziki Recipe',
     excerpt: 'Discover the family secrets and traditional techniques that make our tzatziki the talk of Parramatta.',

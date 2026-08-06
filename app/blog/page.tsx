@@ -31,6 +31,28 @@ export const metadata: Metadata = {
 // Mock blog posts data - in a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    slug: 'christmas-party-venue-parramatta',
+    title: 'Christmas Party Venues in Parramatta: How to Book Before December Fills Up',
+    excerpt: 'The good December tables in Parramatta are gone by October. How a Greek table works for a work lunch, what to order for a group, and what to sort out before you call.',
+    category: 'Group Dining',
+    date: '2026-08-06',
+    readTime: '6 min read',
+    featured: true,
+    image: '/popular_02.png',
+    imageAlt: 'A large shared Greek platter of grilled meats, dips and pita for a group table'
+  },
+  {
+    slug: 'fathers-day-lunch-parramatta',
+    title: "Father's Day Lunch in Parramatta: A Greek Table for Dad",
+    excerpt: "Father's Day falls on Sunday 6 September. A straightforward case for lamb cutlets, a shared grill, and a long table in Parramatta.",
+    category: 'Occasions',
+    date: '2026-08-06',
+    readTime: '4 min read',
+    featured: true,
+    image: '/popular_03.png',
+    imageAlt: 'Grilled Greek lamb and souvlaki plate served with pita, salad and tzatziki'
+  },
+  {
     slug: 'best-greek-restaurant-western-sydney-parramatta',
     title: 'Best Greek Restaurant in Western Sydney: What to Look For in 2025',
     excerpt: 'Searching for authentic Greek food in Parramatta or Western Sydney? Here\'s how to find the best Greek restaurant and what sets The Souvlucky Country apart.',
