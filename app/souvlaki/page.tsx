@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Container } from '@mantine/core';
 import { ArrowLeft } from 'lucide-react';
 import menuData from '@/data/menu.json';
+import { SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Best Souvlaki in Sydney - The Souvlucky Country Parramatta',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
 };
 
 function generateSouvlakiStructuredData() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://thesouvluckycountry.com.au';
+  const baseUrl = SITE_URL;
   
   return {
     "@context": "https://schema.org",

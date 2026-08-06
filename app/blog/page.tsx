@@ -18,9 +18,13 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: 'Blog - The Souvlucky Country | Greek Food Stories & Tips',
   description: 'Discover the stories behind our authentic Greek dishes, cooking tips, and Greek culture at The Souvlucky Country restaurant in Parramatta.',
+  alternates: {
+    canonical: '/blog',
+  },
   openGraph: {
     title: 'Blog - The Souvlucky Country',
     description: 'Discover the stories behind our authentic Greek dishes, cooking tips, and Greek culture.',
+    url: '/blog',
     type: 'website',
   },
 }

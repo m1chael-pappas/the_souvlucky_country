@@ -8,6 +8,7 @@ import { Inter } from 'next/font/google';
 import ImagePreloader from '@/components/ImagePreloader';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
+import { SITE_URL } from '@/lib/site';
 import {
   ColorSchemeScript,
   mantineHtmlProps,
@@ -50,14 +51,14 @@ export const metadata: Metadata = {
   authors: [{ name: "The Souvlucky Country" }],
   creator: "The Souvlucky Country",
   publisher: "The Souvlucky Country",
-  metadataBase: new URL("https://thesouvluckycountry.com.au"),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL(SITE_URL),
+  // No `alternates.canonical` here on purpose: a canonical set on the root
+  // layout is inherited by every route that does not declare its own, which
+  // would point /reservations, /blog and each post at the homepage.
   openGraph: {
     type: "website",
     locale: "en_AU",
-    url: "https://thesouvluckycountry.com.au",
+    url: SITE_URL,
     siteName: "The Souvlucky Country",
     title: "The Souvlucky Country - Authentic Greek Restaurant in Parramatta",
     description:
@@ -97,17 +98,17 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  "@id": "https://thesouvluckycountry.com.au/#restaurant",
+  "@id": `${SITE_URL}/#restaurant`,
   name: "The Souvlucky Country",
   alternateName: "Souvlucky Country Greek Restaurant",
   description:
     "Authentic Greek restaurant serving traditional Mediterranean cuisine in Parramatta, Sydney. Specializing in fresh souvlaki, homemade dips, and traditional Greek dishes.",
   image: [
-    "https://thesouvluckycountry.com.au/main_hero.png",
-    "https://thesouvluckycountry.com.au/popular_02.png",
-    "https://thesouvluckycountry.com.au/about_01.png",
+    `${SITE_URL}/main_hero.png`,
+    `${SITE_URL}/popular_02.png`,
+    `${SITE_URL}/about_01.png`,
   ],
-  logo: "https://thesouvluckycountry.com.au/Logo1.png",
+  logo: `${SITE_URL}/Logo1.png`,
   address: {
     "@type": "PostalAddress",
     streetAddress: "316 Church St",
@@ -122,7 +123,7 @@ const structuredData = {
     longitude: 151.004254975028,
   },
   telephone: "0298914174",
-  url: "https://thesouvluckycountry.com.au",
+  url: SITE_URL,
   email: "souvlucky62@gmail.com",
   servesCuisine: ["Greek", "Mediterranean", "European"],
   priceRange: "$$",
@@ -146,8 +147,8 @@ const structuredData = {
     },
   ],
   acceptsReservations: true,
-  hasMenu: "https://thesouvluckycountry.com.au/menu",
-  menu: "https://thesouvluckycountry.com.au/menu",
+  hasMenu: `${SITE_URL}/menu`,
+  menu: `${SITE_URL}/menu`,
   foundingDate: "2015",
   founder: {
     "@type": "Organization",

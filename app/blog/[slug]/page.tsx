@@ -530,6 +530,15 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
   return {
     title: `${post.title} - The Souvlucky Country`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `/blog/${slug}`,
+      type: 'article',
+    },
   }
 }
 

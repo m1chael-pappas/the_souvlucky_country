@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import MenuClient from '@/components/menu/MenuClient';
 import menuData from '@/data/menu.json';
+import { SITE_URL } from '@/lib/site';
 
 // Generate dynamic menu descriptions for SEO
 function generateMenuDescription() {
@@ -19,7 +20,7 @@ function generateMenuDescription() {
 
 // Generate structured data for search engines
 function generateMenuStructuredData() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://thesouvluckycountry.com.au';
+  const baseUrl = SITE_URL;
   
   // Extract sample menu items for structured data
   const sampleFoodItems = [
