@@ -4,7 +4,7 @@ import { Home, ArrowLeft } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-sea-mist pt-32 pb-16 flex items-center justify-center">
+    <div className="min-h-screen bg-sea-mist pt-40 pb-16 flex items-center justify-center">
       <Container size="md" className="text-center">
         <div className="bg-white rounded-lg shadow-sm p-12">
           {/* Large 404 with Greek styling */}

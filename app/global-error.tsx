@@ -20,7 +20,7 @@ export default function GlobalError({
   return (
     <html>
       <body>
-        <div className="min-h-screen bg-sea-mist pt-32 pb-16 flex items-center justify-center">
+        <div className="min-h-screen bg-sea-mist pt-40 pb-16 flex items-center justify-center">
           <Container size="md" className="text-center">
             <div className="bg-white rounded-lg shadow-sm p-12">
               {/* Error icon */}

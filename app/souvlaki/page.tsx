@@ -123,7 +123,7 @@ export default function SouvlakiPage() {
         }}
       />
       
-      <div className="min-h-screen bg-sea-mist pt-32 pb-16">
+      <div className="min-h-screen bg-sea-mist pt-40 pb-16">
         <Container size="xl">
           <div className="mb-8">
             <Link 

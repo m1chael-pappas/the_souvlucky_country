@@ -152,7 +152,7 @@ export default function MenuClient({ menuData }: MenuClientProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-sea-mist pt-32 pb-16">
+    <div className="min-h-screen bg-sea-mist pt-40 pb-16">
       <Container size="xl">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-aegean mb-4">

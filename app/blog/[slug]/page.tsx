@@ -54,7 +54,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
   }
 
   return (
-    <div className="bg-white pt-36 pb-16 px-6">
+    <div className="bg-white pt-40 pb-16 px-6">
       <article className="max-w-3xl mx-auto">
         <nav aria-label="Breadcrumb" className="mb-8 text-sm text-story">
           <Link

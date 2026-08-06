@@ -114,7 +114,7 @@ export default function BlogPage() {
   const regularPosts = blogPosts.filter(post => !post.featured)
 
   return (
-    <div className="bg-white pt-36 pb-16">
+    <div className="bg-white pt-40 pb-16">
       <Container size="lg">
       <Stack gap="xl">
         <div>

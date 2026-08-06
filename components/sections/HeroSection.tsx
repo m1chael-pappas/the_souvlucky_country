@@ -7,7 +7,10 @@ const HEADLINE = ['Taste', 'of', 'Greece'];
 
 export default function HeroSection() {
   return (
-    <div className="@container relative min-h-[640px] lg:min-h-[900px] bg-gradient-to-r from-sea-mist via-sky-wash to-aegean flex items-center">
+    // pt clears the fixed header (py-8 + 100px logo = 164px). The hero is
+    // full-bleed under it, so centred content must be padded past it rather
+    // than relying on the content happening to be short enough.
+    <div className="@container relative min-h-[640px] lg:min-h-[900px] pt-44 pb-16 lg:pb-0 bg-gradient-to-b lg:bg-gradient-to-r from-sea-mist via-sky-wash to-aegean flex items-center">
       <div className="container mx-auto px-6 relative ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -54,10 +57,12 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Visual Content: the stroke carries into the photograph */}
-          <div className="relative h-96 lg:h-[500px]">
+          {/* Right Visual Content: the stroke carries into the photograph.
+              Below lg the grid is one column, so the artwork is centred and
+              scaled to the column instead of bleeding off a 1200px box. */}
+          <div className="relative h-72 sm:h-96 lg:h-[500px] overflow-hidden lg:overflow-visible">
             <div
-              className="paint-in absolute -top-20 -right-0"
+              className="paint-in absolute left-1/2 -translate-x-1/2 top-0 w-[130%] sm:w-[110%] lg:left-auto lg:translate-x-0 lg:w-auto lg:-top-20 lg:right-0"
               style={{ animationDelay: '380ms', animationDuration: '1000ms' }}
             >
               <Image
@@ -65,7 +70,8 @@ export default function HeroSection() {
                 alt="Hero image of The Souvlucky Country restaurant"
                 quality={85}
                 priority
-                loading="eager"
+                sizes="(max-width: 1024px) 130vw, 1200px"
+                className="w-full h-auto"
                 width={1200}
                 height={800}
                 placeholder="blur"
