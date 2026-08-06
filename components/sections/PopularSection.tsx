@@ -1,9 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import PaintHeading from "@/components/ui/PaintHeading";
 
 interface PopularItem {
   id: number;
@@ -51,28 +49,18 @@ const popularItems: PopularItem[] = [
 
 export default function PopularSection() {
   return (
-    <section className="py-16 bg-[#F2FDFF]">
+    <section className="py-16 bg-sea-mist">
       <div className="container mt-30 mb-50 mx-auto px-6">
         {/* Header */}
         <div className="mb-8">
-          <PaintHeading className="text-5xl lg:text-6xl text-[#0D71C9] mb-4">
+          <h2 className="text-5xl lg:text-6xl text-aegean mb-4">
             Most popular
-          </PaintHeading>
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {popularItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{
-                duration: 0.7,
-                delay: index * 0.08,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
+          {popularItems.map((item) => (
+            <div key={item.id}>
               <Link href="/menu" className="block group h-full">
                 <div className="h-full bg-white rounded-2xl p-6 shadow-card group-hover:shadow-card-hover transition-shadow duration-300 ease-out cursor-pointer">
                   {/* Food Image */}
@@ -83,7 +71,7 @@ export default function PopularSection() {
                       fill
                       className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      priority
+                      loading="lazy"
                       quality={80}
                       placeholder="blur"
                       blurDataURL={BLUR_DATA_URL}
@@ -92,22 +80,22 @@ export default function PopularSection() {
 
                   {/* Item Details */}
                   <div className="space-y-3">
-                    <h3 className="text-2xl text-[#03233C]">{item.name}</h3>
-                    <div className="text-[#4B5563] text-sm leading-relaxed">
+                    <h3 className="text-2xl text-midnight">{item.name}</h3>
+                    <div className="text-story text-sm leading-relaxed">
                       <p>
                         <strong>{item.description.highlight}</strong>
                       </p>
                       <p>{item.description.main}</p>
                     </div>
                     <div className="pt-2">
-                      <span className="text-2xl font-medium text-[#111827]">
+                      <span className="text-2xl font-medium text-ink">
                         {item.price}
                       </span>
                     </div>
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

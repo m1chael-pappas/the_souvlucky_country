@@ -3,7 +3,7 @@
  *
  * Set NEXT_PUBLIC_SITE_URL per environment (production, preview, local) so the
  * canonical URL always matches the host actually being served. Everything that
- * emits an absolute URL — metadataBase, JSON-LD, sitemap, robots — reads from
+ * emits an absolute URL (metadataBase, JSON-LD, sitemap, robots) reads from
  * here rather than hardcoding the domain.
  */
 export const SITE_URL = (

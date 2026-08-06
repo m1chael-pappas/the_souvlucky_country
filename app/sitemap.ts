@@ -1,57 +1,30 @@
 import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/site';
+import { blogPosts } from '@/lib/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_URL;
+  const now = new Date();
 
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/menu`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/reservations`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/about-us`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+  const staticRoutes: MetadataRoute.Sitemap = [
+    { url: baseUrl, changeFrequency: 'weekly' as const, priority: 1 },
+    { url: `${baseUrl}/menu`, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/reservations`, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/souvlaki`, changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${baseUrl}/about-us`, changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${baseUrl}/blog`, changeFrequency: 'weekly' as const, priority: 0.7 },
+  ].map((route) => ({ ...route, lastModified: now }));
+
+  // Derived from the post data itself, so a new post is never left out of the
+  // sitemap the way two of the local-SEO comparison posts previously were.
+  const postRoutes: MetadataRoute.Sitemap = Object.entries(blogPosts).map(
+    ([slug, post]) => ({
+      url: `${baseUrl}/blog/${slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'monthly' as const,
       priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/story-behind-signature-tzatziki`,
-      lastModified: new Date('2024-01-15'),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/souvlaki-traditional-vs-modern`,
-      lastModified: new Date('2024-01-10'),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/greek-meat-dishes-guide`,
-      lastModified: new Date('2024-01-05'),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-  ];
+    })
+  );
+
+  return [...staticRoutes, ...postRoutes];
 }

@@ -26,8 +26,14 @@ const nextConfig = {
       contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
       // Set aggressive caching for better performance
       minimumCacheTTL: 31536000, // 1 year
-      // Add domains if using external images
-      domains: ['booking-widget.quandoo.com', 'assets-www.prod.quandoo.com'],
+      // Every quality level used by a <Image quality={...}> in this app.
+      // Required from Next.js 16; unlisted values stop being optimised.
+      qualities: [75, 80, 85],
+      // Replaces the deprecated `domains` array
+      remotePatterns: [
+        { protocol: 'https', hostname: 'booking-widget.quandoo.com' },
+        { protocol: 'https', hostname: 'assets-www.prod.quandoo.com' },
+      ],
       // Enable experimental features for performance
       unoptimized: false,
       // Loader configuration for better performance

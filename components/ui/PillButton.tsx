@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
  * outline counterpart. Consolidates four hand-rolled variants that had
  * drifted apart on padding, shadow, and hover colour.
  *
- * Renders a single anchor — never a <button> nested inside a <Link>, which
+ * Renders a single anchor, never a <button> nested inside a <Link>, which
  * is invalid HTML and confuses assistive technology.
  *
  * Sizes follow DESIGN.md: `md` is the documented 12px/32px pill; `lg` is the
@@ -43,15 +43,15 @@ export default function PillButton({
   const isPrimary = variant === "primary";
 
   const variantClasses = isPrimary
-    ? "bg-[#0D71C9] text-white shadow-cta hover:bg-[#0A4E8C] hover:shadow-cta-hover transition-[background-color,box-shadow,transform] duration-200"
-    : "group relative isolate overflow-hidden border-2 bg-white border-[#0D71C9] text-[#0D71C9] hover:text-white transition-[color,transform] duration-300";
+    ? "bg-aegean text-white shadow-cta hover:bg-aegean-deep hover:shadow-cta-hover transition-[background-color,box-shadow,transform] duration-200"
+    : "group relative isolate overflow-hidden border-2 bg-white border-aegean text-aegean hover:text-white transition-[color,transform] duration-300";
 
   const content = (
     <>
       {!isPrimary && (
         <span
           aria-hidden
-          className="absolute inset-0 -z-10 bg-[#0D71C9] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          className="absolute inset-0 -z-10 bg-aegean origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
         />
       )}
       {children}

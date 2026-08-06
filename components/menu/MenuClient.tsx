@@ -30,26 +30,26 @@ interface MenuItemProps {
 
 const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
   return (
-    <div className="py-4 border-b border-blue-100 last:border-b-0" role="article" aria-labelledby={`item-${item.name.replace(/\s+/g, '-').toLowerCase()}`}>
+    <div className="py-4 border-b border-sky-wash last:border-b-0" aria-labelledby={`item-${item.name.replace(/\s+/g, '-').toLowerCase()}`}>
       <div className="flex justify-between items-start">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-1">
-            <h3 id={`item-${item.name.replace(/\s+/g, '-').toLowerCase()}`} className="text-lg font-medium text-gray-800">{item.name}</h3>
+            <h3 id={`item-${item.name.replace(/\s+/g, '-').toLowerCase()}`} className="text-lg font-medium text-ink">{item.name}</h3>
             {item.vegetarian && (
               <span className="text-green-600 text-sm font-medium bg-green-50 px-2 py-1 rounded-full border border-green-200" aria-label="Vegetarian option">
                 🌱 V
               </span>
             )}
           </div>
-          <p className="text-sm text-gray-600 mb-2" aria-describedby={`item-${item.name.replace(/\s+/g, '-').toLowerCase()}`}>{item.description}</p>
+          <p className="text-sm text-story mb-2" aria-describedby={`item-${item.name.replace(/\s+/g, '-').toLowerCase()}`}>{item.description}</p>
           
           {/* Show variations if they exist */}
           {item.variations && (
-            <div className="space-y-1" role="list" aria-label={`${item.name} variations`}>
+            <div className="space-y-1" aria-label={`${item.name} variations`}>
               {item.variations.map((variation, index) => (
-                <div key={index} className="flex justify-between items-center text-sm" role="listitem">
-                  <span className="text-gray-700 ml-4">• {variation.name}</span>
-                  <span className="text-lg font-medium text-[#0D71C9]" aria-label={`Price: ${variation.price} Australian dollars`}>${variation.price}</span>
+                <div key={index} className="flex justify-between items-center text-sm">
+                  <span className="text-story ml-4">• {variation.name}</span>
+                  <span className="text-lg font-medium text-aegean" aria-label={`Price: ${variation.price} Australian dollars`}>${variation.price}</span>
                 </div>
               ))}
             </div>
@@ -58,7 +58,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
         
         {/* Show single price if no variations */}
         {item.price && !item.variations && (
-          <span className="text-lg font-medium text-[#0D71C9] ml-4" aria-label={`Price: ${item.price} Australian dollars`}>${item.price}</span>
+          <span className="text-lg font-medium text-aegean ml-4" aria-label={`Price: ${item.price} Australian dollars`}>${item.price}</span>
         )}
       </div>
     </div>
@@ -79,14 +79,14 @@ const MenuSection: React.FC<MenuSectionProps> = ({ title, items, subtitle }) => 
   const sectionId = `section-${title.replace(/\s+/g, '-').toLowerCase()}`;
 
   return (
-    <div className="mb-12" role="region" aria-labelledby={sectionId}>
-      <h2 id={sectionId} className="text-3xl font-bold text-[#0D71C9] mb-4 text-center">
+    <div className="mb-12" aria-labelledby={sectionId}>
+      <h2 id={sectionId} className="text-3xl font-bold text-aegean mb-4 text-center">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-gray-600 text-center mb-8 italic" aria-describedby={sectionId}>{subtitle}</p>
+        <p className="text-story text-center mb-8 italic" aria-describedby={sectionId}>{subtitle}</p>
       )}
-      <div className="bg-white rounded-lg shadow-sm p-6" role="region" aria-labelledby={sectionId}>
+      <div className="bg-white rounded-lg shadow-sm p-6" aria-labelledby={sectionId}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Column */}
           <div>
@@ -152,43 +152,37 @@ export default function MenuClient({ menuData }: MenuClientProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-blue-50 pt-32 pb-16">
+    <div className="min-h-screen bg-sea-mist pt-32 pb-16">
       <Container size="xl">
-        <div className="text-center mb-16" role="banner">
-          <h1 className="text-5xl font-bold text-[#0D71C9] mb-4">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-aegean mb-4">
             Menu
           </h1>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Our menu is packed with authentic souvlaki, fresh salads, hearty plates, and homemade favourites—each dish crafted with love, tradition, and the freshest ingredients.
+          <p className="text-story text-lg max-w-3xl mx-auto">
+            Our menu is packed with authentic souvlaki, fresh salads, hearty plates, and homemade favourites. Each dish is crafted with love, tradition, and the freshest ingredients.
           </p>
         </div>
 
-        <Tabs defaultValue="food" role="tablist" aria-label="Restaurant menu categories">
+        <Tabs defaultValue="food" aria-label="Restaurant menu categories">
           <Tabs.List grow className="mb-8 flex justify-center" role="tablist">
             <Tabs.Tab
               value="food"
               leftSection={<UtensilsCrossed className="mr-2 w-5 h-5" aria-hidden="true" />}
-              role="tab"
               aria-controls="food-panel"
-              aria-selected="true"
             >
               Food Menu
             </Tabs.Tab>
             <Tabs.Tab
               value="drinks"
               leftSection={<Wine className="mr-2 w-5 h-5" aria-hidden="true" />}
-              role="tab"
               aria-controls="drinks-panel"
-              aria-selected="false"
             >
               Drink Menu
             </Tabs.Tab>
             <Tabs.Tab
               value="desserts"
               leftSection={<Cake className="mr-2 w-5 h-5" aria-hidden="true" />}
-              role="tab"
               aria-controls="desserts-panel"
-              aria-selected="false"
             >
               Desserts
             </Tabs.Tab>

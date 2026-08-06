@@ -33,9 +33,9 @@ const Header = () => {
   // Prevent hydration mismatch by using consistent styling until mounted
   const headerScrolledClass = mounted && scrolled ? "bg-white shadow-md py-4" : "bg-transparent py-8";
   const linkScrolledClass = mounted && scrolled 
-    ? "text-[#0D71C9] hover:text-blue-900 hover:underline"
-    : "text-[#03233C] hover:text-[#0A4E8C] hover:underline";
-  const hamburgerScrolledClass = mounted && scrolled ? "text-[#0D71C9]" : "text-[#03233C]";
+    ? "text-aegean hover:text-midnight hover:underline"
+    : "text-midnight hover:text-aegean-deep hover:underline";
+  const hamburgerScrolledClass = mounted && scrolled ? "text-aegean" : "text-midnight";
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -51,7 +51,7 @@ const Header = () => {
       <>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#0D71C9] text-white px-4 py-2 rounded z-[60] focus:z-[60]"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-aegean text-white px-4 py-2 rounded z-[60] focus:z-[60]"
         >
           Skip to main content
         </a>
@@ -63,16 +63,16 @@ const Header = () => {
               </Link>
             </div>
             <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">
-              <Link href="/" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Home</Link>
-              <Link href="/about-us" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">About Us</Link>
-              <Link href="/menu" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Menu</Link>
-              <Link href="/reservations" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Reservations</Link>
-              <Link href="#footer" className="transition-colors duration-200 text-2xl tracking-wide text-[#03233C] hover:text-[#0A4E8C] hover:underline">Location & Hours</Link>
+              <Link href="/" className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">Home</Link>
+              <Link href="/about-us" className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">About Us</Link>
+              <Link href="/menu" className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">Menu</Link>
+              <Link href="/reservations" className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">Reservations</Link>
+              <Link href="#footer" className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">Location & Hours</Link>
             </nav>
             <button className="lg:hidden flex flex-col gap-1 p-2 ml-auto mr-5" aria-label="Toggle mobile menu">
-              <span className="w-6 h-0.5 bg-current text-[#03233C]"></span>
-              <span className="w-6 h-0.5 bg-current text-[#03233C]"></span>
-              <span className="w-6 h-0.5 bg-current text-[#03233C]"></span>
+              <span className="w-6 h-0.5 bg-current text-midnight"></span>
+              <span className="w-6 h-0.5 bg-current text-midnight"></span>
+              <span className="w-6 h-0.5 bg-current text-midnight"></span>
             </button>
           </div>
         </header>
@@ -85,7 +85,7 @@ const Header = () => {
       {/* Skip Link for Accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#0D71C9] text-white px-4 py-2 rounded z-[60] focus:z-[60]"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-aegean text-white px-4 py-2 rounded z-[60] focus:z-[60]"
       >
         Skip to main content
       </a>
@@ -175,7 +175,7 @@ const Header = () => {
         {mobileMenuOpen && (
           <div
             id="mobile-menu"
-            className="lg:hidden fixed inset-0 top-24 bg-white bg-opacity-95 backdrop-blur-sm"
+            className="lg:hidden fixed inset-0 top-24 bg-white/95 backdrop-blur-sm"
           >
             <nav
               className="flex flex-col items-center gap-8 pt-8"
@@ -184,7 +184,7 @@ const Header = () => {
             >
               <Link
                 href="/"
-                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
+                className="text-aegean text-2xl font-medium hover:text-midnight transition-colors duration-200"
                 onClick={closeMobileMenu}
               >
                 Home
@@ -192,7 +192,7 @@ const Header = () => {
 
               <Link
                 href="/about-us"
-                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
+                className="text-aegean text-2xl font-medium hover:text-midnight transition-colors duration-200"
                 onClick={closeMobileMenu}
               >
                 About Us
@@ -200,7 +200,7 @@ const Header = () => {
 
               <Link
                 href="/menu"
-                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
+                className="text-aegean text-2xl font-medium hover:text-midnight transition-colors duration-200"
                 onClick={closeMobileMenu}
               >
                 Menu
@@ -208,7 +208,7 @@ const Header = () => {
 
               <Link
                 href="/reservations"
-                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
+                className="text-aegean text-2xl font-medium hover:text-midnight transition-colors duration-200"
                 onClick={closeMobileMenu}
               >
                 Reservations
@@ -216,7 +216,7 @@ const Header = () => {
 
               <Link
                 href="#footer"
-                className="text-[#0D71C9] text-2xl font-medium hover:text-blue-900 transition-colors duration-200"
+                className="text-aegean text-2xl font-medium hover:text-midnight transition-colors duration-200"
                 onClick={closeMobileMenu}
               >
                 Location & Hours

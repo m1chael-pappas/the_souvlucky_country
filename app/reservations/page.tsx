@@ -88,9 +88,9 @@ export default function ReservationsPage() {
   return (
     <>
       
-      <div className="min-h-screen bg-blue-50 py-36">
+      <div className="min-h-screen bg-sea-mist py-36">
       {/* Title */}
-      <h1 className="text-5xl font-semibold text-center text-[#0D71C9] mb-8">
+      <h1 className="text-5xl font-semibold text-center text-aegean mb-8">
         Make a reservation
       </h1>
 
@@ -112,7 +112,7 @@ export default function ReservationsPage() {
 
       {/* Instructions */}
       <div className="container mx-auto mb-8 px-4 text-center">
-        <p className="text-gray-700 text-lg leading-relaxed max-w-2xl mx-auto">
+        <p className="text-story text-lg leading-relaxed max-w-2xl mx-auto">
           Book your table at SouvLucky Country and experience authentic Greek
           flavors in the heart of Parramatta. Select your preferred date and
           time below.
@@ -123,10 +123,10 @@ export default function ReservationsPage() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
           <div className="text-center mb-6">
-            <h2 className="text-3xl font-bold text-[#0D71C9] mb-4">
+            <h2 className="text-3xl font-bold text-aegean mb-4">
               Reserve Your Table
             </h2>
-            <p className="text-gray-600">
+            <p className="text-story">
               Use our online booking system to secure your table
             </p>
           </div>
@@ -145,11 +145,11 @@ export default function ReservationsPage() {
                 <div className="text-center mt-4">
                   <button
                     onClick={openQuandooDirectly}
-                    className="bg-[#0D71C9] text-white px-8 py-3 rounded-lg hover:bg-[#03233C] transition-colors font-medium"
+                    className="bg-aegean text-white px-8 py-3 rounded-lg hover:bg-midnight transition-colors font-medium"
                   >
                     Book Now
                   </button>
-                  <p className="text-sm text-gray-500 mt-2">
+                  <p className="text-sm text-story mt-2">
                     Click here to make a reservation directly
                   </p>
                 </div>
@@ -162,8 +162,8 @@ export default function ReservationsPage() {
       {/* Contact Information */}
       <div className="container mx-auto px-4 mt-12">
         <div className="max-w-2xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-[#0D71C9] mb-4">Need Help?</h3>
-          <p className="text-gray-700 mb-4">
+          <h3 className="text-2xl font-bold text-aegean mb-4">Need Help?</h3>
+          <p className="text-story mb-4">
             For large groups or special requests, please call us directly.
           </p>
         </div>

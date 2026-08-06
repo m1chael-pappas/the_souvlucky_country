@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import PillButton from "@/components/ui/PillButton";
-import PaintHeading from "@/components/ui/PaintHeading";
 
 export default function SocialSection() {
   const [activePost, setActivePost] = useState<number | null>(null);
@@ -76,13 +74,13 @@ export default function SocialSection() {
   ];
 
   return (
-    <section className="py-16 pt-30 bg-[#F2FDFF]">
+    <section className="py-16 pt-30 bg-sea-mist">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <PaintHeading className="text-5xl lg:text-6xl text-[#0D71C9] mb-4">
+          <h2 className="text-5xl lg:text-6xl text-aegean mb-4">
             Follow us
-          </PaintHeading>
+          </h2>
           {/* Call to action */}
           <div className="text-center mt-8">
             <PillButton
@@ -105,16 +103,8 @@ export default function SocialSection() {
 
         {/* Instagram Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 max-w-6xl mx-auto">
-          {socialPosts.map((post, index) => (
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{
-                duration: 0.7,
-                delay: (index % 4) * 0.06,
-                ease: [0.16, 1, 0.3, 1],
-              }}
+          {socialPosts.map((post) => (
+            <button
               key={post.id}
               className="relative aspect-square group cursor-pointer overflow-hidden w-full h-full border-0 bg-transparent p-0"
               onClick={() =>
@@ -142,7 +132,7 @@ export default function SocialSection() {
                     activePost === post.id ? "scale-105" : ""
                   }`}
                   sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 25vw"
-                  priority={post.id <= 4} // Priority for first 4 visible images
+                  loading="lazy"
                   quality={75}
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+ZaBjVurhTJLEuZpWOSSxJJJJJJJJH//Z"
@@ -151,7 +141,7 @@ export default function SocialSection() {
 
               {/* Sliding Text Overlay */}
               <div
-                className={`absolute inset-x-0 bottom-0 h-full bg-[#0D71C9]/95 text-white p-4 flex flex-col justify-center items-center text-center transform transition-transform duration-500 ease-in-out ${
+                className={`absolute inset-x-0 bottom-0 h-full bg-aegean/95 text-white p-4 flex flex-col justify-center items-center text-center transform transition-transform duration-500 ease-in-out ${
                   activePost === post.id ? "translate-y-0" : "translate-y-full"
                 }`}
               >
@@ -168,7 +158,7 @@ export default function SocialSection() {
                   </div>
                 </div>
               </div>
-            </motion.button>
+            </button>
           ))}
         </div>
       </div>

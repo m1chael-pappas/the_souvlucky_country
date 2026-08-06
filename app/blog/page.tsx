@@ -9,7 +9,6 @@ import {
   Group,
   Stack,
   Text,
-  Title,
 } from '@mantine/core';
 
 // Enable static generation for better performance
@@ -93,22 +92,24 @@ export default function BlogPage() {
   const regularPosts = blogPosts.filter(post => !post.featured)
 
   return (
-    <Container size="lg" pt={128} pb="xl">
+    <div className="bg-white pt-36 pb-16">
+      <Container size="lg">
       <Stack gap="xl">
         <div>
-          <Title order={1} size="h1" mb="md">
+          <h1 className="text-5xl lg:text-6xl text-aegean mb-4 leading-[1.1]">
             The Souvlucky Stories
-          </Title>
-          <Text size="lg" c="dimmed">
-            Discover the stories, traditions, and secrets behind authentic Greek cuisine
-          </Text>
+          </h1>
+          <p className="text-xl text-story max-w-2xl">
+            Recipes, traditions, and the thinking behind the food we cook in
+            Parramatta.
+          </p>
         </div>
 
         {featuredPosts.length > 0 && (
           <section>
-            <Title order={2} size="h2" mb="md" className="text-[#0D71C9]">
+            <h2 className="text-4xl text-aegean mb-4">
               Featured Stories
-            </Title>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {featuredPosts.map((post) => (
                 <Card 
@@ -117,7 +118,7 @@ export default function BlogPage() {
                   padding={0}
                   component={Link} 
                   href={`/blog/${post.slug}`} 
-                  className="hover:shadow-xl transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                  className="shadow-card hover:shadow-card-hover transition-shadow duration-300 overflow-hidden rounded-2xl"
                 >
                   <div className="relative h-48">
                     <Image
@@ -127,7 +128,7 @@ export default function BlogPage() {
                       className="object-cover"
                     />
                     <div className="absolute top-4 left-4">
-                      <Badge color="blue" variant="filled" size="md" className="bg-blue-600/90 backdrop-blur-sm">
+                      <Badge color="blue" variant="filled" size="md" className="bg-aegean/95 backdrop-blur-sm">
                         {post.category}
                       </Badge>
                     </div>
@@ -147,9 +148,9 @@ export default function BlogPage() {
                       </Text>
                     </Group>
                     
-                    <Title order={3} size="h3" mb="sm" className="text-[#03233C] leading-tight">
+                    <h3 className="text-2xl text-midnight leading-tight mb-2">
                       {post.title}
-                    </Title>
+                    </h3>
                     
                     <Text size="sm" c="dimmed" lineClamp={3} className="leading-relaxed">
                       {post.excerpt}
@@ -162,9 +163,9 @@ export default function BlogPage() {
         )}
 
         <section>
-          <Title order={2} size="h2" mb="md" className="text-[#0D71C9]">
+          <h2 className="text-4xl text-aegean mb-4">
             All Stories
-          </Title>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogPosts.map((post) => (
               <Card 
@@ -173,7 +174,7 @@ export default function BlogPage() {
                 padding={0}
                 component={Link} 
                 href={`/blog/${post.slug}`} 
-                className="hover:shadow-lg transition-all duration-300 hover:scale-[1.02] overflow-hidden"
+                className="shadow-card hover:shadow-card-hover transition-shadow duration-300 overflow-hidden rounded-2xl"
               >
                 <div className="relative h-40">
                   <Image
@@ -183,7 +184,7 @@ export default function BlogPage() {
                     className="object-cover"
                   />
                   <div className="absolute top-3 left-3">
-                    <Badge color="blue" variant="filled" size="sm" className="bg-blue-600/90 backdrop-blur-sm">
+                    <Badge color="blue" variant="filled" size="sm" className="bg-aegean/95 backdrop-blur-sm">
                       {post.category}
                     </Badge>
                   </div>
@@ -203,9 +204,9 @@ export default function BlogPage() {
                     </Text>
                   </Group>
                   
-                  <Title order={3} size="h4" mb="sm" className="text-[#03233C] leading-tight">
+                  <h3 className="text-xl text-midnight leading-tight mb-2">
                     {post.title}
-                  </Title>
+                  </h3>
                   
                   <Text size="sm" c="dimmed" lineClamp={2} className="leading-relaxed">
                     {post.excerpt}
@@ -216,6 +217,7 @@ export default function BlogPage() {
           </div>
         </section>
       </Stack>
-    </Container>
+      </Container>
+    </div>
   )
 }

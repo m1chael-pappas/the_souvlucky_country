@@ -7,14 +7,14 @@ const HEADLINE = ['Taste', 'of', 'Greece'];
 
 export default function HeroSection() {
   return (
-    <div className="@container relative min-h-[900px] bg-gradient-to-r from-[#F2FDFF] via-[#DFF4FF] to-[#0D71C9] flex items-center">
+    <div className="@container relative min-h-[640px] lg:min-h-[900px] bg-gradient-to-r from-sea-mist via-sky-wash to-aegean flex items-center">
       <div className="container mx-auto px-6 relative ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-10 z-20">
             <div className="space-y-8">
               {/* The headline letters itself onto the board, word by word */}
-              <h2 className="text-6xl lg:text-8xl text-[#03233C] leading-[1.1] max-w-[12ch]">
+              <h2 className="text-6xl lg:text-8xl text-midnight leading-[1.1] max-w-[12ch]">
                 {HEADLINE.map((word, i) => (
                   <span key={word}>
                     <span
@@ -29,7 +29,7 @@ export default function HeroSection() {
               </h2>
 
               <p
-                className="settle-in text-xl text-[#4B5563] leading-relaxed max-w-xl"
+                className="settle-in text-xl text-story leading-relaxed max-w-xl"
                 style={{ animationDelay: '520ms' }}
               >
                 Greek cuisine has a variety of flavours, tastes and colours.
@@ -54,7 +54,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Visual Content — the stroke carries into the photograph */}
+          {/* Right Visual Content: the stroke carries into the photograph */}
           <div className="relative h-96 lg:h-[500px]">
             <div
               className="paint-in absolute -top-20 -right-0"

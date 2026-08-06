@@ -20,7 +20,7 @@ export default function GlobalError({
   return (
     <html>
       <body>
-        <div className="min-h-screen bg-blue-50 pt-32 pb-16 flex items-center justify-center">
+        <div className="min-h-screen bg-sea-mist pt-32 pb-16 flex items-center justify-center">
           <Container size="md" className="text-center">
             <div className="bg-white rounded-lg shadow-sm p-12">
               {/* Error icon */}
@@ -30,13 +30,13 @@ export default function GlobalError({
               </div>
               
               {/* Error message */}
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="text-3xl font-bold text-ink mb-4">
                 Application Error
               </h2>
-              <p className="text-gray-600 text-lg mb-2">
+              <p className="text-story text-lg mb-2">
                 Our kitchen experienced a technical difficulty.
               </p>
-              <p className="text-gray-600 text-lg mb-8">
+              <p className="text-story text-lg mb-8">
                 We&apos;re working to get everything back to normal.
               </p>
               
@@ -45,7 +45,7 @@ export default function GlobalError({
                 <Button 
                   size="lg" 
                   onClick={reset}
-                  className="bg-[#0D71C9] hover:bg-[#03233C] text-white"
+                  className="bg-aegean hover:bg-midnight text-white"
                   leftSection={<RefreshCw className="w-5 h-5" />}
                 >
                   Try Again
@@ -54,7 +54,7 @@ export default function GlobalError({
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="border-[#0D71C9] text-[#0D71C9] hover:bg-[#0D71C9] hover:text-white"
+                    className="border-aegean text-aegean hover:bg-aegean hover:text-white"
                     leftSection={<Home className="w-5 h-5" />}
                   >
                     Go to Homepage
@@ -64,12 +64,12 @@ export default function GlobalError({
               
               {/* Contact info */}
               <div className="mt-12 pt-8 border-t border-gray-200">
-                <p className="text-gray-600 mb-2">
+                <p className="text-story mb-2">
                   <strong>Need immediate assistance?</strong>
                 </p>
                 <a 
                   href="tel:0298914174" 
-                  className="text-[#0D71C9] font-semibold text-lg hover:underline"
+                  className="text-aegean font-semibold text-lg hover:underline"
                 >
                   Call us: (02) 9891 4174
                 </a>

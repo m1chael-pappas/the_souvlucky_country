@@ -14,12 +14,12 @@ typography:
   display:
     fontFamily: "Sedgwick Ave, cursive"
     fontSize: "clamp(3rem, 6vw, 3.75rem)"
-    fontWeight: 700
+    fontWeight: 400
     lineHeight: 1.25
   headline:
     fontFamily: "Sedgwick Ave, cursive"
     fontSize: "2.25rem"
-    fontWeight: 700
+    fontWeight: 400
     lineHeight: 1.2
   body:
     fontFamily: "Roboto, sans-serif"
@@ -100,7 +100,11 @@ A single Greek blue in three depths against whitewash and sea-light neutrals —
 - **Story Grey** (#4B5563): Supporting paragraphs and captions.
 
 ### Named Rules
-**The One Blue Rule.** Aegean Blue is the only accent. No secondary accent colour exists or may be introduced — warmth comes from photography, lettering, and copy, not from adding colours. (The footer's social icons may flash their platform colours on hover; that is the single sanctioned exception.)
+**The One Blue Rule.** Aegean Blue is the only accent. No secondary accent colour exists or may be introduced — warmth comes from photography, lettering, and copy, not from adding colours.
+
+Two sanctioned exceptions, both because the colour carries *meaning* rather than decoration:
+- **Platform colours.** The footer's social icons may flash their own brand colours on hover.
+- **Semantic indicators.** Dietary, status, and validation signals use conventional colours because the convention *is* the information — the menu's vegetarian badge is green because a green leaf is legible at a glance and a blue one is not. Semantic colour is a separate axis from the brand accent and does not count against this rule. It may never be used decoratively.
 
 ## Typography
 
@@ -115,6 +119,15 @@ A single Greek blue in three depths against whitewash and sea-light neutrals —
 - **Body** (400, 1.125rem, 1.625): Paragraph copy, max-width constrained (`max-w-lg` in hero); Story Grey or Ink.
 - **Label** (500, 1.125rem): Button text, prices, nav emphasis.
 - **Nav** (400, 1.5rem, letter-spacing 0.025em): Roboto, wide-tracked, Midnight Harbour over light heroes; Aegean Blue on the scrolled white header.
+
+### Long-form article scale
+
+Blog posts need steps the marketing pages don't. These are part of the system, implemented once in `.article-prose` (`app/globals.css`) and never hand-rolled per post:
+
+- **Article H2** (2.25rem, Sedgwick Ave, Aegean Blue): section breaks within a post — the Headline step reused.
+- **Article H3** (1.5rem, Sedgwick Ave, Midnight Harbour): sub-sections inside a section. The one step between Headline and Body, added because long posts genuinely need three levels.
+- **Article body** (1.125rem / 1.75, Story Grey): the Body step at a looser line-height for sustained reading, capped at a 68ch measure.
+- **Table text** (1rem, Roboto): dense comparison tables only, one step below Body so a wide table fits. Tables scroll inside their own container.
 
 ### Named Rules
 **The Signboard Rule.** Sedgwick Ave belongs to headings (h1–h3) only — applied globally via the base layer. It never sets body copy, buttons, nav, or prices; hand-lettering everywhere would turn the signboard into noise.

@@ -52,7 +52,7 @@ const Footer = () => {
   const [mapError] = useState(false);
 
   return (
-    <footer id="footer" className="bg-[#0D71C9] w-full py-10 px-4 md:px-6">
+    <footer id="footer" className="bg-aegean w-full py-10 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <h2 className="text-white text-3xl md:text-4xl text-center mb-12">
@@ -91,7 +91,7 @@ const Footer = () => {
                   href="https://www.facebook.com/SouvLuckyCountryParra/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-white hover:bg-blue-600 p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                  className="group bg-white hover:bg-aegean p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
                   aria-label="Visit our Facebook page"
                 >
                   <FacebookIcon className="w-6 h-6 text-blue-600 group-hover:text-white" />
@@ -142,7 +142,7 @@ const Footer = () => {
           {/* Map Section */}
           <div className="w-full lg:w-1/2 h-[327px] rounded-3xl overflow-hidden">
             {mapError ? (
-              <div className="w-full h-full flex items-center justify-center bg-blue-400 text-white">
+              <div className="w-full h-full flex items-center justify-center bg-aegean text-white">
                 <p>Unable to load map. Please check your connection.</p>
               </div>
             ) : (

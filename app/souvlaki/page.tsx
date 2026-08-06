@@ -123,12 +123,12 @@ export default function SouvlakiPage() {
         }}
       />
       
-      <div className="min-h-screen bg-blue-50 pt-32 pb-16">
+      <div className="min-h-screen bg-sea-mist pt-32 pb-16">
         <Container size="xl">
           <div className="mb-8">
             <Link 
               href="/menu" 
-              className="inline-flex items-center text-[#0D71C9] hover:text-[#03233C] transition-colors"
+              className="inline-flex items-center text-aegean hover:text-midnight transition-colors"
               aria-label="Back to full menu"
             >
               <ArrowLeft className="w-4 h-4 mr-2" aria-hidden="true" />
@@ -137,10 +137,10 @@ export default function SouvlakiPage() {
           </div>
 
           <header className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-[#0D71C9] mb-6">
+            <h1 className="text-5xl font-bold text-aegean mb-6">
               Authentic Greek Souvlaki in Sydney
             </h1>
-            <p className="text-gray-700 text-xl max-w-4xl mx-auto leading-relaxed">
+            <p className="text-story text-xl max-w-4xl mx-auto leading-relaxed">
               Experience the best souvlaki in Sydney at The Souvlucky Country. Our traditional Greek souvlaki 
               is made with fresh, premium ingredients and authentic recipes passed down through generations. 
               Located in the heart of Parramatta, we bring you the true taste of Greece.
@@ -148,27 +148,27 @@ export default function SouvlakiPage() {
           </header>
 
           <section className="mb-12" aria-labelledby="why-our-souvlaki">
-            <h2 id="why-our-souvlaki" className="text-3xl font-bold text-[#0D71C9] mb-8 text-center">
+            <h2 id="why-our-souvlaki" className="text-3xl font-bold text-aegean mb-8 text-center">
               Why Our Souvlaki is the Best in Sydney
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#0D71C9] mb-4">Fresh Ingredients Daily</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-aegean mb-4">Fresh Ingredients Daily</h3>
+                <p className="text-story">
                   We source the freshest meats and vegetables daily, ensuring every souvlaki 
                   is made with premium quality ingredients.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#0D71C9] mb-4">Traditional Recipes</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-aegean mb-4">Traditional Recipes</h3>
+                <p className="text-story">
                   Our souvlaki recipes have been perfected over generations, bringing you 
                   the authentic taste of traditional Greek street food.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#0D71C9] mb-4">Homemade Pita</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-aegean mb-4">Homemade Pita</h3>
+                <p className="text-story">
                   Every souvlaki is wrapped in our freshly made pita bread, baked daily 
                   in our kitchen for the perfect texture and flavor.
                 </p>
@@ -177,30 +177,30 @@ export default function SouvlakiPage() {
           </section>
 
           <section className="mb-12" aria-labelledby="our-souvlaki-menu">
-            <h2 id="our-souvlaki-menu" className="text-3xl font-bold text-[#0D71C9] mb-8 text-center">
+            <h2 id="our-souvlaki-menu" className="text-3xl font-bold text-aegean mb-8 text-center">
               Our Souvlaki Selection
             </h2>
             <div className="bg-white rounded-lg shadow-sm p-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {souvlakiItems.map((item, index) => (
-                  <article key={index} className="py-4 border-b border-blue-100 last:border-b-0">
+                  <article key={index} className="py-4 border-b border-sky-wash last:border-b-0">
                     <div className="flex justify-between items-start">
                       <div className="flex-1">
-                        <h3 className="text-lg font-medium text-gray-800 mb-2">{item.name}</h3>
-                        <p className="text-sm text-gray-600 mb-2">{item.description}</p>
+                        <h3 className="text-lg font-medium text-ink mb-2">{item.name}</h3>
+                        <p className="text-sm text-story mb-2">{item.description}</p>
                         {item.variations && (
                           <div className="space-y-1">
                             {item.variations.map((variation, vIndex) => (
                               <div key={vIndex} className="flex justify-between items-center text-sm">
-                                <span className="text-gray-700 ml-4">• {variation.name}</span>
-                                <span className="text-lg font-medium text-[#0D71C9]">${variation.price}</span>
+                                <span className="text-story ml-4">• {variation.name}</span>
+                                <span className="text-lg font-medium text-aegean">${variation.price}</span>
                               </div>
                             ))}
                           </div>
                         )}
                       </div>
                       {item.price && !item.variations && (
-                        <span className="text-lg font-medium text-[#0D71C9] ml-4">${item.price}</span>
+                        <span className="text-lg font-medium text-aegean ml-4">${item.price}</span>
                       )}
                     </div>
                   </article>
@@ -210,25 +210,25 @@ export default function SouvlakiPage() {
           </section>
 
           <section className="text-center bg-white rounded-lg p-8 shadow-sm" aria-labelledby="visit-us">
-            <h2 id="visit-us" className="text-3xl font-bold text-[#0D71C9] mb-6">
+            <h2 id="visit-us" className="text-3xl font-bold text-aegean mb-6">
               Visit Us for the Best Souvlaki Experience
             </h2>
-            <p className="text-gray-700 text-lg mb-8 max-w-3xl mx-auto">
+            <p className="text-story text-lg mb-8 max-w-3xl mx-auto">
               Located in Parramatta, we&apos;re easily accessible from anywhere in Sydney. 
               Come taste why locals consider us the best Greek restaurant for authentic souvlaki.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
               <div>
-                <h3 className="text-xl font-bold text-[#0D71C9] mb-4">Location & Hours</h3>
-                <address className="text-gray-600 not-italic">
+                <h3 className="text-xl font-bold text-aegean mb-4">Location & Hours</h3>
+                <address className="text-story not-italic">
                   316 Church St<br />
                   Parramatta, NSW 2150<br />
                   <strong>Open Daily:</strong> 12:00 PM - 10:00 PM
                 </address>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[#0D71C9] mb-4">Contact</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-aegean mb-4">Contact</h3>
+                <p className="text-story">
                   <strong>Phone:</strong> (02) 9891 4174<br />
                   <strong>Reservations:</strong> Available<br />
                   <strong>Takeaway:</strong> Available
@@ -238,7 +238,7 @@ export default function SouvlakiPage() {
             <div className="mt-8">
               <Link 
                 href="/reservations" 
-                className="inline-block bg-[#0D71C9] text-white px-8 py-3 rounded-lg hover:bg-[#03233C] transition-colors font-medium"
+                className="inline-block bg-aegean text-white px-8 py-3 rounded-lg hover:bg-midnight transition-colors font-medium"
               >
                 Make a Reservation
               </Link>

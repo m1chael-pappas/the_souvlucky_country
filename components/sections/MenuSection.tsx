@@ -12,7 +12,7 @@ export default function MenuSection() {
       <div className="flex flex-col lg:flex-row items-stretch justify-center max-w-[2000px] ">
         {/* Left side - Image */}
         <div className="w-full lg:w-1/2 ">
-          <div className="relative w-full h-[700px]">
+          <div className="relative w-full h-[420px] lg:h-[700px]">
             <Image
               src="/souvlucky1.jpeg"
               alt="Greek cuisine"
@@ -26,13 +26,13 @@ export default function MenuSection() {
 
         {/* Right side - Content */}
         <div className="w-full lg:w-1/2 p-6  lg:py-0">
-          <div className="border border-[#0D71C9] rounded-xl p-8 lg:p-12 w-full h-[700px] flex flex-col justify-center">
+          <div className="border border-aegean rounded-xl p-8 lg:p-12 w-full h-[420px] lg:h-[700px] flex flex-col justify-center">
             {" "}
-            <h2 className="text-[#0D71C9] text-5xl mb-10">
+            <h2 className="text-aegean text-5xl mb-10">
               {" "}
               Our Menus
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-12 font-light text-lg">
+            <p className="text-story leading-relaxed mb-12 font-light text-lg">
               {" "}
               Experience the authentic flavors of Greece through our carefully
               crafted menu. From traditional souvlaki and gyros to fresh Greek
@@ -43,7 +43,7 @@ export default function MenuSection() {
             </p>
             <Link href="/menu">
               <Button
-                className="bg-[#0D71C9] hover:bg-[#0A4E8C] transition-colors px-10 py-3 text-white uppercase tracking-wider text-lg"
+                className="bg-aegean hover:bg-aegean-deep transition-colors px-10 py-3 text-white uppercase tracking-wider text-lg"
                 variant="filled"
               >
                 View Menus
