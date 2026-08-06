@@ -31,6 +31,16 @@ typography:
     fontSize: "1.125rem"
     fontWeight: 500
     lineHeight: 1.5
+  article-subhead:
+    fontFamily: "Sedgwick Ave, cursive"
+    fontSize: "1.5rem"
+    fontWeight: 400
+    lineHeight: 1.3
+  article-table:
+    fontFamily: "Roboto, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.5
 rounded:
   lg: "8px"
   xl: "12px"

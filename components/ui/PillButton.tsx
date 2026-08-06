@@ -21,6 +21,8 @@ type PillButtonProps = {
   external?: boolean;
   className?: string;
   "aria-label"?: string;
+  /** Fires on click, e.g. to close a menu the button sits inside. */
+  onNavigate?: () => void;
 };
 
 const SIZE = {
@@ -39,6 +41,7 @@ export default function PillButton({
   external = false,
   className = "",
   "aria-label": ariaLabel,
+  onNavigate,
 }: PillButtonProps) {
   const isPrimary = variant === "primary";
 
@@ -75,7 +78,7 @@ export default function PillButton({
   }
 
   return (
-    <Link href={href} className={classes} aria-label={ariaLabel}>
+    <Link href={href} className={classes} aria-label={ariaLabel} onClick={onNavigate}>
       {content}
     </Link>
   );

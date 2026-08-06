@@ -111,6 +111,21 @@
     }
   }
 
+  /* The signboard stroke turned vertical: the mobile menu paints down from
+     under the header rather than fading in from nowhere. */
+  @keyframes paint-down {
+    from {
+      clip-path: inset(0 0 100% 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .paint-down {
+    animation: paint-down 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
   .paint-on {
     animation: paint-on 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
@@ -127,6 +142,7 @@
 @media (prefers-reduced-motion: reduce) {
   .paint-on,
   .paint-in,
+  .paint-down,
   .settle-in {
     animation: none;
     clip-path: none;
