@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   // No `alternates.canonical` here on purpose: a canonical set on the root
   // layout is inherited by every route that does not declare its own, which
-  // would point /reservations, /blog and each post at the homepage.
+  // would point /menu, /blog and each post at the homepage.
   openGraph: {
     type: "website",
     locale: "en_AU",
@@ -274,9 +274,6 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link rel="preconnect" href="https://booking-widget.quandoo.com" />
-        <link rel="preconnect" href="https://www.quandoo.com.au" />
-        <link rel="preconnect" href="https://assets-www.prod.quandoo.com" />
       </head>
       <body className={inter.className}>
         <MantineProvider>

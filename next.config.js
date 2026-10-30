@@ -29,11 +29,6 @@ const nextConfig = {
       // Every quality level used by a <Image quality={...}> in this app.
       // Required from Next.js 16; unlisted values stop being optimised.
       qualities: [75, 80, 85],
-      // Replaces the deprecated `domains` array
-      remotePatterns: [
-        { protocol: 'https', hostname: 'booking-widget.quandoo.com' },
-        { protocol: 'https', hostname: 'assets-www.prod.quandoo.com' },
-      ],
       // Enable experimental features for performance
       unoptimized: false,
       // Loader configuration for better performance
@@ -172,20 +167,12 @@ const nextConfig = {
           destination: '/#footer', 
           permanent: true,
         },
+
+        // Booking redirects, temporary while online booking is offline
         {
-          source: '/book',
-          destination: '/reservations',
-          permanent: true,
-        },
-        {
-          source: '/booking',
-          destination: '/reservations',
-          permanent: true,
-        },
-        {
-          source: '/reserve',
-          destination: '/reservations',
-          permanent: true,
+          source: '/:path(reservations|book|booking|reserve)',
+          destination: '/#footer',
+          permanent: false,
         },
         
         // Food-specific redirects for SEO

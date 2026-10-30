@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { Container } from '@mantine/core';
 import AboutUsHero from '@/components/AboutUsHero';
+import { PHONE } from '@/lib/site';
 
 // Enable static generation for better performance
 export const revalidate = 3600;
@@ -156,7 +157,7 @@ export default function AboutUs() {
             always something special waiting for you at The Souvlucky Country.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <PillButton href="/reservations">Book a Table</PillButton>
+            <PillButton href={PHONE.href}>Call to Book</PillButton>
             <PillButton href="/menu" variant="outline">
               See the Menu
             </PillButton>
@@ -164,10 +165,10 @@ export default function AboutUs() {
           <p className="text-story mt-8">
             316 Church St, Parramatta NSW 2150 ·{" "}
             <a
-              href="tel:+61298914174"
-              className="text-aegean underline-offset-4 hover:underline"
+              href={PHONE.href}
+              className="whitespace-nowrap text-aegean underline-offset-4 hover:underline"
             >
-              (02) 9891 4174
+              {PHONE.display}
             </a>
           </p>
         </Container>

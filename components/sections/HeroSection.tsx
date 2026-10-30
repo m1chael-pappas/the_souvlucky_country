@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import PillButton from '@/components/ui/PillButton';
+import { PHONE } from '@/lib/site';
 
 const HEADLINE = ['Taste', 'of', 'Greece'];
 
@@ -46,12 +47,12 @@ export default function HeroSection() {
               className="settle-in flex flex-wrap gap-4"
               style={{ animationDelay: '640ms' }}
             >
-              <PillButton href="/reservations" size="lg">
-                Book Now
+              <PillButton href={PHONE.href} size="lg" className="w-full sm:w-auto">
+                Call to Book
               </PillButton>
 
               {/* Outline button fills by the same left-to-right stroke */}
-              <PillButton href="/menu" variant="outline" size="lg">
+              <PillButton href="/menu" variant="outline" size="lg" className="w-full sm:w-auto">
                 Menu
               </PillButton>
             </div>
