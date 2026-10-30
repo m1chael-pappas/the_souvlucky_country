@@ -3,7 +3,7 @@
 const nextConfig = {
     // Enable experimental features for better performance
     experimental: {
-      optimizePackageImports: ['@mantine/core', '@mantine/dates', 'lucide-react'],
+      optimizePackageImports: ['@mantine/core', 'lucide-react'],
     },
     
     // Compiler optimizations
