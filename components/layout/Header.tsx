@@ -8,12 +8,12 @@ import Link from 'next/link';
 
 import { LogoSVG } from '@/components/ui/LogoSVG';
 import PillButton from '@/components/ui/PillButton';
+import { PHONE } from '@/lib/site';
 
-const MOBILE_LINKS = [
+const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about-us', label: 'About Us' },
   { href: '/menu', label: 'Menu' },
-  { href: '/reservations', label: 'Reservations' },
   { href: '#footer', label: 'Location & Hours' },
 ];
 
@@ -87,11 +87,11 @@ const Header = () => {
               </Link>
             </div>
             <nav className="hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">
-              <Link href="/" className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">Home</Link>
-              <Link href="/about-us" className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">About Us</Link>
-              <Link href="/menu" className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">Menu</Link>
-              <Link href="/reservations" className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">Reservations</Link>
-              <Link href="#footer" className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">Location & Hours</Link>
+              {NAV_LINKS.map((link) => (
+                <Link key={link.href} href={link.href} className="transition-colors duration-200 text-2xl tracking-wide text-midnight hover:text-aegean-deep hover:underline">
+                  {link.label}
+                </Link>
+              ))}
             </nav>
             <button className="lg:hidden flex flex-col justify-center items-center gap-[7px] w-12 h-12 ml-auto mr-4" aria-label="Open menu">
               <span className="w-8 h-[3px] rounded-full bg-current text-midnight"></span>
@@ -133,40 +133,15 @@ const Header = () => {
             aria-label="Main navigation"
             suppressHydrationWarning
           >
-            <Link
-              href="/"
-              className={`transition-colors duration-200 text-2xl tracking-wide ${linkScrolledClass}`}
-            >
-              Home
-            </Link>
-
-            <Link
-              href="/about-us"
-              className={`transition-colors duration-200 text-2xl tracking-wide ${linkScrolledClass}`}
-            >
-              About Us
-            </Link>
-
-            <Link
-              href="/menu"
-              className={`transition-colors duration-200 text-2xl tracking-wide ${linkScrolledClass}`}
-            >
-              Menu
-            </Link>
-
-            <Link
-              href="/reservations"
-              className={`transition-colors duration-200 text-2xl tracking-wide ${linkScrolledClass}`}
-            >
-              Reservations
-            </Link>
-
-            <Link
-              href="#footer"
-              className={`transition-colors duration-200 text-2xl tracking-wide ${linkScrolledClass}`}
-            >
-              Location & Hours
-            </Link>
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`transition-colors duration-200 text-2xl tracking-wide ${linkScrolledClass}`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
 
           {/* Mobile Hamburger Button */}
@@ -206,7 +181,7 @@ const Header = () => {
               role="navigation"
               aria-label="Mobile navigation"
             >
-              {MOBILE_LINKS.map((link, i) => (
+              {NAV_LINKS.map((link, i) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -221,10 +196,10 @@ const Header = () => {
               {/* The site's one conversion, given the weight the list denies it */}
               <div
                 className="settle-in pt-8 flex justify-center"
-                style={{ animationDelay: `${140 + MOBILE_LINKS.length * 45}ms` }}
+                style={{ animationDelay: `${140 + NAV_LINKS.length * 45}ms` }}
               >
-                <PillButton href="/reservations" onNavigate={closeMobileMenu}>
-                  Book a Table
+                <PillButton href={PHONE.href} onNavigate={closeMobileMenu}>
+                  Call to Book
                 </PillButton>
               </div>
             </nav>

@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { Container, Button } from '@mantine/core';
+import { PHONE } from '@/lib/site';
 import { Home, RefreshCw, AlertTriangle } from 'lucide-react';
 
 export default function GlobalError({
@@ -68,10 +69,10 @@ export default function GlobalError({
                   <strong>Need immediate assistance?</strong>
                 </p>
                 <a 
-                  href="tel:0298914174" 
+                  href={PHONE.href}
                   className="text-aegean font-semibold text-lg hover:underline"
                 >
-                  Call us: (02) 9891 4174
+                  Call us: {PHONE.display}
                 </a>
               </div>
             </div>

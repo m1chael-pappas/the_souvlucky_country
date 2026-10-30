@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import PillButton from '@/components/ui/PillButton'
 import { blogPosts } from '@/lib/blog-posts'
+import { PHONE } from '@/lib/site'
 
 // Enable static generation with revalidation
 export const revalidate = 3600;
@@ -111,10 +112,17 @@ export default async function BlogPost({ params }: BlogPostProps) {
           </h2>
           <p className="text-story mb-8 max-w-xl mx-auto">
             The dishes in this story are on the table at The Souvlucky Country,
-            316 Church St, Parramatta.
+            316 Church St, Parramatta. Book on{" "}
+            <a
+              href={PHONE.href}
+              className="whitespace-nowrap text-aegean underline-offset-4 hover:underline"
+            >
+              {PHONE.display}
+            </a>
+            .
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <PillButton href="/reservations">Book a Table</PillButton>
+            <PillButton href={PHONE.href}>Call to Book</PillButton>
             <PillButton href="/menu" variant="outline">
               See the Menu
             </PillButton>

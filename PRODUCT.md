@@ -12,7 +12,7 @@ Locals and visitors in Parramatta / Western Sydney searching for Greek food — 
 
 ## Product Purpose
 
-Marketing and reservations website for The Souvlucky Country, a family-run Greek restaurant at 316 Church St, Parramatta NSW 2150 (trading since 2015). The site exists first to drive **table reservations** via the email reservation form (confirmed); local search visibility and walk-in/phone conversions support that goal. Live at https://thesouvluckycountry.com.au.
+Marketing and reservations website for The Souvlucky Country, a family-run Greek restaurant at 316 Church St, Parramatta NSW 2150 (trading since 2015). The site exists first to drive **table reservations**, which are phone-only while online booking is offline; local search visibility and walk-in conversions support that goal. Live at https://thesouvluckycountry.com.au.
 
 ## Positioning
 
@@ -25,13 +25,15 @@ Existing site copy consistent with this: "A family-run Greek eatery in Parramatt
 ## Operating Context
 
 - Visitors arrive largely via local organic search; the blog exists to win local-SEO comparison queries.
-- Reservations flow: form on site → `/app/api/sendMail/route.ts` (nodemailer + Gmail SMTP) → restaurant's inbox. Requires `GMAIL_USER`, `GMAIL_PASS`, `GMAIL_EMAIL` env vars.
+- Reservations flow: phone only, after Quandoo (the previous booking widget) shut down in Australia.
+  Every booking CTA is a `tel:` link built from `PHONE` in `lib/site.ts`.
+  `/reservations`, `/book`, `/booking` and `/reserve` redirect temporarily to the footer contact block until a new booking provider is in place.
 - Social presence is real and linked: Facebook (SouvLuckyCountryParra), Instagram (@the_souvlucky_country).
 - Site is built and maintained by OnTheDot (footer credit links to onthedot.au — a confirmed commitment, keep it).
 
 ## Capabilities and Constraints
 
-- Next.js 15 App Router, TypeScript, React 19; Mantine + Tailwind + shadcn/ui. Routes: home, menu, about-us, souvlaki, reservations, blog (`/blog/[slug]`), plus sitemap/robots.
+- Next.js 15 App Router, TypeScript, React 19; Mantine + Tailwind + shadcn/ui. Routes: home, menu, about-us, souvlaki, blog (`/blog/[slug]`), plus sitemap/robots.
 - Comprehensive SEO already in place (Restaurant JSON-LD, Open Graph, en_AU locale, canonical URLs) — future work must preserve it.
 - Note: CLAUDE.md describes a parallel-route `/app/homepage/@slot` architecture that no longer exists; the homepage is now plain sections in `components/sections/` composed by `app/page.tsx`.
 - Online ordering/takeaway: not built; not confirmed as a goal. Undecided — do not assume.

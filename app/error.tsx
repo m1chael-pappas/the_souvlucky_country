@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { Container, Button } from '@mantine/core';
+import { PHONE } from '@/lib/site';
 import { Home, RefreshCw, AlertTriangle } from 'lucide-react';
 
 export default function Error({
@@ -79,10 +80,10 @@ export default function Error({
               <strong>Still having issues?</strong> Contact us:
             </p>
             <a 
-              href="tel:0298914174" 
+              href={PHONE.href}
               className="text-aegean font-semibold text-lg hover:underline"
             >
-              (02) 9891 4174
+              {PHONE.display}
             </a>
           </div>
         </div>

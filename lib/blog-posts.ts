@@ -265,7 +265,7 @@ export const blogPosts = {
 
       <h2>Book it now, not in November</h2>
       <p>We are at 316 Church St, Parramatta, open Monday to Friday from 12pm to 10pm and Saturday and Sunday from 12pm to 11pm.</p>
-      <p>For a group, call us on (02) 9891 4174 rather than booking online. Large tables need a conversation, and we would rather work out what your group actually needs than have you guess from a menu.</p>
+      <p>Call us on (02) 9891 4174 to book. Large tables need a conversation, and we would rather work out what your group actually needs than have you guess from a menu.</p>
 `
   },
   'fathers-day-lunch-parramatta': {
@@ -292,7 +292,7 @@ export const blogPosts = {
 
       <h2>Book early, Sunday fills up</h2>
       <p>Father's Day is one of the busiest Sundays of the year in Parramatta, and we are a small family restaurant, not a function centre. The tables that suit a big family group are the first to go.</p>
-      <p>We are at 316 Church St, Parramatta, open Sunday from 12pm to 11pm. Book a table online, or call us on (02) 9891 4174 if you are bringing a larger group and want us to put you somewhere you can all hear each other.</p>
+      <p>We are at 316 Church St, Parramatta, open Sunday from 12pm to 11pm. Call us on (02) 9891 4174 to book, and tell us if you are bringing a larger group so we can put you somewhere you can all hear each other.</p>
 `
   },
   'story-behind-signature-tzatziki': {

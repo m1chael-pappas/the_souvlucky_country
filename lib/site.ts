@@ -14,3 +14,9 @@ export const SITE_URL = (
 export function absoluteUrl(path = "/"): string {
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 }
+
+/** The restaurant's phone number, as printed and as a `tel:` link target. */
+export const PHONE = {
+  display: "(02) 9891 4174",
+  href: "tel:+61298914174",
+} as const;

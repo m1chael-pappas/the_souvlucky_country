@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { PHONE } from '@/lib/site';
 
 import {
   MapPin,
@@ -56,7 +57,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <h2 className="text-white text-3xl md:text-4xl text-center mb-12">
-          Locations & Hours
+          Location & Hours
         </h2>
 
         {/* Content Container */}
@@ -65,7 +66,7 @@ const Footer = () => {
           <div className="text-white text-center lg:text-left space-y-8 lg:w-1/3">
             <div className="space-y-1">
               <p className="font-light text-lg">The Souvlucky Country,</p>
-              <p className="font-light text-lg">316 Church st.</p>
+              <p className="font-light text-lg">316 Church St</p>
               <p className="font-light text-lg">Parramatta NSW 2150</p>
             </div>
 
@@ -79,7 +80,12 @@ const Footer = () => {
             </div>
 
             <div className="space-y-1">
-              <p className="font-light text-lg">Tel: (02) 9891 4174</p>
+              <p className="font-light text-lg">
+                Tel:{" "}
+                <a href={PHONE.href} className="underline-offset-4 hover:underline">
+                  {PHONE.display}
+                </a>
+              </p>
               <p className="font-light text-lg">Email: souvlucky62@gmail.com</p>
             </div>
 
@@ -180,12 +186,6 @@ const Footer = () => {
             className="font-light text-lg underline-offset-4 hover:underline transition-colors duration-200"
           >
             Blog
-          </Link>
-          <Link
-            href="/reservations"
-            className="font-light text-lg underline-offset-4 hover:underline transition-colors duration-200"
-          >
-            Reservations
           </Link>
         </nav>
 

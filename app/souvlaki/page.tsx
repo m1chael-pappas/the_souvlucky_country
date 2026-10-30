@@ -2,8 +2,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Container } from '@mantine/core';
 import { ArrowLeft } from 'lucide-react';
+import PillButton from '@/components/ui/PillButton';
 import menuData from '@/data/menu.json';
-import { SITE_URL } from '@/lib/site';
+import { PHONE, SITE_URL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Best Souvlaki in Sydney - The Souvlucky Country Parramatta',
@@ -229,19 +230,14 @@ export default function SouvlakiPage() {
               <div>
                 <h3 className="text-xl font-bold text-aegean mb-4">Contact</h3>
                 <p className="text-story">
-                  <strong>Phone:</strong> (02) 9891 4174<br />
-                  <strong>Reservations:</strong> Available<br />
+                  <strong>Phone:</strong> {PHONE.display}<br />
+                  <strong>Reservations:</strong> By phone<br />
                   <strong>Takeaway:</strong> Available
                 </p>
               </div>
             </div>
             <div className="mt-8">
-              <Link 
-                href="/reservations" 
-                className="inline-block bg-aegean text-white px-8 py-3 rounded-lg hover:bg-midnight transition-colors font-medium"
-              >
-                Make a Reservation
-              </Link>
+              <PillButton href={PHONE.href}>Call to Book</PillButton>
             </div>
           </section>
         </Container>
